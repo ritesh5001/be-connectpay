@@ -12,7 +12,7 @@ used_i = sorted(set(re.findall(r'#i-([a-z0-9-]+)', src)) - {''} | set(DYNAMIC))
 used_b = sorted(set(re.findall(r'#b-([a-z0-9-]+)', src)))
 syms = []
 for n in used_i:
-    inner = re.search(r'>\s*(.*)</svg>', (LUCIDE / f'{n}.svg').read_text(), re.S).group(1)
+    inner = re.search(r'<svg[^>]*>\s*(.*)</svg>', (LUCIDE / f'{n}.svg').read_text(), re.S).group(1)
     syms.append(f'<symbol id="i-{n}" viewBox="0 0 24 24">' + re.sub(r'\s+/>', '/>', re.sub(r'\s+', ' ', inner)).strip() + '</symbol>')
 for n in used_b:
     d = re.search(r'<path d="([^"]+)"', (SIMPLE / f'{n}.svg').read_text()).group(1)

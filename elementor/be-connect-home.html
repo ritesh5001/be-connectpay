@@ -1,0 +1,1037 @@
+<!-- ============================================================
+  Be-Connect Pay homepage for Elementor
+  Paste all of this into ONE Elementor "HTML" widget.
+  Everything is scoped under .bcp-home and prefixed bcp-, so it
+  won't change any other page or element on the site.
+  Images load from:
+  https://raw.githubusercontent.com/ritesh5001/be-connectpay/claude/be-connectpay-homepage-redesign-5wiwc8/assets/
+  To host them yourself, upload the files in /assets to the media
+  library and replace that address everywhere in this code.
+============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap">
+<style>
+.bcp-home{
+  --sky:#00A0DC; --sky-hover:#0090C7; --sky-300:#5CC6EE; --sky-100:#D6F0FB; --sky-50:#EEF8FD;
+  --navy-950:#040E22; --navy-900:#071736; --navy-800:#0C2149; --navy-700:#16305F;
+  --ink:#0A1A3A; --text:#42506B; --muted:#6E7B93; --line:#E5EAF1; --line-2:#EEF2F7; --bg:#FFFFFF; --bg-2:#F6F8FB;
+  --green:#14B26A; --green-50:#E6F7EF; --tp:#00B67A;
+  --on-dark:#FFFFFF; --on-dark-2:#B9C6DE; --on-dark-3:#7F8FAE; --dark-line:rgb(255 255 255 / .1);
+  --f:"Plus Jakarta Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --r-sm:12px; --r:18px; --r-lg:28px;
+  --sh-sm:0 1px 2px rgb(10 26 58 / .06), 0 4px 12px -4px rgb(10 26 58 / .08);
+  --sh:0 1px 2px rgb(10 26 58 / .05), 0 18px 40px -18px rgb(10 26 58 / .25);
+  --sh-lg:0 2px 6px rgb(4 14 34 / .08), 0 40px 80px -30px rgb(4 14 34 / .45);
+  --wrap:1200px; --gutter:20px;
+  color-scheme:light;
+  position:relative;display:block;width:100%;margin:0;padding:0;background:var(--bg);color:var(--text);font-family:var(--f);font-size:16.5px;font-weight:400;font-style:normal;line-height:1.65;letter-spacing:normal;text-transform:none;text-align:left;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;overflow-x:hidden;overflow-x:clip}
+.bcp-home [class*="bcp-"],.bcp-home [class*="bcp-"]::before,.bcp-home [class*="bcp-"]::after{box-sizing:border-box}
+.bcp-home [class*="bcp-"]{margin:0;padding:0;border:0 solid transparent;border-radius:0;background:none;box-shadow:none;outline:0;font:inherit;color:inherit;letter-spacing:inherit;line-height:inherit;text-transform:inherit;text-align:inherit;text-decoration:none;text-shadow:none;list-style:none;min-width:0;float:none;vertical-align:baseline}
+.bcp-home [class*="bcp-"]:hover,.bcp-home [class*="bcp-"]:focus{text-decoration:none}
+.bcp-home [hidden]{display:none!important}
+.bcp-home .bcp-t-img{max-width:100%;height:auto;display:block}
+.bcp-home .bcp-t-svg{display:inline-block;overflow:visible}
+.bcp-home .bcp-t-h1,.bcp-home .bcp-t-h2,.bcp-home .bcp-t-h3,.bcp-home .bcp-t-h4,.bcp-home .bcp-t-h5{font-family:var(--f)!important;color:var(--ink);line-height:1.1;letter-spacing:-.025em;font-weight:700;text-wrap:balance}
+.bcp-home .bcp-t-b,.bcp-home .bcp-t-strong{font-weight:700}
+.bcp-home .bcp-t-small{font-size:inherit}
+.bcp-home .bcp-t-a{cursor:pointer}
+.bcp-home .bcp-t-button{cursor:pointer;-webkit-appearance:none;appearance:none}
+.bcp-home .bcp-t-input{-webkit-appearance:none;appearance:none}
+.bcp-home .bcp-t-input[type=checkbox],.bcp-home .bcp-t-input[type=radio]{-webkit-appearance:auto;appearance:auto}
+.bcp-home .bcp-t-ol,.bcp-home .bcp-t-ul{list-style:none}
+.bcp-home [class*="bcp-"]:focus-visible{outline:3px solid var(--sky);outline-offset:3px;border-radius:8px}
+@media (prefers-reduced-motion: reduce){ .bcp-home [class*="bcp-"],.bcp-home [class*="bcp-"]::before,.bcp-home [class*="bcp-"]::after{animation:none!important;transition:none!important} }
+body.admin-bar .bcp-home .bcp-header{top:32px}
+@media (max-width:782px){ body.admin-bar .bcp-home .bcp-header{top:46px} }
+.bcp-home .bcp-ic{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.bcp-home .bcp-wrap{width:100%;max-width:calc(var(--wrap) + var(--gutter)*2);margin-inline:auto;padding-inline:var(--gutter)}
+.bcp-home .bcp-sec{padding-block:clamp(72px,9vw,128px)}
+.bcp-home .bcp-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--sky)}
+.bcp-home .bcp-eyebrow::before{content:"";width:18px;height:2px;border-radius:2px;background:currentColor}
+.bcp-home .bcp-h2{font-size:clamp(32px,4.4vw,52px);font-weight:800;letter-spacing:-.035em}
+.bcp-home .bcp-lead{font-size:clamp(17px,1.4vw,19px);color:var(--text);max-width:58ch}
+.bcp-home .bcp-head{display:grid;gap:18px;margin-bottom:clamp(40px,5vw,64px)}
+.bcp-home .bcp-head.bcp-split{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);align-items:end;gap:28px 64px}
+.bcp-home .bcp-head.bcp-split .bcp-lead{justify-self:end}
+.bcp-home .bcp-head.bcp-center{text-align:center;justify-items:center;max-width:760px;margin-inline:auto}
+@media (max-width:860px){.bcp-home .bcp-head.bcp-split{grid-template-columns:minmax(0,1fr)}
+.bcp-home .bcp-head.bcp-split .bcp-lead{justify-self:start}}
+.bcp-home .bcp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 26px;border-radius:999px;border:1.5px solid transparent;font:700 15.5px/1 var(--f);text-decoration:none;cursor:pointer;transition:background .2s,transform .2s,box-shadow .2s,border-color .2s,color .2s;white-space:nowrap}
+.bcp-home .bcp-btn .bcp-ic{width:18px;height:18px;transition:transform .2s}
+.bcp-home .bcp-btn:hover .bcp-ic.bcp-arrow{transform:translateX(3px)}
+.bcp-home .bcp-btn-sky{background:var(--sky);color:#fff;box-shadow:0 10px 24px -10px rgb(0 160 220 / .8),inset 0 1px 0 rgb(255 255 255 / .2)}
+.bcp-home .bcp-btn-sky:hover{background:var(--sky-hover);transform:translateY(-1px)}
+.bcp-home .bcp-btn-glass{background:rgb(255 255 255 / .08);color:#fff;border-color:rgb(255 255 255 / .2);backdrop-filter:blur(8px)}
+.bcp-home .bcp-btn-glass:hover{background:rgb(255 255 255 / .14);border-color:rgb(255 255 255 / .35)}
+.bcp-home .bcp-btn-dark{background:var(--ink);color:#fff}
+.bcp-home .bcp-btn-dark:hover{background:var(--navy-700);transform:translateY(-1px)}
+.bcp-home .bcp-btn-outline{border-color:var(--line);color:var(--ink);background:#fff}
+.bcp-home .bcp-btn-outline:hover{border-color:var(--ink)}
+.bcp-home .bcp-btn-white{background:#fff;color:var(--ink)}
+.bcp-home .bcp-btn-white:hover{transform:translateY(-1px);box-shadow:var(--sh)}
+.bcp-home .bcp-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--ink);text-decoration:none;font-size:15px}
+.bcp-home .bcp-link .bcp-ic{width:16px;height:16px;color:var(--sky);transition:transform .2s}
+.bcp-home .bcp-link:hover .bcp-ic{transform:translateX(4px)}
+.bcp-home .bcp-header{position:fixed;top:0;left:0;right:0;z-index:60;padding-top:env(safe-area-inset-top,0px);transition:background .3s,box-shadow .3s,border-color .3s;border-bottom:1px solid transparent}
+.bcp-home .bcp-header .bcp-wrap{display:flex;align-items:center;gap:20px;height:84px;transition:height .3s}
+.bcp-home .bcp-logo{flex:none;display:block;height:48px}
+.bcp-home .bcp-logo .bcp-t-img{height:48px;width:auto}
+.bcp-home .bcp-logo .bcp-lg-d{display:none}
+.bcp-home .bcp-nav{display:flex;gap:2px;margin-left:auto}
+.bcp-home .bcp-nav .bcp-t-a{padding:10px 14px;border-radius:999px;color:var(--on-dark);text-decoration:none;font-weight:600;font-size:15px;opacity:.88;transition:background .2s,opacity .2s,color .2s;white-space:nowrap}
+.bcp-home .bcp-nav .bcp-t-a:hover{opacity:1;background:rgb(255 255 255 / .08)}
+.bcp-home .bcp-h-cta{display:flex;align-items:center;gap:14px;margin-left:12px}
+.bcp-home .bcp-h-phone{display:inline-flex;align-items:center;gap:8px;color:var(--on-dark);text-decoration:none;font-weight:700;font-size:15px;white-space:nowrap}
+.bcp-home .bcp-h-phone .bcp-ic{width:17px;height:17px;color:var(--sky-300)}
+.bcp-home .bcp-h-cta .bcp-btn{min-height:46px;padding:0 20px;font-size:14.5px}
+.bcp-home .bcp-menu-btn{display:none;margin-left:auto;width:46px;height:46px;border-radius:50%;border:1px solid rgb(255 255 255 / .25);background:rgb(255 255 255 / .06);color:#fff;align-items:center;justify-content:center;cursor:pointer}
+.bcp-home .bcp-header.bcp-solid{background:rgb(255 255 255 / .92);backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-color:var(--line)}
+.bcp-home .bcp-header.bcp-solid .bcp-wrap{height:72px}
+.bcp-home .bcp-header.bcp-solid .bcp-logo .bcp-lg-l{display:none}
+.bcp-home .bcp-header.bcp-solid .bcp-logo .bcp-lg-d{display:block}
+.bcp-home .bcp-header.bcp-solid .bcp-nav .bcp-t-a,.bcp-home .bcp-header.bcp-solid .bcp-h-phone{color:var(--ink)}
+.bcp-home .bcp-header.bcp-solid .bcp-nav .bcp-t-a:hover{background:var(--bg-2)}
+.bcp-home .bcp-header.bcp-solid .bcp-h-phone .bcp-ic{color:var(--sky)}
+.bcp-home .bcp-header.bcp-solid .bcp-menu-btn{border-color:var(--line);background:#fff;color:var(--ink)}
+@media (max-width:1100px){.bcp-home .bcp-h-phone{display:none}}
+@media (max-width:940px){.bcp-home .bcp-nav,.bcp-home .bcp-h-cta{display:none}
+.bcp-home .bcp-menu-btn{display:inline-flex}
+.bcp-home .bcp-logo,.bcp-home .bcp-logo .bcp-t-img{height:42px}}
+.bcp-home .bcp-drawer{position:fixed;inset:0;z-index:70;background:var(--navy-950);color:#fff;display:flex;flex-direction:column;padding:calc(env(safe-area-inset-top,0px) + 18px) 20px calc(env(safe-area-inset-bottom,0px) + 24px);transform:translateY(-100%);transition:transform .45s cubic-bezier(.7,0,.2,1);visibility:hidden}
+.bcp-home .bcp-drawer.bcp-open{transform:none;visibility:visible}
+.bcp-home .bcp-drawer-top{display:flex;justify-content:space-between;align-items:center}
+.bcp-home .bcp-drawer-top .bcp-t-img{height:42px;width:auto}
+.bcp-home .bcp-drawer .bcp-t-nav{display:grid;margin-top:36px}
+.bcp-home .bcp-drawer .bcp-t-nav .bcp-t-a{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid var(--dark-line);color:#fff;text-decoration:none;font-size:24px;font-weight:700;letter-spacing:-.02em}
+.bcp-home .bcp-drawer .bcp-t-nav .bcp-t-a .bcp-ic{color:var(--sky-300)}
+.bcp-home .bcp-drawer .bcp-bottom{margin-top:auto;display:grid;gap:12px}
+.bcp-home .bcp-drawer .bcp-bottom .bcp-btn{width:100%}
+.bcp-home .bcp-drawer .bcp-meta{color:var(--on-dark-2);font-size:14px;text-align:center;margin-top:6px}
+.bcp-home .bcp-hero{position:relative;background:var(--navy-950);color:var(--on-dark-2);overflow:hidden;padding-top:calc(84px + env(safe-area-inset-top,0px))}
+.bcp-home .bcp-hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(60% 70% at 85% 30%,rgb(0 160 220 / .32),transparent 60%),
+  radial-gradient(40% 50% at 10% 100%,rgb(0 160 220 / .14),transparent 70%),
+  linear-gradient(180deg,var(--navy-950),var(--navy-900));pointer-events:none}
+.bcp-home .bcp-hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgb(255 255 255 / .035) 1px,transparent 1px),linear-gradient(90deg,rgb(255 255 255 / .035) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(70% 60% at 60% 40%,#000,transparent);-webkit-mask-image:radial-gradient(70% 60% at 60% 40%,#000,transparent);pointer-events:none}
+.bcp-home .bcp-hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:clamp(40px,5vw,72px);align-items:center;padding-block:clamp(48px,6vw,88px) clamp(56px,6vw,80px)}
+.bcp-home .bcp-hero-copy{display:grid;gap:26px;min-width:0}
+.bcp-home .bcp-chip{justify-self:start;display:inline-flex;align-items:center;gap:10px;padding:7px 14px 7px 8px;border-radius:999px;background:rgb(255 255 255 / .06);border:1px solid rgb(255 255 255 / .12);color:#E6EEFB;font-size:13.5px;font-weight:600}
+.bcp-home .bcp-chip .bcp-t-b{display:inline-grid;place-items:center;padding:3px 9px;border-radius:999px;background:var(--sky);color:#fff;font-size:11.5px;letter-spacing:.04em}
+.bcp-home .bcp-hero .bcp-t-h1{color:#fff;font-size:clamp(42px,5.6vw,74px);font-weight:800;letter-spacing:-.045em;line-height:1.02}
+.bcp-home .bcp-hero .bcp-t-h1 .bcp-t-em{font-style:normal;background:linear-gradient(92deg,#5CC6EE 0%,#00A0DC 60%,#7FD6F5 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.bcp-home .bcp-hero .bcp-lead{color:var(--on-dark-2);font-size:clamp(17px,1.45vw,19.5px)}
+.bcp-home .bcp-hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.bcp-home .bcp-proof{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding-top:6px}
+.bcp-home .bcp-faces{display:flex}
+.bcp-home .bcp-faces .bcp-t-img{width:40px;height:40px;border-radius:50%;border:2.5px solid var(--navy-950);object-fit:cover;margin-left:-10px}
+.bcp-home .bcp-faces .bcp-t-img:first-child{margin-left:0}
+.bcp-home .bcp-proof-text{display:grid;gap:3px;font-size:14px;color:var(--on-dark-2)}
+.bcp-home .bcp-proof-text .bcp-t-strong{color:#fff;font-weight:700}
+.bcp-home .bcp-stars{display:inline-flex;gap:2px;vertical-align:middle}
+.bcp-home .bcp-stars .bcp-t-i{display:grid;place-items:center;width:18px;height:18px;background:var(--tp)}
+.bcp-home .bcp-stars .bcp-t-svg{width:12px;height:12px;fill:#fff}
+.bcp-home .bcp-hero-visual{position:relative;min-width:0;padding:28px 0 36px 28px}
+.bcp-home .bcp-hero-photo{position:relative;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:4/4.3;box-shadow:var(--sh-lg);border:1px solid rgb(255 255 255 / .08)}
+.bcp-home .bcp-hero-photo .bcp-t-img{width:100%;height:100%;object-fit:cover;object-position:52% 60%}
+.bcp-home .bcp-hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgb(4 14 34 / .45))}
+.bcp-home .bcp-fcard{position:absolute;z-index:2;background:rgb(255 255 255 / .96);color:var(--ink);border-radius:18px;box-shadow:var(--sh-lg);padding:16px 18px;backdrop-filter:blur(10px);animation:bcp-float 7s ease-in-out infinite}
+.bcp-home .bcp-fcard .bcp-t-small{display:block;color:var(--muted);font-size:12.5px;font-weight:600}
+.bcp-home .bcp-fc-pay{top:0;left:-8px;display:flex;align-items:center;gap:14px;min-width:250px}
+.bcp-home .bcp-fc-pay .bcp-tick{display:grid;place-items:center;width:44px;height:44px;border-radius:14px;background:var(--green-50);color:var(--green)}
+.bcp-home .bcp-fc-pay .bcp-tick .bcp-ic{width:22px;height:22px;stroke-width:2.6}
+.bcp-home .bcp-fc-pay .bcp-t-b{display:block;font-size:20px;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.bcp-home .bcp-fc-settle{right:-14px;bottom:0;width:270px;animation-delay:-3.5s}
+.bcp-home .bcp-fc-settle .bcp-row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.bcp-home .bcp-fc-settle .bcp-t-b{display:block;font-size:24px;letter-spacing:-.03em;margin-top:2px;font-variant-numeric:tabular-nums}
+.bcp-home .bcp-fc-settle .bcp-pill{font-size:11.5px;font-weight:700;color:var(--green);background:var(--green-50);padding:4px 8px;border-radius:999px}
+.bcp-home .bcp-spark{display:flex;align-items:flex-end;gap:5px;height:44px;margin-top:12px}
+.bcp-home .bcp-spark .bcp-t-i{flex:1;border-radius:4px 4px 2px 2px;background:var(--sky-100)}
+.bcp-home .bcp-spark .bcp-t-i:last-child{background:var(--sky)}
+.bcp-home .bcp-fc-support{left:-30px;bottom:110px;display:flex;align-items:center;gap:10px;padding:10px 14px 10px 10px;border-radius:999px;animation-delay:-1.8s}
+.bcp-home .bcp-fc-support .bcp-t-img{width:34px;height:34px;border-radius:50%;object-fit:cover}
+.bcp-home .bcp-fc-support .bcp-t-b{font-size:13.5px;display:block;line-height:1.2}
+.bcp-home .bcp-fc-support .bcp-t-small{display:flex;align-items:center;gap:6px;font-size:12px}
+.bcp-home .bcp-fc-support .bcp-t-small::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px var(--green-50)}
+@keyframes bcp-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.bcp-home .bcp-logos{position:relative;z-index:1;border-top:1px solid var(--dark-line)}
+.bcp-home .bcp-logos .bcp-wrap{display:flex;align-items:center;justify-content:space-between;gap:20px 40px;flex-wrap:wrap;padding-block:26px}
+.bcp-home .bcp-logos .bcp-t-span{font-size:13.5px;color:var(--on-dark-3);font-weight:600}
+.bcp-home .bcp-logo-row{display:flex;align-items:center;gap:clamp(18px,3vw,40px);flex-wrap:wrap}
+.bcp-home .bcp-logo-row .bcp-t-svg{height:26px;width:auto;fill:#fff;opacity:.72;transition:opacity .2s}
+.bcp-home .bcp-logo-row .bcp-t-svg.bcp-w{height:36px}
+.bcp-home .bcp-logo-row .bcp-t-svg:hover{opacity:1}
+@media (max-width:980px){.bcp-home .bcp-hero-grid{grid-template-columns:minmax(0,1fr)}
+.bcp-home .bcp-hero-visual{padding:24px 8px 30px;max-width:560px;width:100%;justify-self:center}
+.bcp-home .bcp-fc-pay{left:-4px}
+.bcp-home .bcp-fc-settle{right:-4px}
+.bcp-home .bcp-fc-support{left:-4px}}
+@media (max-width:560px){.bcp-home .bcp-hero .bcp-t-h1{font-size:clamp(38px,11vw,46px)}
+.bcp-home .bcp-hero-actions .bcp-btn{flex:1 1 100%}
+.bcp-home .bcp-hero-photo{aspect-ratio:4/4.4}
+.bcp-home .bcp-fc-pay{min-width:0;padding:12px 14px;gap:10px}
+.bcp-home .bcp-fc-pay .bcp-tick{width:36px;height:36px;border-radius:11px}
+.bcp-home .bcp-fc-pay .bcp-t-b{font-size:17px}
+.bcp-home .bcp-fc-settle{width:200px;padding:12px 14px}
+.bcp-home .bcp-fc-settle .bcp-t-b{font-size:19px}
+.bcp-home .bcp-spark{height:32px}
+.bcp-home .bcp-fc-support{display:none}
+.bcp-home .bcp-logo-row{gap:18px 22px}
+.bcp-home .bcp-logo-row .bcp-t-svg{height:20px}
+.bcp-home .bcp-logo-row .bcp-t-svg.bcp-w{height:28px}}
+.bcp-home .bcp-bento{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:20px}
+.bcp-home .bcp-tile{position:relative;display:flex;flex-direction:column;gap:14px;border-radius:var(--r-lg);padding:clamp(24px,3vw,36px);background:var(--bg-2);overflow:hidden;min-width:0;isolation:isolate;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.bcp-home .bcp-tile:hover{transform:translateY(-4px);box-shadow:var(--sh)}
+.bcp-home .bcp-tile .bcp-tag{align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--sky);background:#fff;padding:6px 11px;border-radius:999px;box-shadow:var(--sh-sm)}
+.bcp-home .bcp-tile .bcp-t-h3{font-size:clamp(24px,2.4vw,30px);font-weight:800;letter-spacing:-.03em}
+.bcp-home .bcp-tile .bcp-t-p{max-width:44ch}
+.bcp-home .bcp-t-machines{grid-column:span 7;grid-row:span 2;background:linear-gradient(160deg,#EAF7FD 0%,#F6FBFE 45%,#E1F3FB 100%)}
+.bcp-home .bcp-t-machines .bcp-devices{position:relative;margin-top:auto;height:clamp(300px,32vw,440px);margin-top:12px;display:flex;align-items:flex-end;justify-content:center;gap:clamp(12px,3vw,36px)}
+.bcp-home .bcp-t-machines .bcp-devices::before{content:"";position:absolute;left:10%;right:10%;bottom:-6px;height:30px;border-radius:50%;background:radial-gradient(closest-side,rgb(10 26 58 / .22),transparent)}
+.bcp-home .bcp-t-machines .bcp-devices .bcp-t-img{position:relative;width:auto;max-height:100%;filter:drop-shadow(0 24px 24px rgb(10 26 58 / .2))}
+.bcp-home .bcp-t-machines .bcp-devices .bcp-d1{height:66%;transform:rotate(-6deg)}
+.bcp-home .bcp-t-machines .bcp-devices .bcp-d2{height:100%;z-index:1}
+.bcp-home .bcp-t-machines .bcp-devices .bcp-d3{height:60%;transform:rotate(6deg)}
+.bcp-home .bcp-t-online{grid-column:span 5;background:var(--navy-900);color:var(--on-dark-2)}
+.bcp-home .bcp-t-online .bcp-t-h3{color:#fff}
+.bcp-home .bcp-t-online .bcp-tag{background:rgb(255 255 255 / .08);color:var(--sky-300);box-shadow:none}
+.bcp-home .bcp-t-online .bcp-link{color:#fff}
+.bcp-home .bcp-paylink{margin-top:8px;align-self:stretch;background:#fff;border-radius:16px;padding:16px;color:var(--ink);box-shadow:var(--sh-lg);display:grid;gap:12px}
+.bcp-home .bcp-paylink .bcp-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.bcp-home .bcp-paylink .bcp-merchant{display:flex;align-items:center;gap:10px;font-weight:700;font-size:14px}
+.bcp-home .bcp-paylink .bcp-merchant .bcp-t-i{display:grid;place-items:center;width:32px;height:32px;border-radius:10px;background:var(--sky-50);color:var(--sky);font-style:normal}
+.bcp-home .bcp-paylink .bcp-amt{font-size:26px;font-weight:800;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.bcp-home .bcp-paylink .bcp-btns{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.bcp-home .bcp-paylink .bcp-btns .bcp-t-span{display:grid;place-items:center;height:40px;border-radius:10px;font-weight:700;font-size:13.5px}
+.bcp-home .bcp-paylink .bcp-btns .bcp-ap{background:#000;color:#fff}
+.bcp-home .bcp-paylink .bcp-btns .bcp-cd{background:var(--sky);color:#fff}
+.bcp-home .bcp-paylink .bcp-meta{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+.bcp-home .bcp-t-pos{grid-column:span 5;background:#fff;border:1px solid var(--line)}
+.bcp-home .bcp-t-pos{min-height:420px}
+.bcp-home .bcp-t-pos .bcp-txt{max-width:50%;display:grid;gap:14px;position:relative;z-index:1}
+.bcp-home .bcp-t-pos .bcp-pos-img{position:absolute;right:-8px;bottom:-10px;width:min(52%,260px);filter:drop-shadow(0 24px 24px rgb(10 26 58 / .18))}
+@media (max-width:520px){.bcp-home .bcp-t-pos{min-height:0}
+.bcp-home .bcp-t-pos .bcp-txt{max-width:none}
+.bcp-home .bcp-t-pos .bcp-pos-img{position:static;align-self:center;width:min(78%,260px);margin:8px auto -36px}}
+.bcp-home .bcp-t-phone{grid-column:span 6;padding:0;background:var(--ink);min-height:340px;color:#fff}
+.bcp-home .bcp-t-phone .bcp-t-img.bcp-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .8s}
+.bcp-home .bcp-t-phone:hover .bcp-t-img.bcp-bg{transform:scale(1.04)}
+.bcp-home .bcp-t-phone::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgb(4 14 34 / .9) 0%,rgb(4 14 34 / .55) 55%,rgb(4 14 34 / .1))}
+.bcp-home .bcp-t-phone .bcp-inner{display:flex;flex-direction:column;gap:14px;padding:clamp(24px,3vw,36px);height:100%;max-width:420px}
+.bcp-home .bcp-t-phone .bcp-t-h3{color:#fff}
+.bcp-home .bcp-t-phone .bcp-t-p{color:#D5DEEE}
+.bcp-home .bcp-t-phone .bcp-link{color:#fff;margin-top:auto}
+@media (max-width:640px){.bcp-home .bcp-t-phone::after{background:linear-gradient(180deg,rgb(4 14 34 / .88) 0%,rgb(4 14 34 / .6) 60%,rgb(4 14 34 / .8))}}
+.bcp-home .bcp-t-phone .bcp-tag{background:rgb(255 255 255 / .12);color:#fff;box-shadow:none;backdrop-filter:blur(6px)}
+.bcp-home .bcp-t-funding{grid-column:span 6;background:linear-gradient(150deg,#0C2149,#071736);color:var(--on-dark-2)}
+.bcp-home .bcp-t-funding .bcp-t-h3{color:#fff}
+.bcp-home .bcp-t-funding .bcp-tag{background:rgb(255 255 255 / .08);color:var(--sky-300);box-shadow:none}
+.bcp-home .bcp-t-funding .bcp-link{color:#fff;margin-top:auto}
+.bcp-home .bcp-bars{display:flex;align-items:flex-end;gap:6px;height:90px;margin-block:4px 6px}
+.bcp-home .bcp-bars .bcp-t-i{flex:1;border-radius:6px 6px 2px 2px;background:rgb(255 255 255 / .12);position:relative;overflow:hidden}
+.bcp-home .bcp-bars .bcp-t-i::after{content:"";position:absolute;left:0;right:0;top:0;height:16%;background:var(--sky)}
+@media (max-width:1000px){.bcp-home .bcp-t-machines,.bcp-home .bcp-t-online,.bcp-home .bcp-t-pos,.bcp-home .bcp-t-phone,.bcp-home .bcp-t-funding{grid-column:span 12}
+.bcp-home .bcp-t-machines{grid-row:auto}
+.bcp-home .bcp-t-machines .bcp-devices{flex:none;height:clamp(240px,62vw,420px);min-height:0}
+.bcp-home .bcp-t-machines .bcp-devices .bcp-t-img{max-height:100%}}
+.bcp-home .bcp-band-dark{background:var(--navy-950);color:var(--on-dark-2);position:relative;overflow:hidden}
+.bcp-home .bcp-band-dark::before{content:"";position:absolute;inset:0;background:radial-gradient(50% 60% at 75% 50%,rgb(0 160 220 / .2),transparent 70%);pointer-events:none}
+.bcp-home .bcp-band-dark .bcp-t-h2,.bcp-home .bcp-band-dark .bcp-t-h3{color:#fff}
+.bcp-home .bcp-band-dark .bcp-lead{color:var(--on-dark-2)}
+.bcp-home .bcp-band-dark .bcp-eyebrow{color:var(--sky-300)}
+.bcp-home .bcp-show{position:relative;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,5vw,72px);align-items:center}
+.bcp-home .bcp-mtabs{display:grid;gap:10px;margin-top:36px}
+.bcp-home .bcp-mtab{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:16px;align-items:center;text-align:left;padding:18px 20px;border-radius:var(--r);border:1px solid var(--dark-line);background:transparent;color:var(--on-dark-2);cursor:pointer;transition:background .25s,border-color .25s}
+.bcp-home .bcp-mtab:hover{background:rgb(255 255 255 / .04)}
+.bcp-home .bcp-mtab .bcp-n{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:rgb(255 255 255 / .06);color:var(--sky-300)}
+.bcp-home .bcp-mtab .bcp-t-b{display:block;color:#fff;font-size:17px;font-weight:700}
+.bcp-home .bcp-mtab .bcp-t-span{font-size:14px}
+.bcp-home .bcp-mtab .bcp-ic.bcp-chev{color:var(--on-dark-3);transition:transform .25s}
+.bcp-home .bcp-mtab[aria-selected="true"]{background:rgb(0 160 220 / .1);border-color:rgb(0 160 220 / .55)}
+.bcp-home .bcp-mtab[aria-selected="true"] .bcp-n{background:var(--sky);color:#fff}
+.bcp-home .bcp-mtab[aria-selected="true"] .bcp-ic.bcp-chev{color:var(--sky-300);transform:translateX(3px)}
+.bcp-home .bcp-stage{position:relative;border-radius:32px;background:radial-gradient(55% 50% at 50% 55%,rgb(0 160 220 / .38) 0%,rgb(0 160 220 / .08) 55%,transparent 75%),linear-gradient(180deg,#0C2149,#071736);border:1px solid var(--dark-line);min-height:540px;display:grid;grid-template-rows:1fr auto;overflow:hidden;box-shadow:var(--sh-lg)}
+.bcp-home .bcp-stage::before{content:"";position:absolute;left:50%;top:55%;width:70%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;border:1px solid rgb(255 255 255 / .07);box-shadow:0 0 0 60px rgb(255 255 255 / .02),0 0 0 120px rgb(255 255 255 / .015)}
+.bcp-home .bcp-stage .bcp-shot{display:grid;place-items:center;padding:40px 24px 8px;min-height:0}
+.bcp-home .bcp-stage .bcp-shot{position:relative}
+.bcp-home .bcp-stage .bcp-shot .bcp-t-img{height:380px;width:auto;filter:drop-shadow(0 40px 50px rgb(0 0 0 / .5));transition:opacity .35s,transform .45s}
+.bcp-home .bcp-stage .bcp-shot .bcp-t-img.bcp-swap{opacity:0;transform:translateY(12px) scale(.98)}
+.bcp-home .bcp-stage .bcp-label{position:absolute;z-index:1;top:22px;left:22px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:rgb(255 255 255 / .1);border:1px solid rgb(255 255 255 / .14);padding:7px 12px;border-radius:999px;backdrop-filter:blur(6px)}
+.bcp-home .bcp-specs{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--dark-line);border-top:1px solid var(--dark-line)}
+.bcp-home .bcp-specs .bcp-t-div{background:rgb(7 23 54 / .92);padding:18px 20px;display:grid;gap:2px}
+.bcp-home .bcp-specs .bcp-t-small{color:var(--on-dark-3);font-size:12px;font-weight:600}
+.bcp-home .bcp-specs .bcp-t-b{color:#fff;font-size:14.5px}
+.bcp-home .bcp-show-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+@media (max-width:980px){.bcp-home .bcp-show{grid-template-columns:minmax(0,1fr)}
+.bcp-home .bcp-mtabs{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:28px}
+.bcp-home .bcp-mtab{grid-template-columns:minmax(0,1fr);padding:12px;gap:8px}
+.bcp-home .bcp-mtab .bcp-t-span,.bcp-home .bcp-mtab .bcp-ic.bcp-chev{display:none}
+.bcp-home .bcp-mtab .bcp-t-b{font-size:13.5px;line-height:1.25}
+.bcp-home .bcp-stage .bcp-shot{padding-top:64px}
+.bcp-home .bcp-mtab > .bcp-t-div{min-width:0}
+.bcp-home .bcp-stage{min-height:440px}}
+@media (max-width:520px){.bcp-home .bcp-mtab .bcp-n{width:36px;height:36px}
+.bcp-home .bcp-stage{min-height:400px;border-radius:24px}
+.bcp-home .bcp-stage .bcp-shot .bcp-t-img{height:270px}
+.bcp-home .bcp-show-cta .bcp-btn{flex:1 1 100%}
+.bcp-home .bcp-specs{grid-template-columns:minmax(0,1fr)}
+.bcp-home .bcp-specs .bcp-t-div{display:flex;justify-content:space-between;align-items:center}}
+.bcp-home .bcp-sectors{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.bcp-home .bcp-sector{position:relative;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:3/3.6;color:#fff;text-decoration:none;isolation:isolate;display:flex;flex-direction:column;justify-content:flex-end;padding:22px}
+.bcp-home .bcp-sector .bcp-t-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.bcp-home .bcp-sector::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgb(4 14 34 / 0) 40%,rgb(4 14 34 / .85))}
+.bcp-home .bcp-sector:hover .bcp-t-img{transform:scale(1.06)}
+.bcp-home .bcp-sector .bcp-t-b{font-size:21px;font-weight:700;letter-spacing:-.02em}
+.bcp-home .bcp-sector .bcp-t-span{font-size:14px;color:#D9E2F1;margin-top:4px}
+.bcp-home .bcp-sector .bcp-go{position:absolute;top:18px;right:18px;display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:rgb(255 255 255 / .16);backdrop-filter:blur(8px);transition:background .25s,transform .25s}
+.bcp-home .bcp-sector:hover .bcp-go{background:var(--sky);transform:rotate(-45deg)}
+.bcp-home .bcp-sector .bcp-go .bcp-ic{width:18px;height:18px}
+.bcp-home .bcp-sector.bcp-big{grid-column:span 2;aspect-ratio:auto}
+@media (max-width:980px){.bcp-home .bcp-sectors{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.bcp-home .bcp-sectors{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin-inline:calc(-1 * var(--gutter));padding-inline:var(--gutter);padding-bottom:8px;scrollbar-width:none}
+.bcp-home .bcp-sectors::-webkit-scrollbar{display:none}
+.bcp-home .bcp-sector,.bcp-home .bcp-sector.bcp-big{flex:0 0 76%;aspect-ratio:3/3.8;scroll-snap-align:start}}
+.bcp-home .bcp-swipe-hint{display:none;margin-top:14px;font-size:13px;color:var(--muted);font-weight:600}
+@media (max-width:640px){.bcp-home .bcp-swipe-hint{display:flex;align-items:center;gap:6px}}
+.bcp-home .bcp-story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,96px);align-items:center}
+.bcp-home .bcp-timeline{display:grid;gap:0;margin-top:36px;position:relative}
+.bcp-home .bcp-tl{display:grid;grid-template-columns:52px minmax(0,1fr);gap:18px;padding-bottom:26px;position:relative}
+.bcp-home .bcp-tl:not(:last-child)::before{content:"";position:absolute;left:25px;top:52px;bottom:4px;width:2px;background:linear-gradient(var(--sky-100),var(--line))}
+.bcp-home .bcp-tl .bcp-dot{display:grid;place-items:center;width:52px;height:52px;border-radius:16px;background:var(--sky-50);color:var(--sky)}
+.bcp-home .bcp-tl:last-child .bcp-dot{background:var(--green-50);color:var(--green)}
+.bcp-home .bcp-tl .bcp-t-time{font-family:var(--f-mono);font-size:12.5px;color:var(--muted);font-weight:600}
+.bcp-home .bcp-tl .bcp-t-h4{font-size:18px;margin-top:2px}
+.bcp-home .bcp-tl .bcp-t-p{font-size:15px;margin-top:4px}
+.bcp-home .bcp-app{position:relative;justify-self:center;width:min(100%,360px)}
+.bcp-home .bcp-phone{position:relative;border-radius:46px;background:#0B1324;padding:12px;box-shadow:var(--sh-lg),inset 0 0 0 2px #2A3550}
+.bcp-home .bcp-screen{border-radius:36px;background:var(--bg-2);overflow:hidden}
+.bcp-home .bcp-notch{position:absolute;top:22px;left:50%;transform:translateX(-50%);width:96px;height:26px;border-radius:20px;background:#0B1324;z-index:2}
+.bcp-home .bcp-app-head{background:linear-gradient(160deg,var(--navy-800),var(--navy-950));color:#fff;padding:56px 22px 26px}
+.bcp-home .bcp-app-head .bcp-t-small{color:var(--on-dark-2);font-weight:600;font-size:12.5px}
+.bcp-home .bcp-app-head .bcp-bal{font-size:36px;font-weight:800;letter-spacing:-.04em;margin-top:2px;font-variant-numeric:tabular-nums}
+.bcp-home .bcp-app-head .bcp-sub{display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:5px 10px;border-radius:999px;background:rgb(20 178 106 / .18);color:#6EE7B0;font-size:12px;font-weight:700}
+.bcp-home .bcp-app-chart{display:flex;align-items:flex-end;gap:6px;height:64px;margin-top:20px}
+.bcp-home .bcp-app-chart .bcp-t-i{flex:1;border-radius:5px 5px 2px 2px;background:rgb(255 255 255 / .16)}
+.bcp-home .bcp-app-chart .bcp-t-i.bcp-on{background:var(--sky)}
+.bcp-home .bcp-tx{padding:14px 16px 20px;display:grid;gap:8px}
+.bcp-home .bcp-tx .bcp-t-h5{margin:4px 6px 4px;font-size:12.5px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.bcp-home .bcp-tx-row{display:grid;grid-template-columns:38px minmax(0,1fr) auto;gap:12px;align-items:center;background:#fff;border-radius:14px;padding:10px 12px;box-shadow:var(--sh-sm)}
+.bcp-home .bcp-tx-row .bcp-i{display:grid;place-items:center;width:38px;height:38px;border-radius:11px;background:var(--sky-50);color:var(--sky)}
+.bcp-home .bcp-tx-row .bcp-i .bcp-ic{width:18px;height:18px}
+.bcp-home .bcp-tx-row .bcp-t-b{display:block;font-size:14px;color:var(--ink)}
+.bcp-home .bcp-tx-row .bcp-t-small{font-size:12px;color:var(--muted)}
+.bcp-home .bcp-tx-row .bcp-v{font-weight:800;color:var(--ink);font-size:14.5px;font-variant-numeric:tabular-nums}
+.bcp-home .bcp-app-badge{position:absolute;left:-56px;top:47%;background:#fff;border-radius:16px;box-shadow:var(--sh-lg);padding:12px 14px;display:flex;gap:10px;align-items:center;animation:bcp-float 7s ease-in-out infinite}
+.bcp-home .bcp-app-badge .bcp-ic{color:var(--green)}
+.bcp-home .bcp-app-badge .bcp-t-b{display:block;font-size:13.5px;color:var(--ink)}
+.bcp-home .bcp-app-badge .bcp-t-small{font-size:12px;color:var(--muted)}
+@media (max-width:900px){.bcp-home .bcp-story{grid-template-columns:minmax(0,1fr)}
+.bcp-home .bcp-app-badge{left:-8px}}
+.bcp-home .bcp-why{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:stretch}
+.bcp-home .bcp-team{position:relative;border-radius:var(--r-lg);overflow:hidden;min-height:540px;isolation:isolate;display:flex;align-items:flex-end;padding:26px}
+.bcp-home .bcp-team .bcp-t-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;z-index:-1}
+.bcp-home .bcp-team-card{background:rgb(255 255 255 / .95);backdrop-filter:blur(10px);border-radius:20px;padding:20px 22px;box-shadow:var(--sh-lg);display:grid;gap:10px;max-width:360px}
+.bcp-home .bcp-team-card .bcp-on{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;color:var(--green)}
+.bcp-home .bcp-team-card .bcp-on::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px var(--green-50)}
+.bcp-home .bcp-team-card .bcp-t-b{font-size:18px;color:var(--ink);letter-spacing:-.02em}
+.bcp-home .bcp-team-card .bcp-num{font-family:var(--f-mono);font-weight:600;color:var(--ink);font-size:20px;user-select:all}
+.bcp-home .bcp-feats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-content:center}
+.bcp-home .bcp-feat{display:grid;gap:10px;align-content:start;padding:24px;border-radius:var(--r);border:1px solid var(--line);background:#fff;transition:border-color .25s,box-shadow .25s}
+.bcp-home .bcp-feat:hover{border-color:var(--sky-100);box-shadow:var(--sh)}
+.bcp-home .bcp-feat .bcp-fi{display:grid;place-items:center;width:46px;height:46px;border-radius:14px;background:var(--sky-50);color:var(--sky)}
+.bcp-home .bcp-feat .bcp-t-h3{font-size:17.5px}
+.bcp-home .bcp-feat .bcp-t-p{font-size:14.5px}
+@media (max-width:980px){.bcp-home .bcp-why{grid-template-columns:minmax(0,1fr)}
+.bcp-home .bcp-team{min-height:440px}}
+@media (max-width:520px){.bcp-home .bcp-feats{grid-template-columns:minmax(0,1fr)}
+.bcp-home .bcp-feat{grid-template-columns:auto minmax(0,1fr);column-gap:14px;padding:18px}
+.bcp-home .bcp-feat .bcp-fi{grid-row:span 2}
+.bcp-home .bcp-team{min-height:400px;padding:16px}}
+.bcp-home .bcp-calc{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);border-radius:32px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:var(--sh)}
+.bcp-home .bcp-calc-in{padding:clamp(24px,4vw,48px);display:grid;grid-template-columns:minmax(0,1fr);gap:30px;align-content:start}
+.bcp-home .bcp-tip{display:flex;gap:12px;align-items:flex-start;padding:16px 18px;border-radius:16px;background:var(--bg-2);font-size:14.5px}
+.bcp-home .bcp-tip .bcp-ic{color:var(--sky);margin-top:2px}
+.bcp-home .bcp-tip .bcp-t-b{color:var(--ink)}
+.bcp-home .bcp-calc-in .bcp-t-h3{font-size:24px}
+.bcp-home .bcp-ctl{display:grid;gap:12px}
+.bcp-home .bcp-ctl-top{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.bcp-home .bcp-ctl-top .bcp-t-label{font-weight:600;color:var(--ink);font-size:15px}
+.bcp-home .bcp-ctl-top .bcp-t-output{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.bcp-home .bcp-t-input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:8px;border-radius:8px;background:linear-gradient(90deg,var(--sky) var(--p,50%),var(--line-2) var(--p,50%));outline-offset:6px;cursor:pointer}
+.bcp-home .bcp-t-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:#fff;border:2px solid var(--sky);box-shadow:0 4px 12px rgb(0 160 220 / .35)}
+.bcp-home .bcp-t-input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:#fff;border:2px solid var(--sky);box-shadow:0 4px 12px rgb(0 160 220 / .35)}
+.bcp-home .bcp-ticks{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);font-weight:600}
+.bcp-home .bcp-calc-out{background:var(--navy-950);color:var(--on-dark-2);padding:clamp(24px,4vw,48px);display:grid;grid-template-columns:minmax(0,1fr);gap:22px;align-content:start;position:relative;overflow:hidden}
+.bcp-home .bcp-calc-out::before{content:"";position:absolute;right:-30%;top:-30%;width:80%;aspect-ratio:1;background:radial-gradient(closest-side,rgb(0 160 220 / .35),transparent)}
+.bcp-home .bcp-calc-out > [class*="bcp-"]{position:relative}
+.bcp-home .bcp-calc-out .bcp-t-small{font-size:13px;font-weight:600;color:var(--on-dark-3)}
+.bcp-home .bcp-big-num{font-size:clamp(52px,6vw,76px);font-weight:800;color:#fff;letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums}
+.bcp-home .bcp-kv{display:grid;gap:0;border-top:1px solid var(--dark-line)}
+.bcp-home .bcp-kv .bcp-t-div{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--dark-line);font-size:15px}
+.bcp-home .bcp-kv .bcp-t-b{color:#fff;font-variant-numeric:tabular-nums}
+.bcp-home .bcp-save{padding:16px 18px;border-radius:16px;background:rgb(0 160 220 / .12);border:1px solid rgb(0 160 220 / .3);color:#DDF3FC;font-size:15px}
+.bcp-home .bcp-save .bcp-t-b{color:#fff}
+.bcp-home .bcp-calc-out .bcp-btn{justify-self:stretch}
+.bcp-home .bcp-fine{font-size:12.5px;color:var(--on-dark-3)}
+@media (max-width:900px){.bcp-home .bcp-calc{grid-template-columns:minmax(0,1fr)}}
+.bcp-home .bcp-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;list-style:none;margin:0;padding:0;counter-reset:s}
+.bcp-home .bcp-step{position:relative;padding:32px 28px;border-radius:var(--r-lg);background:#fff;border:1px solid var(--line);display:grid;gap:12px;align-content:start}
+.bcp-home .bcp-step .bcp-n{font-size:15px;font-weight:800;color:var(--sky);display:flex;align-items:center;gap:10px}
+.bcp-home .bcp-step .bcp-n::after{content:"";flex:1;height:1px;background:var(--line)}
+.bcp-home .bcp-step .bcp-t-h3{font-size:21px}
+.bcp-home .bcp-step .bcp-t-p{font-size:15px}
+.bcp-home .bcp-step .bcp-ic.bcp-big{width:30px;height:30px;color:var(--ink);stroke-width:1.6}
+@media (max-width:860px){.bcp-home .bcp-steps{grid-template-columns:minmax(0,1fr)}}
+.bcp-home .bcp-reviews{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.bcp-home .bcp-review{display:flex;flex-direction:column;gap:18px;padding:30px;border-radius:var(--r-lg);background:#fff;border:1px solid var(--line)}
+.bcp-home .bcp-review .bcp-q{font-size:17.5px;line-height:1.55;color:var(--ink);font-weight:500;letter-spacing:-.01em}
+.bcp-home .bcp-review .bcp-q::before{content:"“";display:block;font-size:60px;line-height:.6;color:var(--sky);font-weight:800;margin-bottom:10px}
+.bcp-home .bcp-review .bcp-who{display:flex;align-items:center;gap:12px;margin-top:auto;padding-top:18px;border-top:1px solid var(--line-2)}
+.bcp-home .bcp-review .bcp-av{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--ink);color:#fff;font-weight:700;font-size:15px}
+.bcp-home .bcp-review .bcp-who .bcp-t-b{display:block;color:var(--ink);font-size:15px}
+.bcp-home .bcp-review .bcp-who .bcp-t-small{color:var(--muted);font-size:13px}
+.bcp-home .bcp-review.bcp-feature{background:var(--navy-950);border-color:var(--navy-950)}
+.bcp-home .bcp-review.bcp-feature .bcp-q{color:#fff}
+.bcp-home .bcp-review.bcp-feature .bcp-who{border-color:var(--dark-line)}
+.bcp-home .bcp-review.bcp-feature .bcp-who .bcp-t-b{color:#fff}
+.bcp-home .bcp-review.bcp-feature .bcp-who .bcp-t-small{color:var(--on-dark-3)}
+.bcp-home .bcp-review.bcp-feature .bcp-av{background:var(--sky)}
+.bcp-home .bcp-tp-row{display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;margin-top:36px;color:var(--text);font-size:15px}
+.bcp-home .bcp-tp-row .bcp-tp{display:inline-flex;align-items:center;gap:6px;font-weight:800;color:var(--ink)}
+.bcp-home .bcp-tp-row .bcp-tp .bcp-t-svg{width:22px;height:22px;fill:var(--tp)}
+@media (max-width:980px){.bcp-home .bcp-reviews{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin-inline:calc(-1 * var(--gutter));padding-inline:var(--gutter);padding-bottom:8px;scrollbar-width:none}
+.bcp-home .bcp-reviews::-webkit-scrollbar{display:none}
+.bcp-home .bcp-review{flex:0 0 min(84%,380px);scroll-snap-align:start;padding:24px}}
+.bcp-home .bcp-faq-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(32px,6vw,96px);align-items:start}
+.bcp-home .bcp-contact-card{margin-top:32px;padding:24px;border-radius:var(--r);background:var(--bg-2);display:grid;gap:14px}
+.bcp-home .bcp-contact-card .bcp-t-a{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);font-weight:700}
+.bcp-home .bcp-contact-card .bcp-t-a .bcp-ic{width:40px;height:40px;padding:10px;border-radius:12px;background:#fff;color:var(--sky);box-shadow:var(--sh-sm)}
+.bcp-home .bcp-faq .bcp-t-details{border-bottom:1px solid var(--line)}
+.bcp-home .bcp-faq .bcp-t-details:first-child{border-top:1px solid var(--line)}
+.bcp-home .bcp-faq .bcp-t-summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;cursor:pointer;font-weight:700;color:var(--ink);font-size:18px;letter-spacing:-.01em}
+.bcp-home .bcp-faq .bcp-t-summary::-webkit-details-marker{display:none}
+.bcp-home .bcp-faq .bcp-t-summary .bcp-pm{flex:none;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);transition:background .2s,transform .3s,border-color .2s}
+.bcp-home .bcp-faq .bcp-t-summary .bcp-pm .bcp-ic{width:16px;height:16px}
+.bcp-home .bcp-faq .bcp-t-details[open] .bcp-t-summary .bcp-pm{background:var(--ink);border-color:var(--ink);color:#fff;transform:rotate(45deg)}
+.bcp-home .bcp-faq .bcp-a{padding:0 50px 24px 0;font-size:16px}
+@media (max-width:900px){.bcp-home .bcp-faq-grid{grid-template-columns:minmax(0,1fr)}
+.bcp-home .bcp-faq .bcp-a{padding-right:0}
+.bcp-home .bcp-faq .bcp-t-summary{font-size:16.5px}}
+.bcp-home .bcp-cta{position:relative;border-radius:36px;overflow:hidden;background:var(--navy-950);display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);min-height:440px;isolation:isolate}
+.bcp-home .bcp-cta-copy{padding:clamp(32px,5vw,64px);display:grid;gap:20px;align-content:center;color:var(--on-dark-2)}
+.bcp-home .bcp-cta-copy .bcp-t-h2{color:#fff}
+.bcp-home .bcp-cta-copy .bcp-lead{color:var(--on-dark-2)}
+@media (max-width:560px){.bcp-home .bcp-cta-copy .bcp-row .bcp-btn{flex:1 1 100%}}
+.bcp-home .bcp-cta-copy .bcp-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+.bcp-home .bcp-cta-copy .bcp-t-ul{list-style:none;margin:6px 0 0;padding:0;display:flex;gap:10px 22px;flex-wrap:wrap;font-size:14.5px}
+.bcp-home .bcp-cta-copy .bcp-t-li{display:inline-flex;align-items:center;gap:8px}
+.bcp-home .bcp-cta-copy .bcp-t-li .bcp-ic{width:16px;height:16px;color:var(--sky-300);stroke-width:3}
+.bcp-home .bcp-cta-img{position:relative}
+.bcp-home .bcp-cta-img .bcp-t-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.bcp-home .bcp-cta-img::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,var(--navy-950),rgb(4 14 34 / 0) 40%)}
+.bcp-home .bcp-cta::after{content:"";position:absolute;left:-10%;bottom:-40%;width:60%;aspect-ratio:1;background:radial-gradient(closest-side,rgb(0 160 220 / .3),transparent);z-index:-1}
+@media (max-width:900px){.bcp-home .bcp-cta{grid-template-columns:minmax(0,1fr)}
+.bcp-home .bcp-cta-img{min-height:260px;order:-1}
+.bcp-home .bcp-cta-img::before{background:linear-gradient(0deg,var(--navy-950),rgb(4 14 34 / 0) 50%)}}
+.bcp-home .bcp-footer{background:var(--navy-950);color:var(--on-dark-3);padding-block:80px 32px;font-size:15px;margin-top:clamp(72px,9vw,128px)}
+.bcp-home .bcp-f-top{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:40px}
+.bcp-home .bcp-f-brand .bcp-t-img{height:52px;width:auto}
+.bcp-home .bcp-f-brand .bcp-t-p{margin-top:20px;max-width:36ch;line-height:1.7}
+.bcp-home .bcp-social{display:flex;gap:10px;margin-top:22px}
+.bcp-home .bcp-social .bcp-t-a{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;border:1px solid var(--dark-line);transition:background .2s,border-color .2s}
+.bcp-home .bcp-social .bcp-t-a:hover{background:var(--sky);border-color:var(--sky)}
+.bcp-home .bcp-social .bcp-t-svg{width:16px;height:16px;fill:#fff}
+.bcp-home .bcp-footer .bcp-t-h4{color:#fff;font-size:15px;margin-bottom:18px;letter-spacing:-.01em}
+.bcp-home .bcp-footer .bcp-t-ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.bcp-home .bcp-footer .bcp-t-a{color:var(--on-dark-2);text-decoration:none;transition:color .2s}
+.bcp-home .bcp-footer .bcp-t-a:hover{color:#fff}
+.bcp-home .bcp-f-contact .bcp-t-li{display:flex;gap:10px;align-items:flex-start}
+.bcp-home .bcp-f-contact .bcp-ic{width:17px;height:17px;margin-top:3px;color:var(--sky-300)}
+.bcp-home .bcp-f-bottom{margin-top:56px;padding-top:28px;border-top:1px solid var(--dark-line);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-size:13.5px}
+.bcp-home .bcp-f-bottom .bcp-logo-row .bcp-t-svg{height:20px;opacity:.55}
+.bcp-home .bcp-f-bottom .bcp-logo-row .bcp-t-svg.bcp-w{height:28px}
+.bcp-home .bcp-f-bottom .bcp-tp{display:inline-flex;align-items:center;gap:6px;color:#fff;font-weight:700}
+.bcp-home .bcp-f-bottom .bcp-tp .bcp-t-svg{width:18px;height:18px;fill:var(--tp)}
+@media (max-width:900px){.bcp-home .bcp-f-top{grid-template-columns:repeat(2,minmax(0,1fr))}
+.bcp-home .bcp-f-brand{grid-column:1/-1}}
+@media (max-width:480px){.bcp-home .bcp-f-top{grid-template-columns:minmax(0,1fr)}}
+.bcp-home .bcp-quote{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:16px;background:rgb(4 14 34 / .6);backdrop-filter:blur(6px);opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.bcp-home .bcp-quote.bcp-open{opacity:1;visibility:visible}
+.bcp-home .bcp-q-panel{width:min(100%,560px);max-height:calc(100dvh - 32px);overflow:auto;background:#fff;border-radius:28px;box-shadow:var(--sh-lg);padding:clamp(22px,4vw,36px);display:grid;gap:22px;transform:translateY(16px) scale(.98);transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.bcp-home .bcp-quote.bcp-open .bcp-q-panel{transform:none}
+.bcp-home .bcp-q-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.bcp-home .bcp-q-top .bcp-t-h3{font-size:24px}
+.bcp-home .bcp-q-top .bcp-t-p{font-size:14.5px;margin-top:6px}
+.bcp-home .bcp-q-close{flex:none;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:#fff;display:grid;place-items:center;cursor:pointer;color:var(--ink)}
+.bcp-home .bcp-q-prog{display:flex;gap:6px}
+.bcp-home .bcp-q-prog .bcp-t-i{flex:1;height:5px;border-radius:5px;background:var(--line-2);transition:background .3s}
+.bcp-home .bcp-q-prog .bcp-t-i.bcp-on{background:var(--sky)}
+.bcp-home .bcp-q-step{display:grid;gap:14px;border:0;margin:0;padding:0;min-width:0}
+.bcp-home .bcp-q-step .bcp-t-legend{font-weight:700;color:var(--ink);font-size:17px;padding:0;margin-bottom:14px}
+.bcp-home .bcp-opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.bcp-home .bcp-opt .bcp-t-input{position:absolute;opacity:0;pointer-events:none}
+.bcp-home .bcp-opt{position:relative}
+.bcp-home .bcp-opt .bcp-t-label{display:flex;align-items:center;gap:12px;min-height:58px;padding:12px 14px;border-radius:14px;border:1.5px solid var(--line);cursor:pointer;font-weight:600;color:var(--ink);font-size:15px;transition:border-color .2s,background .2s}
+.bcp-home .bcp-opt .bcp-t-label .bcp-ic{color:var(--sky)}
+.bcp-home .bcp-opt .bcp-t-label:hover{border-color:var(--sky-300)}
+.bcp-home .bcp-opt .bcp-t-input:checked + .bcp-t-label{border-color:var(--sky);background:var(--sky-50);box-shadow:inset 0 0 0 1px var(--sky)}
+.bcp-home .bcp-opt .bcp-t-input:focus-visible + .bcp-t-label{outline:3px solid var(--sky);outline-offset:2px}
+.bcp-home .bcp-field{display:grid;gap:6px}
+.bcp-home .bcp-field .bcp-t-label{font-size:14px;font-weight:600;color:var(--ink)}
+.bcp-home .bcp-field .bcp-t-input{min-height:52px;padding:0 16px;border-radius:14px;border:1.5px solid var(--line);font:500 16px var(--f);color:var(--ink)}
+.bcp-home .bcp-field .bcp-t-input:focus{outline:none;border-color:var(--sky);box-shadow:0 0 0 4px var(--sky-50)}
+.bcp-home .bcp-q-nav{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.bcp-home .bcp-q-back{background:none;border:0;color:var(--muted);font-weight:700;cursor:pointer;padding:10px 4px;font-size:15px}
+.bcp-home .bcp-q-msg{color:#C2410C;font-size:14px;min-height:1px}
+.bcp-home .bcp-q-done{display:grid;gap:12px;justify-items:center;text-align:center;padding:12px 0}
+.bcp-home .bcp-q-done .bcp-t{display:grid;place-items:center;width:72px;height:72px;border-radius:50%;background:var(--green-50);color:var(--green)}
+.bcp-home .bcp-q-done .bcp-t .bcp-ic{width:34px;height:34px;stroke-width:2.6}
+.bcp-home .bcp-q-done .bcp-t-h3{font-size:24px}
+.bcp-home .bcp-q-done .bcp-note{font-size:12.5px;color:var(--muted)}
+@media (max-width:480px){.bcp-home .bcp-opts{grid-template-columns:minmax(0,1fr)}}
+.bcp-home .bcp-mbar{display:none}
+@media (max-width:760px){.bcp-home .bcp-mbar{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:55;display:grid;grid-template-columns:auto 1fr;gap:8px;padding:8px;border-radius:999px;background:rgb(4 14 34 / .92);backdrop-filter:blur(12px);box-shadow:var(--sh-lg);transform:translateY(140%);transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.bcp-home .bcp-mbar.bcp-show{transform:none}
+.bcp-home .bcp-mbar .bcp-btn{min-height:48px}
+.bcp-home .bcp-mbar .bcp-call{width:48px;padding:0;border-radius:50%;background:rgb(255 255 255 / .1);color:#fff}
+.bcp-home .bcp-footer{padding-bottom:110px}}
+@media (max-width:420px){.bcp-home .bcp-btn{white-space:normal;text-align:center;line-height:1.25;padding-block:12px}}
+.bcp-home .bcp-rv{transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.bcp-home.bcp-js .bcp-rv.bcp-pre{opacity:.35;transform:translateY(28px)}
+</style>
+<div class="bcp-home" id="bcp-home">
+<svg class="bcp-t-svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><symbol id="bcp-i-arrow-right" viewbox="0 0 24 24"><path d="M5 12h14"/> <path d="m12 5 7 7-7 7"/></symbol><symbol id="bcp-i-arrow-up-right" viewbox="0 0 24 24"><path d="M7 7h10v10"/> <path d="M7 17 17 7"/></symbol><symbol id="bcp-i-badge-pound-sterling" viewbox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/> <path d="M8 12h4"/> <path d="M10 16V9.5a2.5 2.5 0 0 1 5 0"/> <path d="M8 16h7"/></symbol><symbol id="bcp-i-bar-chart-3" viewbox="0 0 24 24"><path d="M3 3v16a2 2 0 0 0 2 2h16"/> <path d="M18 17V9"/> <path d="M13 17V5"/> <path d="M8 17v-3"/></symbol><symbol id="bcp-i-check" viewbox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol><symbol id="bcp-i-chevron-right" viewbox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol><symbol id="bcp-i-circle-check" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"/> <path d="m16 9-5.5 5.5L8 12"/></symbol><symbol id="bcp-i-cpu" viewbox="0 0 24 24"><path d="M12 20v2"/> <path d="M12 2v2"/> <path d="M17 20v2"/> <path d="M17 2v2"/> <path d="M2 12h2"/> <path d="M2 17h2"/> <path d="M2 7h2"/> <path d="M20 12h2"/> <path d="M20 17h2"/> <path d="M20 7h2"/> <path d="M7 20v2"/> <path d="M7 2v2"/> <rect x="4" y="4" width="16" height="16" rx="2"/> <rect x="8" y="8" width="8" height="8" rx="1"/></symbol><symbol id="bcp-i-credit-card" viewbox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2"/> <line x1="2" x2="22" y1="10" y2="10"/> <path d="M6 14h2"/></symbol><symbol id="bcp-i-file-text" viewbox="0 0 24 24"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/> <path d="M14 2v5a1 1 0 0 0 1 1h5"/> <path d="M10 9H8"/> <path d="M16 13H8"/> <path d="M16 17H8"/></symbol><symbol id="bcp-i-headset" viewbox="0 0 24 24"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/> <path d="M21 16v2a4 4 0 0 1-4 4h-5"/></symbol><symbol id="bcp-i-house" viewbox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/> <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol><symbol id="bcp-i-landmark" viewbox="0 0 24 24"><path d="M10 18v-7"/> <path d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z"/> <path d="M14 18v-7"/> <path d="M18 18v-7"/> <path d="M3 22h18"/> <path d="M6 18v-7"/></symbol><symbol id="bcp-i-link" viewbox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/> <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol><symbol id="bcp-i-mail" viewbox="0 0 24 24"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/> <rect x="2" y="4" width="20" height="16" rx="2"/></symbol><symbol id="bcp-i-map-pin" viewbox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/> <circle cx="12" cy="10" r="3"/></symbol><symbol id="bcp-i-menu" viewbox="0 0 24 24"><path d="M4 5h16"/> <path d="M4 12h16"/> <path d="M4 19h16"/></symbol><symbol id="bcp-i-monitor" viewbox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/> <line x1="8" x2="16" y1="21" y2="21"/> <line x1="12" x2="12" y1="17" y2="21"/></symbol><symbol id="bcp-i-phone" viewbox="0 0 24 24"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></symbol><symbol id="bcp-i-plus" viewbox="0 0 24 24"><path d="M5 12h14"/> <path d="M12 5v14"/></symbol><symbol id="bcp-i-shield-check" viewbox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/> <path d="m9 12 2 2 4-4"/></symbol><symbol id="bcp-i-shopping-cart" viewbox="0 0 24 24"><path d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18"/> <path d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25"/> <circle cx="18" cy="20" r="2"/> <circle cx="8" cy="20" r="2"/></symbol><symbol id="bcp-i-smartphone" viewbox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/> <path d="M12 18h.01"/></symbol><symbol id="bcp-i-store" viewbox="0 0 24 24"><path d="M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5"/> <path d="M17.774 10.31a1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.451 0 1.12 1.12 0 0 0-1.548 0 2.5 2.5 0 0 1-3.452 0 1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.77-3.248l2.889-4.184A2 2 0 0 1 7 2h10a2 2 0 0 1 1.653.873l2.895 4.192a2.5 2.5 0 0 1-3.774 3.244"/> <path d="M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05"/></symbol><symbol id="bcp-i-x" viewbox="0 0 24 24"><path d="M18 6 6 18"/> <path d="m6 6 12 12"/></symbol><symbol id="bcp-i-zap" viewbox="0 0 24 24"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"/></symbol><symbol id="bcp-b-americanexpress" viewbox="0 0 24 24"><path d="M16.015 14.378c0-.32-.135-.496-.344-.622-.21-.12-.464-.135-.81-.135h-1.543v2.82h.675v-1.027h.72c.24 0 .39.024.478.125.12.13.104.38.104.55v.35h.66v-.555c-.002-.25-.017-.376-.108-.516-.06-.08-.18-.18-.33-.234l.02-.008c.18-.072.48-.297.48-.747zm-.87.407l-.028-.002c-.09.053-.195.058-.33.058h-.81v-.63h.824c.12 0 .24 0 .33.05.098.048.156.147.15.255 0 .12-.045.215-.134.27zM20.297 15.837H19v.6h1.304c.676 0 1.05-.278 1.05-.884 0-.28-.066-.448-.187-.582-.153-.133-.392-.193-.73-.207l-.376-.015c-.104 0-.18 0-.255-.03-.09-.03-.15-.105-.15-.21 0-.09.017-.166.09-.21.083-.046.177-.066.272-.06h1.23v-.602h-1.35c-.704 0-.958.437-.958.84 0 .9.776.855 1.407.87.104 0 .18.015.225.06.046.03.082.106.082.18 0 .077-.035.15-.08.18-.06.053-.15.07-.277.07zM0 0v10.096L.81 8.22h1.75l.225.464V8.22h2.043l.45 1.02.437-1.013h6.502c.295 0 .56.057.756.236v-.23h1.787v.23c.307-.17.686-.23 1.12-.23h2.606l.24.466v-.466h1.918l.254.465v-.466h1.858v3.948H20.87l-.36-.6v.585h-2.353l-.256-.63h-.583l-.27.614h-1.213c-.48 0-.84-.104-1.08-.24v.24h-2.89v-.884c0-.12-.03-.12-.105-.135h-.105v1.036H6.067v-.48l-.21.48H4.69l-.202-.48v.465H2.235l-.256-.624H1.4l-.256.624H0V24h23.786v-7.108c-.27.135-.613.18-.973.18H21.09v-.255c-.21.165-.57.255-.914.255H14.71v-.9c0-.12-.018-.12-.12-.12h-.075v1.022h-1.8v-1.066c-.298.136-.643.15-.928.136h-.214v.915h-2.18l-.54-.617-.57.6H4.742v-3.93h3.61l.518.602.554-.6h2.412c.28 0 .74.03.942.225v-.24h2.177c.202 0 .644.045.903.225v-.24h3.265v.24c.163-.164.508-.24.803-.24h1.89v.24c.194-.15.464-.24.84-.24h1.176V0H0zM21.156 14.955c.004.005.006.012.01.016.01.01.024.01.032.02l-.042-.035zM23.828 13.082h.065v.555h-.065zM23.865 15.03v-.005c-.03-.025-.046-.048-.075-.07-.15-.153-.39-.215-.764-.225l-.36-.012c-.12 0-.194-.007-.27-.03-.09-.03-.15-.105-.15-.21 0-.09.03-.16.09-.204.076-.045.15-.05.27-.05h1.223v-.588h-1.283c-.69 0-.96.437-.96.84 0 .9.78.855 1.41.87.104 0 .18.015.224.06.046.03.076.106.076.18 0 .07-.034.138-.09.18-.045.056-.136.07-.27.07h-1.288v.605h1.287c.42 0 .734-.118.9-.36h.03c.09-.134.135-.3.135-.523 0-.24-.045-.39-.135-.526zM18.597 14.208v-.583h-2.235V16.458h2.235v-.585h-1.57v-.57h1.533v-.584h-1.532v-.51M13.51 8.787h.685V11.6h-.684zM13.126 9.543l-.007.006c0-.314-.13-.5-.34-.624-.217-.125-.47-.135-.81-.135H10.43v2.82h.674v-1.034h.72c.24 0 .39.03.487.12.122.136.107.378.107.548v.354h.677v-.553c0-.25-.016-.375-.11-.516-.09-.107-.202-.19-.33-.237.172-.07.472-.3.472-.75zm-.855.396h-.015c-.09.054-.195.056-.33.056H11.1v-.623h.825c.12 0 .24.004.33.05.09.04.15.128.15.25s-.047.22-.134.266zM15.92 9.373h.632v-.6h-.644c-.464 0-.804.105-1.02.33-.286.3-.362.69-.362 1.11 0 .512.123.833.36 1.074.232.238.645.31.97.31h.78l.255-.627h1.39l.262.627h1.36v-2.11l1.272 2.11h.95l.002.002V8.786h-.684v1.963l-1.18-1.96h-1.02V11.4L18.11 8.744h-1.004l-.943 2.22h-.3c-.177 0-.362-.03-.468-.134-.125-.15-.186-.36-.186-.662 0-.285.08-.51.194-.63.133-.135.272-.165.516-.165zm1.668-.108l.464 1.118v.002h-.93l.466-1.12zM2.38 10.97l.254.628H4V9.393l.972 2.205h.584l.973-2.202.015 2.202h.69v-2.81H6.118l-.807 1.904-.876-1.905H3.343v2.663L2.205 8.787h-.997L.01 11.597h.72l.26-.626h1.39zm-.688-1.705l.46 1.118-.003.002h-.915l.457-1.12zM11.856 13.62H9.714l-.85.923-.825-.922H5.346v2.82H8l.855-.932.824.93h1.302v-.94h.838c.6 0 1.17-.164 1.17-.945l-.006-.003c0-.78-.598-.93-1.128-.93zM7.67 15.853l-.014-.002H6.02v-.557h1.47v-.574H6.02v-.51H7.7l.733.82-.764.824zm2.642.33l-1.03-1.147 1.03-1.108v2.253zm1.553-1.258h-.885v-.717h.885c.24 0 .42.098.42.344 0 .243-.15.372-.42.372zM9.967 9.373v-.586H7.73V11.6h2.237v-.58H8.4v-.564h1.527V9.88H8.4v-.507"/></symbol><symbol id="bcp-b-applepay" viewbox="0 0 24 24"><path d="M2.15 4.318a42.16 42.16 0 0 0-.454.003c-.15.005-.303.013-.452.04a1.44 1.44 0 0 0-1.06.772c-.07.138-.114.278-.14.43-.028.148-.037.3-.04.45A10.2 10.2 0 0 0 0 6.222v11.557c0 .07.002.138.003.207.004.15.013.303.04.452.027.15.072.291.142.429a1.436 1.436 0 0 0 .63.63c.138.07.278.115.43.142.148.027.3.036.45.04l.208.003h20.194l.207-.003c.15-.004.303-.013.452-.04.15-.027.291-.071.428-.141a1.432 1.432 0 0 0 .631-.631c.07-.138.115-.278.141-.43.027-.148.036-.3.04-.45.002-.07.003-.138.003-.208l.001-.246V6.221c0-.07-.002-.138-.004-.207a2.995 2.995 0 0 0-.04-.452 1.446 1.446 0 0 0-1.2-1.201 3.022 3.022 0 0 0-.452-.04 10.448 10.448 0 0 0-.453-.003zm0 .512h19.942c.066 0 .131.002.197.003.115.004.25.01.375.032.109.02.2.05.287.094a.927.927 0 0 1 .407.407.997.997 0 0 1 .094.288c.022.123.028.258.031.374.002.065.003.13.003.197v11.552c0 .065 0 .13-.003.196-.003.115-.009.25-.032.375a.927.927 0 0 1-.5.693 1.002 1.002 0 0 1-.286.094 2.598 2.598 0 0 1-.373.032l-.2.003H1.906c-.066 0-.133-.002-.196-.003a2.61 2.61 0 0 1-.375-.032c-.109-.02-.2-.05-.288-.094a.918.918 0 0 1-.406-.407 1.006 1.006 0 0 1-.094-.288 2.531 2.531 0 0 1-.032-.373 9.588 9.588 0 0 1-.002-.197V6.224c0-.065 0-.131.002-.197.004-.114.01-.248.032-.375.02-.108.05-.199.094-.287a.925.925 0 0 1 .407-.406 1.03 1.03 0 0 1 .287-.094c.125-.022.26-.029.375-.032.065-.002.131-.002.196-.003zm4.71 3.7c-.3.016-.668.199-.88.456-.191.22-.36.58-.316.918.338.03.675-.169.888-.418.205-.258.345-.603.308-.955zm2.207.42v5.493h.852v-1.877h1.18c1.078 0 1.835-.739 1.835-1.812 0-1.07-.742-1.805-1.808-1.805zm.852.719h.982c.739 0 1.161.396 1.161 1.089 0 .692-.422 1.092-1.164 1.092h-.979zm-3.154.3c-.45.01-.83.28-1.05.28-.235 0-.593-.264-.981-.257a1.446 1.446 0 0 0-1.23.747c-.527.908-.139 2.255.374 2.995.249.366.549.769.944.754.373-.014.52-.242.973-.242.454 0 .586.242.98.235.41-.007.667-.366.915-.733.286-.417.403-.82.41-.841-.007-.008-.79-.308-.797-1.209-.008-.754.615-1.113.644-1.135-.352-.52-.9-.578-1.09-.593a1.123 1.123 0 0 0-.092-.002zm8.204.397c-.99 0-1.606.533-1.652 1.256h.777c.072-.358.369-.586.845-.586.502 0 .803.266.803.711v.309l-1.097.064c-.951.054-1.488.484-1.488 1.184 0 .72.548 1.207 1.332 1.207.526 0 1.032-.281 1.264-.727h.019v.659h.788v-2.76c0-.803-.62-1.317-1.591-1.317zm1.94.072l1.446 4.009c0 .003-.073.24-.073.247-.125.41-.33.571-.711.571-.069 0-.206 0-.267-.015v.666c.06.011.267.019.335.019.83 0 1.226-.312 1.568-1.283l1.5-4.214h-.868l-1.012 3.259h-.015l-1.013-3.26zm-1.167 2.189v.316c0 .521-.45.917-1.024.917-.442 0-.731-.228-.731-.579 0-.342.278-.56.769-.593z"/></symbol><symbol id="bcp-b-googlepay" viewbox="0 0 24 24"><path d="M3.963 7.235A3.963 3.963 0 00.422 9.419a3.963 3.963 0 000 3.559 3.963 3.963 0 003.541 2.184c1.07 0 1.97-.352 2.627-.957.748-.69 1.18-1.71 1.18-2.916a4.722 4.722 0 00-.07-.806H3.964v1.526h2.14a1.835 1.835 0 01-.79 1.205c-.356.241-.814.379-1.35.379-1.034 0-1.911-.697-2.225-1.636a2.375 2.375 0 010-1.517c.314-.94 1.191-1.636 2.225-1.636a2.152 2.152 0 011.52.594l1.132-1.13a3.808 3.808 0 00-2.652-1.033zm6.501.55v6.9h.886V11.89h1.465c.603 0 1.11-.196 1.522-.588a1.911 1.911 0 00.635-1.464 1.92 1.92 0 00-.635-1.456 2.125 2.125 0 00-1.522-.598zm2.427.85a1.156 1.156 0 01.823.365 1.176 1.176 0 010 1.686 1.171 1.171 0 01-.877.357H11.35V8.635h1.487a1.156 1.156 0 01.054 0zm4.124 1.175c-.842 0-1.477.308-1.907.925l.781.491c.288-.417.68-.626 1.175-.626a1.255 1.255 0 01.856.323 1.009 1.009 0 01.366.785v.202c-.34-.193-.774-.289-1.3-.289-.617 0-1.11.145-1.479.434-.37.288-.554.677-.554 1.165a1.476 1.476 0 00.525 1.156c.35.308.785.463 1.305.463.61 0 1.098-.27 1.465-.81h.038v.655h.848v-2.909c0-.61-.19-1.09-.568-1.44-.38-.35-.896-.525-1.551-.525zm2.263.154l1.946 4.422-1.098 2.38h.915L24 9.963h-.965l-1.368 3.391h-.02l-1.406-3.39zm-2.146 2.368c.494 0 .88.11 1.156.33 0 .372-.147.696-.44.973a1.413 1.413 0 01-.997.414 1.081 1.081 0 01-.69-.232.708.708 0 01-.293-.578c0-.257.12-.47.363-.647.24-.173.54-.26.9-.26Z"/></symbol><symbol id="bcp-b-mastercard" viewbox="0 0 24 24"><path d="M11.343 18.031c.058.049.12.098.181.146-1.177.783-2.59 1.238-4.107 1.238C3.32 19.416 0 16.096 0 12c0-4.095 3.32-7.416 7.416-7.416 1.518 0 2.931.456 4.105 1.238-.06.051-.12.098-.165.15C9.6 7.489 8.595 9.688 8.595 12c0 2.311 1.001 4.51 2.748 6.031zm5.241-13.447c-1.52 0-2.931.456-4.105 1.238.06.051.12.098.165.15C14.4 7.489 15.405 9.688 15.405 12c0 2.31-1.001 4.507-2.748 6.031-.058.049-.12.098-.181.146 1.177.783 2.588 1.238 4.107 1.238C20.68 19.416 24 16.096 24 12c0-4.094-3.32-7.416-7.416-7.416zM12 6.174c-.096.075-.189.15-.28.231C10.156 7.764 9.169 9.765 9.169 12c0 2.236.987 4.236 2.551 5.595.09.08.185.158.28.232.096-.074.189-.152.28-.232 1.563-1.359 2.551-3.359 2.551-5.595 0-2.235-.987-4.236-2.551-5.595-.09-.08-.184-.156-.28-.231z"/></symbol><symbol id="bcp-b-paypal" viewbox="0 0 24 24"><path d="M7.016 19.198h-4.2a.562.562 0 0 1-.555-.65L5.093.584A.692.692 0 0 1 5.776 0h7.222c3.417 0 5.904 2.488 5.846 5.5-.006.25-.027.5-.066.747A6.794 6.794 0 0 1 12.071 12H8.743a.69.69 0 0 0-.682.583l-.325 2.056-.013.083-.692 4.39-.015.087zM19.79 6.142c-.01.087-.01.175-.023.261a7.76 7.76 0 0 1-7.695 6.598H9.007l-.283 1.795-.013.083-.692 4.39-.134.843-.014.088H6.86l-.497 3.15a.562.562 0 0 0 .555.65h3.612c.34 0 .63-.249.683-.585l.952-6.031a.692.692 0 0 1 .683-.584h2.126a6.793 6.793 0 0 0 6.707-5.752c.306-1.95-.466-3.744-1.89-4.906z"/></symbol><symbol id="bcp-b-samsungpay" viewbox="0 0 24 24"><path d="m6.703 17.387.617-1.5-1.205-2.795h.724l.817 1.98.776-1.98h.711l-1.752 4.295Zm-2.492-1.295c-.708 0-1.445-.569-1.445-1.528 0-.975.712-1.531 1.455-1.531.387 0 .735.16.946.411v-.352h.677v2.94h-.677v-.382a1.222 1.222 0 0 1-.956.442Zm-4.206-.06v-3.666h1.258c.759 0 1.32.581 1.32 1.305 0 .728-.562 1.312-1.325 1.312H.69v1.05zm4.315-.562c.503 0 .88-.407.88-.914 0-.497-.377-.906-.88-.906a.886.886 0 0 0-.888.906c0 .512.386.914.888.914zM.69 14.348h.52c.408 0 .686-.3.686-.677a.66.66 0 0 0-.685-.672H.69Zm.557-4.063C.603 10.285 0 10.055 0 9.29v-.265h.92l.002.333c0 .187.13.31.344.31.228 0 .305-.117.333-.232a.44.44 0 0 0-.005-.252C1.417 8.74.198 8.538.049 7.837a1.192 1.192 0 0 1-.007-.463c.09-.56.588-.76 1.198-.76.485 0 1.156.114 1.156.861v.242h-.854v-.213c0-.187-.12-.31-.32-.31-.215 0-.289.122-.313.232a.435.435 0 0 0 .002.18c.098.401 1.4.615 1.545 1.333.014.072.044.266.002.562-.081.573-.59.784-1.21.784zm11.154-.018c-.638 0-1.234-.227-1.234-.984V9.02h.911v.328c0 .185.129.31.341.31.227 0 .303-.117.331-.23a.438.438 0 0 0-.005-.25c-.175-.44-1.382-.641-1.529-1.336a1.166 1.166 0 0 1-.008-.458c.09-.554.585-.753 1.188-.753.48 0 1.143.115 1.143.855v.24h-.846v-.212c0-.185-.116-.307-.315-.307-.212 0-.289.12-.313.23a.435.435 0 0 0 .005.176c.096.398 1.385.61 1.529 1.32.015.073.044.265.003.558-.081.567-.586.776-1.2.776zm3.224-.013c-.63 0-1.138-.21-1.198-.85a2.792 2.792 0 0 1-.008-.223V6.72h.867v2.538c0 .044 0 .093.008.13.017.085.092.248.331.248.238 0 .311-.163.328-.248a.718.718 0 0 0 .008-.13V6.72h.867v2.461a2.94 2.94 0 0 1-.008.224c-.06.64-.564.849-1.195.849zm7.156-.037c-.608 0-1.148-.221-1.205-.846a2.518 2.518 0 0 1-.014-.227V7.702c0-.061.009-.17.016-.227.077-.641.595-.846 1.203-.846.608 0 1.14.203 1.203.846.011.11.008.227.008.227v.114h-.864v-.193s0-.08-.01-.13c-.016-.075-.082-.25-.345-.25-.249 0-.322.166-.34.25a.816.816 0 0 0-.014.162v1.567a.89.89 0 0 0 .008.13c.016.092.104.25.352.25s.333-.158.349-.25a.722.722 0 0 0 .008-.13v-.497h-.352v-.5H24v.92c0 .064-.003.112-.013.226-.057.625-.598.846-1.206.846zm-19.745-.065.636-3.432h1.526l.633 3.432h-.922l-.456-3.114-.02.002-.47 3.112Zm3.48 0L6.59 6.72h1.4l.421 2.625h.021l.422-2.625h1.399l.075 3.432h-.857l-.02-3.083H9.43l-.573 3.083h-.87L7.414 7.07h-.018l-.021 3.083Zm11.268-.036V6.72h1.273l.79 2.693h.018l-.047-2.693h.851v3.396h-1.221l-.849-2.787h-.018l.047 2.787z"/></symbol><symbol id="bcp-b-visa" viewbox="0 0 24 24"><path d="M9.112 8.262L5.97 15.758H3.92L2.374 9.775c-.094-.368-.175-.503-.461-.658C1.447 8.864.677 8.627 0 8.479l.046-.217h3.3a.904.904 0 01.894.764l.817 4.338 2.018-5.102zm8.033 5.049c.008-1.979-2.736-2.088-2.717-2.972.006-.269.262-.555.822-.628a3.66 3.66 0 011.913.336l.34-1.59a5.207 5.207 0 00-1.814-.333c-1.917 0-3.266 1.02-3.278 2.479-.012 1.079.963 1.68 1.698 2.04.756.367 1.01.603 1.006.931-.005.504-.602.725-1.16.734-.975.015-1.54-.263-1.992-.473l-.351 1.642c.453.208 1.289.39 2.156.398 2.037 0 3.37-1.006 3.377-2.564m5.061 2.447H24l-1.565-7.496h-1.656a.883.883 0 00-.826.55l-2.909 6.946h2.036l.405-1.12h2.488zm-2.163-2.656l1.02-2.815.588 2.815zm-8.16-4.84l-1.603 7.496H8.34l1.605-7.496z"/></symbol></defs></svg>
+<svg class="bcp-t-svg" width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="bcp-star" viewbox="0 0 24 24"><path d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.8-6.2 3.8 1.6-7L2 9.7l7.1-.6z"/></symbol>
+  <symbol id="bcp-s-fb" viewbox="0 0 24 24"><path d="M14 8h3V4h-3c-2.8 0-5 2.2-5 5v2H7v4h2v9h4v-9h3l1-4h-4V9c0-.6.4-1 1-1z"/></symbol>
+  <symbol id="bcp-s-yt" viewbox="0 0 24 24"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.8 15V9l5.7 3z"/></symbol>
+  <symbol id="bcp-s-ig" viewbox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM12 2.2c-2.7 0-3 0-4 .1C4.6 2.4 2.5 4.5 2.3 8c0 1-.1 1.3-.1 4s0 3 .1 4c.2 3.4 2.3 5.5 5.7 5.7 1 0 1.3.1 4 .1s3 0 4-.1c3.4-.2 5.5-2.3 5.7-5.7 0-1 .1-1.3.1-4s0-3-.1-4c-.2-3.4-2.3-5.5-5.7-5.7-1-.1-1.3-.1-4-.1zm0 1.8c2.6 0 2.9 0 4 .1 2.4.1 3.8 1.5 3.9 3.9.1 1 .1 1.4.1 4s0 2.9-.1 4c-.1 2.4-1.5 3.8-3.9 3.9-1 .1-1.4.1-4 .1s-2.9 0-4-.1c-2.4-.1-3.8-1.5-3.9-3.9-.1-1-.1-1.4-.1-4s0-2.9.1-4C4.2 5.6 5.6 4.2 8 4.1c1-.1 1.4-.1 4-.1z"/></symbol>
+  <symbol id="bcp-s-x" viewbox="0 0 24 24"><path d="M18.2 2.5h3.4l-7.4 8.5 8.7 11.5h-6.8l-5.3-7-6.1 7H1.3l7.9-9.1L.9 2.5h7l4.8 6.4zm-1.2 18h1.9L7 4.4H5z"/></symbol>
+</defs></svg>
+<header class="bcp-header bcp-t-header" id="bcp-header">
+  <div class="bcp-wrap bcp-t-div">
+    <a class="bcp-logo bcp-t-a" href="#bcp-top" aria-label="Be-Connect Pay home">
+      <img class="bcp-lg-l bcp-t-img" src="https://raw.githubusercontent.com/ritesh5001/be-connectpay/claude/be-connectpay-homepage-redesign-5wiwc8/assets/logo-light.png" alt="Be-Connect Pay – Together For Good" width="568" height="252">
+      <img class="bcp-lg-d bcp-t-img" src="https://raw.githubusercontent.com/ritesh5001/be-connectpay/claude/be-connectpay-homepage-redesign-5wiwc8/assets/logo-dark.png" alt="" width="568" height="252">
+    </a>
+    <nav class="bcp-nav bcp-t-nav" aria-label="Main">
+      <a class="bcp-t-a" href="#bcp-solutions">Solutions</a>
+      <a class="bcp-t-a" href="#bcp-machines">Card Machines</a>
+      <a class="bcp-t-a" href="#bcp-sectors">Industries</a>
+      <a class="bcp-t-a" href="#bcp-funding">Funding</a>
+      <a class="bcp-t-a" href="#bcp-faq">Support</a>
+    </nav>
+    <div class="bcp-h-cta bcp-t-div">
+      <a class="bcp-h-phone bcp-t-a" href="tel:+442070527978"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-phone"/></svg>020 7052 7978</a>
+      <a class="bcp-btn bcp-btn-sky bcp-t-a" href="#bcp-quote" data-quote>Get a free quote</a>
+    </div>
+    <button class="bcp-menu-btn bcp-t-button" id="bcp-menuBtn" aria-label="Open menu" aria-controls="bcp-drawer" aria-expanded="false"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-menu"/></svg></button>
+  </div>
+</header>
+<div class="bcp-drawer bcp-t-div" id="bcp-drawer" aria-hidden="true">
+  <div class="bcp-drawer-top bcp-t-div">
+    <img class="bcp-t-img" src="https://raw.githubusercontent.com/ritesh5001/be-connectpay/claude/be-connectpay-homepage-redesign-5wiwc8/assets/logo-light.png" alt="Be-Connect Pay" width="568" height="252">
+    <button class="bcp-menu-btn bcp-t-button" id="bcp-closeBtn" style="display:inline-flex;margin:0" aria-label="Close menu"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-x"/></svg></button>
+  </div>
+  <nav class="bcp-t-nav" aria-label="Mobile">
+    <a class="bcp-t-a" href="#bcp-solutions">Solutions <svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-arrow-up-right"/></svg></a>
+    <a class="bcp-t-a" href="#bcp-machines">Card Machines <svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-arrow-up-right"/></svg></a>
+    <a class="bcp-t-a" href="#bcp-sectors">Industries <svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-arrow-up-right"/></svg></a>
+    <a class="bcp-t-a" href="#bcp-funding">Business Funding <svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-arrow-up-right"/></svg></a>
+    <a class="bcp-t-a" href="#bcp-faq">Support <svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-arrow-up-right"/></svg></a>
+  </nav>
+  <div class="bcp-bottom bcp-t-div">
+    <a class="bcp-btn bcp-btn-sky bcp-t-a" href="#bcp-quote" data-quote>Get a free quote</a>
+    <a class="bcp-btn bcp-btn-glass bcp-t-a" href="tel:+442070527978"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-phone"/></svg>020 7052 7978</a>
+    <p class="bcp-meta bcp-t-p">24/7 UK-based support · 7 days a week</p>
+  </div>
+</div>
+<main class="bcp-t-main" id="bcp-top">
+<section class="bcp-hero bcp-t-section">
+  <div class="bcp-wrap bcp-hero-grid bcp-t-div">
+    <div class="bcp-hero-copy bcp-t-div">
+      <span class="bcp-chip bcp-t-span"><b class="bcp-t-b">NEW</b>Next-day settlement for UK businesses</span>
+      <h1 class="bcp-t-h1">Payments that keep your business <em class="bcp-t-em">moving.</em></h1>
+      <p class="bcp-lead bcp-t-p">Card machines, POS and online payments from one trusted UK partner. Get paid the next day, with a dedicated welcome team and support around the clock.</p>
+      <div class="bcp-hero-actions bcp-t-div">
+        <a class="bcp-btn bcp-btn-sky bcp-t-a" href="#bcp-quote" data-quote>Get a free quote <svg class="bcp-ic bcp-arrow bcp-t-svg"><use href="#bcp-i-arrow-right"/></svg></a>
+        <a class="bcp-btn bcp-btn-glass bcp-t-a" href="#bcp-machines">Explore card machines</a>
+      </div>
+      <div class="bcp-proof bcp-t-div">
+        <div class="bcp-faces bcp-t-div"><img class="bcp-t-img" src="https://raw.githubusercontent.com/ritesh5001/be-connectpay/claude/be-connectpay-homepage-redesign-5wiwc8/assets/av-1.jpg" alt="" width="160" height="160"><img class="bcp-t-img" src="https://raw.githubusercontent.com/ritesh5001/be-connectpay/claude/be-connectpay-homepage-redesign-5wiwc8/assets/av-4.jpg" alt="" width="160" height="160"><img class="bcp-t-img" src="https://raw.githubusercontent.com/ritesh5001/be-connectpay/claude/be-connectpay-homepage-redesign-5wiwc8/assets/av-2.jpg" alt="" width="115" height="115"><img class="bcp-t-img" src="https://raw.githubusercontent.com/ritesh5001/be-connectpay/claude/be-connectpay-homepage-redesign-5wiwc8/assets/av-3.jpg" alt="" width="160" height="160"></div>
+        <div class="bcp-proof-text bcp-t-div">
+          <span class="bcp-stars bcp-t-span" aria-label="Five stars"><i class="bcp-t-i"><svg class="bcp-t-svg"><use href="#bcp-star"/></svg></i><i class="bcp-t-i"><svg class="bcp-t-svg"><use href="#bcp-star"/></svg></i><i class="bcp-t-i"><svg class="bcp-t-svg"><use href="#bcp-star"/></svg></i><i class="bcp-t-i"><svg class="bcp-t-svg"><use href="#bcp-star"/></svg></i><i class="bcp-t-i"><svg class="bcp-t-svg"><use href="#bcp-star"/></svg></i></span>
+          <span class="bcp-t-span"><strong class="bcp-t-strong">Trusted by independent UK businesses</strong> · reviewed on Trustpilot</span>
+        </div>
+      </div>
+    </div>
+    <div class="bcp-hero-visual bcp-t-div">
+      <div class="bcp-hero-photo bcp-t-div"><img class="bcp-t-img" src="https://raw.githubusercontent.com/ritesh5001/be-connectpay/claude/be-connectpay-homepage-redesign-5wiwc8/assets/hero-terminal.jpg" alt="Customer tapping a card on a Be-Connect terminal" width="1501" height="1159" fetchpriority="high"></div>
+      <div class="bcp-fcard bcp-fc-pay bcp-t-div" aria-hidden="true">
+        <span class="bcp-tick bcp-t-span"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-check"/></svg></span>
+        <div class="bcp-t-div"><small class="bcp-t-small">Payment approved</small><b class="bcp-t-b">£24.50</b><small class="bcp-t-small">Contactless · Visa •• 4821</small></div>
+      </div>
+      <div class="bcp-fcard bcp-fc-support bcp-t-div" aria-hidden="true">
+        <img class="bcp-t-img" src="https://raw.githubusercontent.com/ritesh5001/be-connectpay/claude/be-connectpay-homepage-redesign-5wiwc8/assets/av-1.jpg" alt="">
+        <div class="bcp-t-div"><b class="bcp-t-b">Welcome team</b><small class="bcp-t-small">Online now · 24/7</small></div>
+      </div>
+      <div class="bcp-fcard bcp-fc-settle bcp-t-div" aria-hidden="true">
+        <div class="bcp-row bcp-t-div"><small class="bcp-t-small">Paid out tomorrow, 9:00</small><span class="bcp-pill bcp-t-span">+12%</span></div>
+        <b class="bcp-t-b">£3,482.60</b>
+        <div class="bcp-spark bcp-t-div"><i class="bcp-t-i" style="height:38%"></i><i class="bcp-t-i" style="height:52%"></i><i class="bcp-t-i" style="height:44%"></i><i class="bcp-t-i" style="height:66%"></i><i class="bcp-t-i" style="height:58%"></i><i class="bcp-t-i" style="height:80%"></i><i class="bcp-t-i" style="height:100%"></i></div>
+      </div>
+    </div>
+  </div>
+  <div class="bcp-logos bcp-t-div">
+    <div class="bcp-wrap bcp-t-div">
+      <span class="bcp-t-span">Accept every way your customers pay</span>
+      <div class="bcp-logo-row bcp-t-div" aria-label="Accepted payment methods">
+        <svg class="bcp-t-svg" viewbox="0 0 24 24" role="img" aria-label="Visa"><use href="#bcp-b-visa"/></svg>
+        <svg class="bcp-t-svg" viewbox="0 0 24 24" role="img" aria-label="Mastercard"><use href="#bcp-b-mastercard"/></svg>
+        <svg class="bcp-t-svg" viewbox="0 0 24 24" role="img" aria-label="American Express"><use href="#bcp-b-americanexpress"/></svg>
+        <svg class="bcp-w bcp-t-svg" viewbox="0 0 24 24" role="img" aria-label="Apple Pay"><use href="#bcp-b-applepay"/></svg>
+        <svg class="bcp-w bcp-t-svg" viewbox="0 0 24 24" role="img" aria-label="Google Pay"><use href="#bcp-b-googlepay"/></svg>
+        <svg class="bcp-w bcp-t-svg" viewbox="0 0 24 24" role="img" aria-label="Samsung Pay"><use href="#bcp-b-samsungpay"/></svg>
+        <svg class="bcp-t-svg" viewbox="0 0 24 24" role="img" aria-label="PayPal"><use href="#bcp-b-paypal"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bcp-sec bcp-t-section" id="bcp-solutions">
+  <div class="bcp-wrap bcp-t-div">
+    <div class="bcp-head bcp-split bcp-rv bcp-t-div">
+      <div class="bcp-t-div" style="display:grid;gap:16px"><span class="bcp-eyebrow bcp-t-span">Solutions</span><h2 class="bcp-h2 bcp-t-h2">One partner for every way you get paid.</h2></div>
+      <p class="bcp-lead bcp-t-p">In store, at the table, on the doorstep, online or over the phone. Be-Connect brings every payment into one place, with next-day settlement as standard.</p>
+    </div>
+    <div class="bcp-bento bcp-t-div">
+      <article class="bcp-tile bcp-t-machines bcp-rv bcp-t-article">
+        <span class="bcp-tag bcp-t-span">Most popular</span>
+        <h3 class="bcp-t-h3">Card machines</h3>
+        <p class="bcp-t-p">Fast, secure terminals with real-time reporting on screen. Countertop, portable and mobile with a built-in 4G SIM.</p>
+        <a class="bcp-link bcp-t-a" href="#bcp-machines">Compare card machines <svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-arrow-right"/></svg></a>
+        <div class="bcp-devices bcp-t-div" aria-hidden="true">
+          <img class="bcp-d1 bcp-t-img" src="https://raw.githubusercontent.com/ritesh5001/be-connectpay/claude/be-connectpay-homepage-redesign-5wiwc8/assets/terminal-move.png" alt="" width="155" height="328">
+          <img class="bcp-d2 bcp-t-img" src="https://raw.githubusercontent.com/ritesh5001/be-connectpay/claude/be-connectpay-homepage-redesign-5wiwc8/assets/terminal-a920.png" alt="" width="273" height="579">
+          <img class="bcp-d3 bcp-t-img" src="https://raw.githubusercontent.com/ritesh5001/be-connectpay/claude/be-connectpay-homepage-redesign-5wiwc8/assets/terminal-compact.png" alt="" width="135" height="288">
+        </div>
+      </article>
+      <article class="bcp-tile bcp-t-online bcp-rv bcp-t-article">
+        <span class="bcp-tag bcp-t-span">Online &amp; Pay by Link</span>
+        <h3 class="bcp-t-h3">Get paid online in a tap</h3>
+        <p class="bcp-t-p">A free payment gateway for your website, plus secure payment links by email or text.</p>
+        <div class="bcp-paylink bcp-t-div" aria-hidden="true">
+          <div class="bcp-top bcp-t-div"><span class="bcp-merchant bcp-t-span"><i class="bcp-t-i">P</i>Patel's Deli</span><span class="bcp-meta bcp-t-span">Invoice #2041</span></div>
+          <div class="bcp-amt bcp-t-div">£180.00</div>
+          <div class="bcp-btns bcp-t-div"><span class="bcp-ap bcp-t-span"> Pay</span><span class="bcp-cd bcp-t-span">Pay by card</span></div>
+          <div class="bcp-meta bcp-t-div"><span class="bcp-t-span">Secured by Be-Connect</span><span class="bcp-t-span">Visa · Mastercard · Amex</span></div>
+        </div>
+        <a class="bcp-link bcp-t-a" href="https://be-connectpay.co.uk/pay-by-link/">Explore online payments <svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-arrow-right"/></svg></a>
+      </article>
+      <article class="bcp-tile bcp-t-pos bcp-rv bcp-t-article">
+        <span class="bcp-tag bcp-t-span">POS systems</span>
+        <h3 class="bcp-t-h3" style="max-width:12ch;position:relative;z-index:1">Run your counter, not your admin</h3>
+        <div class="bcp-txt bcp-t-div"><p class="bcp-t-p">All-in-one point of sale with stock, staff and easy reports on any device.</p><a class="bcp-link bcp-t-a" href="https://be-connectpay.co.uk/pos-system/">Explore POS <svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-arrow-right"/></svg></a></div>
+        <img class="bcp-pos-img bcp-t-img" src="https://raw.githubusercontent.com/ritesh5001/be-connectpay/claude/be-connectpay-homepage-redesign-5wiwc8/assets/pos-system.png" alt="Be-Connect POS system" width="262" height="324">
+      </article>
+      <article class="bcp-tile bcp-t-phone bcp-rv bcp-t-article">
+        <img class="bcp-bg bcp-t-img" src="https://raw.githubusercontent.com/ritesh5001/be-connectpay/claude/be-connectpay-homepage-redesign-5wiwc8/assets/online-phone.jpg" alt="" width="1000" height="667" loading="lazy">
+        <div class="bcp-inner bcp-t-div">
+          <span class="bcp-tag bcp-t-span">Phone payments</span>
+          <h3 class="bcp-t-h3">Take orders by phone, securely</h3>
+          <p class="bcp-t-p">Key in card details or send a payment link while you're still on the call.</p>
+          <a class="bcp-link bcp-t-a" href="https://be-connectpay.co.uk/payment-app/">Explore phone payments <svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-arrow-right"/></svg></a>
+        </div>
+      </article>
+      <article class="bcp-tile bcp-t-funding bcp-rv bcp-t-article">
+        <span class="bcp-tag bcp-t-span">Business funding</span>
+        <h3 class="bcp-t-h3">Funding that flexes with your takings</h3>
+        <div class="bcp-bars bcp-t-div" aria-hidden="true"><i class="bcp-t-i" style="height:48%"></i><i class="bcp-t-i" style="height:40%"></i><i class="bcp-t-i" style="height:58%"></i><i class="bcp-t-i" style="height:52%"></i><i class="bcp-t-i" style="height:74%"></i><i class="bcp-t-i" style="height:100%"></i><i class="bcp-t-i" style="height:86%"></i><i class="bcp-t-i" style="height:50%"></i><i class="bcp-t-i" style="height:44%"></i><i class="bcp-t-i" style="height:62%"></i></div>
+        <p class="bcp-t-p">Repay as a small share of your card sales. Quieter weeks cost you less.</p>
+        <a class="bcp-link bcp-t-a" href="#bcp-funding">See funding options <svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-arrow-right"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="bcp-sec bcp-band-dark bcp-t-section" id="bcp-machines">
+  <div class="bcp-wrap bcp-show bcp-t-div">
+    <div class="bcp-rv bcp-t-div">
+      <span class="bcp-eyebrow bcp-t-span">Card machines</span>
+      <h2 class="bcp-h2 bcp-t-h2" style="margin-top:16px">The right terminal for every counter.</h2>
+      <p class="bcp-lead bcp-t-p" style="margin-top:18px">Chip &amp; PIN, contactless, Apple Pay and Google Pay on every machine. Fast, secure transactions and next-day settlement as standard.</p>
+      <div class="bcp-mtabs bcp-t-div" role="tablist" aria-label="Card machines">
+        <button class="bcp-mtab bcp-t-button" role="tab" aria-selected="true" data-m="0"><span class="bcp-n bcp-t-span"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-smartphone"/></svg></span><div class="bcp-t-div"><b class="bcp-t-b">Mobile 4G</b><span class="bcp-t-span">Take it to your customers</span></div><svg class="bcp-ic bcp-chev bcp-t-svg"><use href="#bcp-i-chevron-right"/></svg></button>
+        <button class="bcp-mtab bcp-t-button" role="tab" aria-selected="false" data-m="1"><span class="bcp-n bcp-t-span"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-credit-card"/></svg></span><div class="bcp-t-div"><b class="bcp-t-b">Smart terminal</b><span class="bcp-t-span">Take your card machine to the next level</span></div><svg class="bcp-ic bcp-chev bcp-t-svg"><use href="#bcp-i-chevron-right"/></svg></button>
+        <button class="bcp-mtab bcp-t-button" role="tab" aria-selected="false" data-m="2"><span class="bcp-n bcp-t-span"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-store"/></svg></span><div class="bcp-t-div"><b class="bcp-t-b">Countertop</b><span class="bcp-t-span">Perfect for serving at the till</span></div><svg class="bcp-ic bcp-chev bcp-t-svg"><use href="#bcp-i-chevron-right"/></svg></button>
+      </div>
+      <div class="bcp-show-cta bcp-t-div">
+        <a class="bcp-btn bcp-btn-sky bcp-t-a" href="#bcp-quote" data-quote>Get a machine quote <svg class="bcp-ic bcp-arrow bcp-t-svg"><use href="#bcp-i-arrow-right"/></svg></a>
+        <a class="bcp-btn bcp-btn-glass bcp-t-a" href="tel:+442070527978">Talk to an expert</a>
+      </div>
+    </div>
+    <div class="bcp-stage bcp-rv bcp-t-div" aria-live="polite">
+      <span class="bcp-label bcp-t-span" id="bcp-mLabel">Mobile · 4G</span>
+      <div class="bcp-shot bcp-t-div"><img class="bcp-t-img" id="bcp-mImg" src="https://raw.githubusercontent.com/ritesh5001/be-connectpay/claude/be-connectpay-homepage-redesign-5wiwc8/assets/terminal-a920.png" alt="Be-Connect A920 mobile card machine" width="273" height="579"></div>
+      <div class="bcp-specs bcp-t-div">
+        <div class="bcp-t-div"><small class="bcp-t-small" id="bcp-s1k">Connection</small><b class="bcp-t-b" id="bcp-s1">Built-in GPRS SIM</b></div>
+        <div class="bcp-t-div"><small class="bcp-t-small" id="bcp-s2k">Coverage</small><b class="bcp-t-b" id="bcp-s2">Anywhere with 4G</b></div>
+        <div class="bcp-t-div"><small class="bcp-t-small" id="bcp-s3k">Battery</small><b class="bcp-t-b" id="bcp-s3">Long battery life</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bcp-sec bcp-t-section" id="bcp-sectors">
+  <div class="bcp-wrap bcp-t-div">
+    <div class="bcp-head bcp-split bcp-rv bcp-t-div">
+      <div class="bcp-t-div" style="display:grid;gap:16px"><span class="bcp-eyebrow bcp-t-span">Industries</span><h2 class="bcp-h2 bcp-t-h2">Built for businesses like yours.</h2></div>
+      <p class="bcp-lead bcp-t-p">From the morning coffee rush to the last table of the night, we set you up with payments that fit the way you trade.</p>
+    </div>
+    <div class="bcp-sectors bcp-t-div" id="bcp-sectorList">
+      <a class="bcp-sector bcp-big bcp-rv bcp-t-a" href="#bcp-quote" data-quote><img class="bcp-t-img" src="https://raw.githubusercontent.com/ritesh5001/be-connectpay/claude/be-connectpay-homepage-redesign-5wiwc8/assets/sector-retail.jpg" alt="" loading="lazy" width="900" height="678"><span class="bcp-go bcp-t-span"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-arrow-up-right"/></svg></span><b class="bcp-t-b">Retail &amp; high street</b><span class="bcp-t-span">Serve faster at the till with countertop terminals</span></a>
+      <a class="bcp-sector bcp-rv bcp-t-a" href="#bcp-quote" data-quote><img class="bcp-t-img" src="https://raw.githubusercontent.com/ritesh5001/be-connectpay/claude/be-connectpay-homepage-redesign-5wiwc8/assets/sector-cafe.jpg" alt="" loading="lazy" width="900" height="900"><span class="bcp-go bcp-t-span"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-arrow-up-right"/></svg></span><b class="bcp-t-b">Cafés</b><span class="bcp-t-span">Quick contactless queues</span></a>
+      <a class="bcp-sector bcp-rv bcp-t-a" href="#bcp-quote" data-quote><img class="bcp-t-img" src="https://raw.githubusercontent.com/ritesh5001/be-connectpay/claude/be-connectpay-homepage-redesign-5wiwc8/assets/sector-restaurant.jpg" alt="" loading="lazy" width="800" height="1198"><span class="bcp-go bcp-t-span"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-arrow-up-right"/></svg></span><b class="bcp-t-b">Restaurants &amp; pubs</b><span class="bcp-t-span">Pay at the table</span></a>
+      <a class="bcp-sector bcp-rv bcp-t-a" href="#bcp-quote" data-quote><img class="bcp-t-img" src="https://raw.githubusercontent.com/ritesh5001/be-connectpay/claude/be-connectpay-homepage-redesign-5wiwc8/assets/sector-beauty.jpg" alt="" loading="lazy" width="900" height="900"><span class="bcp-go bcp-t-span"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-arrow-up-right"/></svg></span><b class="bcp-t-b">Hair &amp; beauty</b><span class="bcp-t-span">Deposits by Pay by Link</span></a>
+      <a class="bcp-sector bcp-rv bcp-t-a" href="#bcp-quote" data-quote><img class="bcp-t-img" src="https://raw.githubusercontent.com/ritesh5001/be-connectpay/claude/be-connectpay-homepage-redesign-5wiwc8/assets/sector-takeaway.jpg" alt="" loading="lazy" width="900" height="675"><span class="bcp-go bcp-t-span"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-arrow-up-right"/></svg></span><b class="bcp-t-b">Takeaways</b><span class="bcp-t-span">Counter, phone and online</span></a>
+      <a class="bcp-sector bcp-rv bcp-t-a" href="#bcp-quote" data-quote><img class="bcp-t-img" src="https://raw.githubusercontent.com/ritesh5001/be-connectpay/claude/be-connectpay-homepage-redesign-5wiwc8/assets/sector-trades.jpg" alt="" loading="lazy" width="900" height="675"><span class="bcp-go bcp-t-span"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-arrow-up-right"/></svg></span><b class="bcp-t-b">Trades</b><span class="bcp-t-span">Get paid on the job over 4G</span></a>
+      <a class="bcp-sector bcp-rv bcp-t-a" href="#bcp-quote" data-quote><img class="bcp-t-img" src="https://raw.githubusercontent.com/ritesh5001/be-connectpay/claude/be-connectpay-homepage-redesign-5wiwc8/assets/sector-gym.jpg" alt="" loading="lazy" width="900" height="601"><span class="bcp-go bcp-t-span"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-arrow-up-right"/></svg></span><b class="bcp-t-b">Gyms &amp; fitness</b><span class="bcp-t-span">Memberships, classes and kit sales</span></a>
+    </div>
+    <p class="bcp-swipe-hint bcp-t-p"><svg class="bcp-ic bcp-t-svg" style="width:16px;height:16px"><use href="#bcp-i-arrow-right"/></svg>Swipe to see more industries</p>
+  </div>
+</section>
+<section class="bcp-sec bcp-t-section" style="background:var(--bg-2)">
+  <div class="bcp-wrap bcp-story bcp-t-div">
+    <div class="bcp-rv bcp-t-div">
+      <span class="bcp-eyebrow bcp-t-span">Next-day settlement</span>
+      <h2 class="bcp-h2 bcp-t-h2" style="margin-top:16px">Today's takings. In your bank tomorrow.</h2>
+      <p class="bcp-lead bcp-t-p" style="margin-top:18px">No waiting days for money to clear. Every card payment you take is settled into your business account the next working day, so you can pay suppliers and staff on time.</p>
+      <div class="bcp-timeline bcp-t-div">
+        <div class="bcp-tl bcp-t-div"><span class="bcp-dot bcp-t-span"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-credit-card"/></svg></span><div class="bcp-t-div"><time class="bcp-t-time">MON · 17:42</time><h4 class="bcp-t-h4">Customer taps to pay</h4><p class="bcp-t-p">Approved in seconds on your Be-Connect terminal.</p></div></div>
+        <div class="bcp-tl bcp-t-div"><span class="bcp-dot bcp-t-span"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-bar-chart-3"/></svg></span><div class="bcp-t-div"><time class="bcp-t-time">MON · CLOSE</time><h4 class="bcp-t-h4">Your day's takings are batched</h4><p class="bcp-t-p">Track every sale in real time from any device.</p></div></div>
+        <div class="bcp-tl bcp-t-div"><span class="bcp-dot bcp-t-span"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-landmark"/></svg></span><div class="bcp-t-div"><time class="bcp-t-time">TUE · NEXT WORKING DAY</time><h4 class="bcp-t-h4">Money lands in your account</h4><p class="bcp-t-p">Ready to reinvest in your business.</p></div></div>
+      </div>
+    </div>
+    <div class="bcp-app bcp-rv bcp-t-div" aria-hidden="true">
+      <div class="bcp-phone bcp-t-div"><span class="bcp-notch bcp-t-span"></span>
+        <div class="bcp-screen bcp-t-div">
+          <div class="bcp-app-head bcp-t-div">
+            <small class="bcp-t-small">Today's takings</small>
+            <div class="bcp-bal bcp-t-div">£3,482.60</div>
+            <span class="bcp-sub bcp-t-span"><svg class="bcp-ic bcp-t-svg" style="width:14px;height:14px"><use href="#bcp-i-check"/></svg>Settles tomorrow</span>
+            <div class="bcp-app-chart bcp-t-div"><i class="bcp-t-i" style="height:40%"></i><i class="bcp-t-i" style="height:55%"></i><i class="bcp-t-i" style="height:35%"></i><i class="bcp-t-i" style="height:70%"></i><i class="bcp-t-i" style="height:60%"></i><i class="bcp-t-i" style="height:85%"></i><i class="bcp-on bcp-t-i" style="height:100%"></i></div>
+          </div>
+          <div class="bcp-tx bcp-t-div">
+            <h5 class="bcp-t-h5">Latest payments</h5>
+            <div class="bcp-tx-row bcp-t-div"><span class="bcp-i bcp-t-span"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-credit-card"/></svg></span><div class="bcp-t-div"><b class="bcp-t-b">Contactless</b><small class="bcp-t-small">Visa · 17:42</small></div><span class="bcp-v bcp-t-span">£24.50</span></div>
+            <div class="bcp-tx-row bcp-t-div"><span class="bcp-i bcp-t-span"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-link"/></svg></span><div class="bcp-t-div"><b class="bcp-t-b">Pay by Link</b><small class="bcp-t-small">Invoice #2041 · 16:10</small></div><span class="bcp-v bcp-t-span">£180.00</span></div>
+            <div class="bcp-tx-row bcp-t-div"><span class="bcp-i bcp-t-span"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-smartphone"/></svg></span><div class="bcp-t-div"><b class="bcp-t-b">Apple Pay</b><small class="bcp-t-small">Table 6 · 15:58</small></div><span class="bcp-v bcp-t-span">£42.80</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="bcp-app-badge bcp-t-div"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-circle-check"/></svg><div class="bcp-t-div"><b class="bcp-t-b">Settlement sent</b><small class="bcp-t-small">Tue, 09:00</small></div></div>
+    </div>
+  </div>
+</section>
+<section class="bcp-sec bcp-t-section" id="bcp-why">
+  <div class="bcp-wrap bcp-t-div">
+    <div class="bcp-head bcp-center bcp-rv bcp-t-div">
+      <span class="bcp-eyebrow bcp-t-span">Why Be-Connect</span>
+      <h2 class="bcp-h2 bcp-t-h2">A payments partner that picks up the phone.</h2>
+      <p class="bcp-lead bcp-t-p">Card payment solutions from a partner you can trust. Together for good.</p>
+    </div>
+    <div class="bcp-why bcp-t-div">
+      <div class="bcp-team bcp-rv bcp-t-div">
+        <img class="bcp-t-img" src="https://raw.githubusercontent.com/ritesh5001/be-connectpay/claude/be-connectpay-homepage-redesign-5wiwc8/assets/team-welcome.jpg" alt="Member of the Be-Connect welcome team" width="1024" height="682" loading="lazy">
+        <div class="bcp-team-card bcp-t-div">
+          <span class="bcp-on bcp-t-span">UK team online now</span>
+          <b class="bcp-t-b">Your dedicated welcome team gets you set up and stays with you.</b>
+          <span class="bcp-num bcp-t-span">020 7052 7978</span>
+        </div>
+      </div>
+      <div class="bcp-feats bcp-t-div">
+        <div class="bcp-feat bcp-rv bcp-t-div"><span class="bcp-fi bcp-t-span"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-headset"/></svg></span><h3 class="bcp-t-h3">24/7 UK support</h3><p class="bcp-t-p">Real people, around the clock, so you never get stuck.</p></div>
+        <div class="bcp-feat bcp-rv bcp-t-div"><span class="bcp-fi bcp-t-span"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-shield-check"/></svg></span><h3 class="bcp-t-h3">Reliable &amp; secure</h3><p class="bcp-t-p">Secure transactions, so you can focus on your business.</p></div>
+        <div class="bcp-feat bcp-rv bcp-t-div"><span class="bcp-fi bcp-t-span"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-cpu"/></svg></span><h3 class="bcp-t-h3">Cutting-edge technology</h3><p class="bcp-t-p">Stay ahead with a fast, modern payment experience.</p></div>
+        <div class="bcp-feat bcp-rv bcp-t-div"><span class="bcp-fi bcp-t-span"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-badge-pound-sterling"/></svg></span><h3 class="bcp-t-h3">Free payment gateway</h3><p class="bcp-t-p">No upfront costs to start taking payments online.</p></div>
+        <div class="bcp-feat bcp-rv bcp-t-div"><span class="bcp-fi bcp-t-span"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-bar-chart-3"/></svg></span><h3 class="bcp-t-h3">Real-time reporting</h3><p class="bcp-t-p">Instant insight into every transaction, on any device.</p></div>
+        <div class="bcp-feat bcp-rv bcp-t-div"><span class="bcp-fi bcp-t-span"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-house"/></svg></span><h3 class="bcp-t-h3">Home service franchise</h3><p class="bcp-t-p">Tailored solutions with specialised, local support.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bcp-sec bcp-t-section" id="bcp-calculator" style="padding-top:0">
+  <div class="bcp-wrap bcp-t-div">
+    <div class="bcp-head bcp-split bcp-rv bcp-t-div">
+      <div class="bcp-t-div" style="display:grid;gap:16px"><span class="bcp-eyebrow bcp-t-span">Fee checker</span><h2 class="bcp-h2 bcp-t-h2">Are you paying too much to take cards?</h2></div>
+      <p class="bcp-lead bcp-t-p">Slide to match your last statement and see your true rate in seconds. Then let us review it for free.</p>
+    </div>
+    <div class="bcp-calc bcp-rv bcp-t-div">
+      <div class="bcp-calc-in bcp-t-div">
+        <h3 class="bcp-t-h3">Your monthly statement</h3>
+        <div class="bcp-ctl bcp-t-div">
+          <div class="bcp-ctl-top bcp-t-div"><label class="bcp-t-label" for="bcp-sTurn">Card takings per month</label><output class="bcp-t-output" id="bcp-oTurn">£20,000</output></div>
+          <input class="bcp-t-input" type="range" id="bcp-sTurn" min="1000" max="150000" step="1000" value="20000">
+          <div class="bcp-ticks bcp-t-div"><span class="bcp-t-span">£1k</span><span class="bcp-t-span">£150k</span></div>
+        </div>
+        <div class="bcp-ctl bcp-t-div">
+          <div class="bcp-ctl-top bcp-t-div"><label class="bcp-t-label" for="bcp-sTx">Transactions per month</label><output class="bcp-t-output" id="bcp-oTx">800</output></div>
+          <input class="bcp-t-input" type="range" id="bcp-sTx" min="50" max="6000" step="50" value="800">
+          <div class="bcp-ticks bcp-t-div"><span class="bcp-t-span">50</span><span class="bcp-t-span">6,000</span></div>
+        </div>
+        <div class="bcp-ctl bcp-t-div">
+          <div class="bcp-ctl-top bcp-t-div"><label class="bcp-t-label" for="bcp-sFees">Total fees per month</label><output class="bcp-t-output" id="bcp-oFees">£340</output></div>
+          <input class="bcp-t-input" type="range" id="bcp-sFees" min="10" max="3000" step="10" value="340">
+          <div class="bcp-ticks bcp-t-div"><span class="bcp-t-span">£10</span><span class="bcp-t-span">£3,000</span></div>
+        </div>
+        <div class="bcp-tip bcp-t-div"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-file-text"/></svg><p class="bcp-t-p"><b class="bcp-t-b">Where to find these:</b> your monthly merchant statement lists total card takings, number of transactions and every fee you were charged.</p></div>
+      </div>
+      <div class="bcp-calc-out bcp-t-div" aria-live="polite">
+        <small class="bcp-t-small">Your effective rate</small>
+        <div class="bcp-big-num bcp-t-div" id="bcp-rRate">1.70%</div>
+        <div class="bcp-kv bcp-t-div">
+          <div class="bcp-t-div"><span class="bcp-t-span">Fees per year</span><b class="bcp-t-b" id="bcp-rYear">£4,080</b></div>
+          <div class="bcp-t-div"><span class="bcp-t-span">Average fee per sale</span><b class="bcp-t-b" id="bcp-rPer">£0.43</b></div>
+          <div class="bcp-t-div"><span class="bcp-t-span">Average sale value</span><b class="bcp-t-b" id="bcp-rAvg">£25.00</b></div>
+        </div>
+        <p class="bcp-save bcp-t-p">Every <b class="bcp-t-b">0.1%</b> off your rate puts <b class="bcp-t-b" id="bcp-rTenth">£240</b> a year back in your pocket.</p>
+        <a class="bcp-btn bcp-btn-sky bcp-t-a" href="#bcp-quote" data-quote>Get my free statement review <svg class="bcp-ic bcp-arrow bcp-t-svg"><use href="#bcp-i-arrow-right"/></svg></a>
+        <p class="bcp-fine bcp-t-p">Illustrative only, not a quote. Example figures shown.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bcp-sec bcp-t-section" style="background:var(--bg-2)">
+  <div class="bcp-wrap bcp-t-div">
+    <div class="bcp-head bcp-center bcp-rv bcp-t-div">
+      <span class="bcp-eyebrow bcp-t-span">How it works</span>
+      <h2 class="bcp-h2 bcp-t-h2">Up and running in three steps.</h2>
+    </div>
+    <ol class="bcp-steps bcp-t-ol">
+      <li class="bcp-step bcp-rv bcp-t-li"><span class="bcp-n bcp-t-span">01</span><svg class="bcp-ic bcp-big bcp-t-svg"><use href="#bcp-i-file-text"/></svg><h3 class="bcp-t-h3">Get a free quote</h3><p class="bcp-t-p">Tell us how you trade and what you take each month. It takes about a minute.</p></li>
+      <li class="bcp-step bcp-rv bcp-t-li"><span class="bcp-n bcp-t-span">02</span><svg class="bcp-ic bcp-big bcp-t-svg"><use href="#bcp-i-headset"/></svg><h3 class="bcp-t-h3">Meet your welcome team</h3><p class="bcp-t-p">A dedicated specialist recommends the right setup and explains every cost clearly.</p></li>
+      <li class="bcp-step bcp-rv bcp-t-li"><span class="bcp-n bcp-t-span">03</span><svg class="bcp-ic bcp-big bcp-t-svg"><use href="#bcp-i-zap"/></svg><h3 class="bcp-t-h3">Start getting paid</h3><p class="bcp-t-p">Your machine arrives ready to go. Take payments today, get paid tomorrow.</p></li>
+    </ol>
+  </div>
+</section>
+<section class="bcp-sec bcp-t-section" id="bcp-reviews">
+  <div class="bcp-wrap bcp-t-div">
+    <div class="bcp-head bcp-split bcp-rv bcp-t-div">
+      <div class="bcp-t-div" style="display:grid;gap:16px"><span class="bcp-eyebrow bcp-t-span">Customer stories</span><h2 class="bcp-h2 bcp-t-h2">Loved by the businesses we serve.</h2></div>
+      <p class="bcp-lead bcp-t-p">Real words from Be-Connect customers about the service and support they get.</p>
+    </div>
+    <div class="bcp-reviews bcp-t-div">
+      <figure class="bcp-review bcp-feature bcp-rv bcp-t-figure" style="margin:0">
+        <span class="bcp-stars bcp-t-span" aria-label="Five stars"><i class="bcp-t-i"><svg class="bcp-t-svg"><use href="#bcp-star"/></svg></i><i class="bcp-t-i"><svg class="bcp-t-svg"><use href="#bcp-star"/></svg></i><i class="bcp-t-i"><svg class="bcp-t-svg"><use href="#bcp-star"/></svg></i><i class="bcp-t-i"><svg class="bcp-t-svg"><use href="#bcp-star"/></svg></i><i class="bcp-t-i"><svg class="bcp-t-svg"><use href="#bcp-star"/></svg></i></span>
+        <blockquote class="bcp-q bcp-t-blockquote" style="margin:0">I have been with Be-Connect for 2 years now and never disappointed. Very reliable and good customer service. I'll recommend it.</blockquote>
+        <figcaption class="bcp-who bcp-t-figcaption"><span class="bcp-av bcp-t-span">D</span><div class="bcp-t-div"><b class="bcp-t-b">Dhayalan</b><small class="bcp-t-small">Be-Connect customer</small></div></figcaption>
+      </figure>
+      <figure class="bcp-review bcp-rv bcp-t-figure" style="margin:0">
+        <span class="bcp-stars bcp-t-span" aria-label="Five stars"><i class="bcp-t-i"><svg class="bcp-t-svg"><use href="#bcp-star"/></svg></i><i class="bcp-t-i"><svg class="bcp-t-svg"><use href="#bcp-star"/></svg></i><i class="bcp-t-i"><svg class="bcp-t-svg"><use href="#bcp-star"/></svg></i><i class="bcp-t-i"><svg class="bcp-t-svg"><use href="#bcp-star"/></svg></i><i class="bcp-t-i"><svg class="bcp-t-svg"><use href="#bcp-star"/></svg></i></span>
+        <blockquote class="bcp-q bcp-t-blockquote" style="margin:0">I signed up for a card machine with Be-Connect. Anushka Banerjee helped me with the process. Great service and help by her.</blockquote>
+        <figcaption class="bcp-who bcp-t-figcaption"><span class="bcp-av bcp-t-span">GM</span><div class="bcp-t-div"><b class="bcp-t-b">Gowtham Manikkam</b><small class="bcp-t-small">Card machine customer</small></div></figcaption>
+      </figure>
+      <figure class="bcp-review bcp-rv bcp-t-figure" style="margin:0">
+        <span class="bcp-stars bcp-t-span" aria-label="Five stars"><i class="bcp-t-i"><svg class="bcp-t-svg"><use href="#bcp-star"/></svg></i><i class="bcp-t-i"><svg class="bcp-t-svg"><use href="#bcp-star"/></svg></i><i class="bcp-t-i"><svg class="bcp-t-svg"><use href="#bcp-star"/></svg></i><i class="bcp-t-i"><svg class="bcp-t-svg"><use href="#bcp-star"/></svg></i><i class="bcp-t-i"><svg class="bcp-t-svg"><use href="#bcp-star"/></svg></i></span>
+        <blockquote class="bcp-q bcp-t-blockquote" style="margin:0">Customer care executive Mr. Jason is very helpful and trustworthy. Overall very good experience.</blockquote>
+        <figcaption class="bcp-who bcp-t-figcaption"><span class="bcp-av bcp-t-span">DS</span><div class="bcp-t-div"><b class="bcp-t-b">Denislav Shanov</b><small class="bcp-t-small">Be-Connect customer</small></div></figcaption>
+      </figure>
+    </div>
+    <div class="bcp-tp-row bcp-rv bcp-t-div"><span class="bcp-stars bcp-t-span" aria-hidden="true"><i class="bcp-t-i"><svg class="bcp-t-svg"><use href="#bcp-star"/></svg></i><i class="bcp-t-i"><svg class="bcp-t-svg"><use href="#bcp-star"/></svg></i><i class="bcp-t-i"><svg class="bcp-t-svg"><use href="#bcp-star"/></svg></i><i class="bcp-t-i"><svg class="bcp-t-svg"><use href="#bcp-star"/></svg></i><i class="bcp-t-i"><svg class="bcp-t-svg"><use href="#bcp-star"/></svg></i></span><span class="bcp-t-span">Read our reviews on</span><span class="bcp-tp bcp-t-span"><svg class="bcp-t-svg" viewbox="0 0 24 24"><use href="#bcp-star"/></svg>Trustpilot</span></div>
+  </div>
+</section>
+<section class="bcp-wrap bcp-t-section" id="bcp-funding">
+  <div class="bcp-cta bcp-rv bcp-t-div">
+    <div class="bcp-cta-copy bcp-t-div">
+      <span class="bcp-eyebrow bcp-t-span">Business funding</span>
+      <h2 class="bcp-h2 bcp-t-h2">Ready to grow? We'll help you get paid, and get funded.</h2>
+      <p class="bcp-lead bcp-t-p">Switch to Be-Connect for next-day settlement, then unlock funding based on your card takings when you need it.</p>
+      <div class="bcp-row bcp-t-div">
+        <a class="bcp-btn bcp-btn-sky bcp-t-a" href="#bcp-quote" data-quote>Get a free quote <svg class="bcp-ic bcp-arrow bcp-t-svg"><use href="#bcp-i-arrow-right"/></svg></a>
+        <a class="bcp-btn bcp-btn-glass bcp-t-a" href="tel:+442070527978"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-phone"/></svg>020 7052 7978</a>
+      </div>
+      <ul class="bcp-t-ul"><li class="bcp-t-li"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-check"/></svg>No-obligation quote</li><li class="bcp-t-li"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-check"/></svg>Next-day settlement</li><li class="bcp-t-li"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-check"/></svg>24/7 UK support</li></ul>
+    </div>
+    <div class="bcp-cta-img bcp-t-div"><img class="bcp-t-img" src="https://raw.githubusercontent.com/ritesh5001/be-connectpay/claude/be-connectpay-homepage-redesign-5wiwc8/assets/owners-bakery.jpg" alt="Two bakery owners smiling behind their counter" width="1400" height="933" loading="lazy"></div>
+  </div>
+</section>
+<section class="bcp-sec bcp-t-section" id="bcp-faq">
+  <div class="bcp-wrap bcp-faq-grid bcp-t-div">
+    <div class="bcp-rv bcp-t-div">
+      <span class="bcp-eyebrow bcp-t-span">Support</span>
+      <h2 class="bcp-h2 bcp-t-h2" style="margin-top:16px">Questions, answered.</h2>
+      <p class="bcp-lead bcp-t-p" style="margin-top:18px">Can't find what you need? Our UK team is here 24/7.</p>
+      <div class="bcp-contact-card bcp-t-div">
+        <a class="bcp-t-a" href="tel:+442070527978"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-phone"/></svg>020 7052 7978</a>
+        <a class="bcp-t-a" href="mailto:services@be-connect.co.uk"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-mail"/></svg>services@be-connect.co.uk</a>
+      </div>
+    </div>
+    <div class="bcp-faq bcp-rv bcp-t-div">
+      <details class="bcp-t-details" open><summary class="bcp-t-summary">How quickly will I receive my money?<span class="bcp-pm bcp-t-span"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-plus"/></svg></span></summary><p class="bcp-a bcp-t-p">With next-day settlement, card payments you take today are paid into your business bank account on the next working day.</p></details>
+      <details class="bcp-t-details"><summary class="bcp-t-summary">Which payment methods can I accept?<span class="bcp-pm bcp-t-span"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-plus"/></svg></span></summary><p class="bcp-a bcp-t-p">All major credit and debit cards including Visa, Mastercard and American Express, plus Apple Pay, Google Pay and Samsung Pay, by chip &amp; PIN or contactless.</p></details>
+      <details class="bcp-t-details"><summary class="bcp-t-summary">Do I need Wi-Fi to use a card machine?<span class="bcp-pm bcp-t-span"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-plus"/></svg></span></summary><p class="bcp-a bcp-t-p">Not with a mobile machine. It has a built-in GPRS SIM card and connects anywhere there's 4G signal. Countertop machines connect by broadband or phone line.</p></details>
+      <details class="bcp-t-details"><summary class="bcp-t-summary">Can I take payments online and over the phone?<span class="bcp-pm bcp-t-span"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-plus"/></svg></span></summary><p class="bcp-a bcp-t-p">Yes. Our free payment gateway integrates with most shopping carts, and Pay by Link lets you send secure payment requests by email or text.</p></details>
+      <details class="bcp-t-details"><summary class="bcp-t-summary">What support will I get?<span class="bcp-pm bcp-t-span"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-plus"/></svg></span></summary><p class="bcp-a bcp-t-p">A dedicated welcome team gets you set up, and our UK-based support is available 24/7, 7 days a week.</p></details>
+      <details class="bcp-t-details"><summary class="bcp-t-summary">Can Be-Connect help with business funding?<span class="bcp-pm bcp-t-span"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-plus"/></svg></span></summary><p class="bcp-a bcp-t-p">Yes. Talk to our team about funding options based on your card takings, and we'll explain what you could access.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="bcp-footer bcp-t-footer">
+  <div class="bcp-wrap bcp-t-div">
+    <div class="bcp-f-top bcp-t-div">
+      <div class="bcp-f-brand bcp-t-div">
+        <img class="bcp-t-img" src="https://raw.githubusercontent.com/ritesh5001/be-connectpay/claude/be-connectpay-homepage-redesign-5wiwc8/assets/logo-light.png" alt="Be-Connect Pay – Together For Good" width="568" height="252">
+        <p class="bcp-t-p">Card machines, POS, online and phone payments for UK businesses, with next-day settlement and 24/7 UK support.</p>
+        <div class="bcp-social bcp-t-div">
+          <a class="bcp-t-a" href="#" aria-label="Facebook"><svg class="bcp-t-svg"><use href="#bcp-s-fb"/></svg></a>
+          <a class="bcp-t-a" href="#" aria-label="YouTube"><svg class="bcp-t-svg"><use href="#bcp-s-yt"/></svg></a>
+          <a class="bcp-t-a" href="#" aria-label="Instagram"><svg class="bcp-t-svg"><use href="#bcp-s-ig"/></svg></a>
+          <a class="bcp-t-a" href="#" aria-label="X"><svg class="bcp-t-svg"><use href="#bcp-s-x"/></svg></a>
+        </div>
+      </div>
+      <div class="bcp-t-div"><h4 class="bcp-t-h4">Solutions</h4><ul class="bcp-t-ul"><li class="bcp-t-li"><a class="bcp-t-a" href="#bcp-machines">Card machines</a></li><li class="bcp-t-li"><a class="bcp-t-a" href="https://be-connectpay.co.uk/pos-system/">POS systems</a></li><li class="bcp-t-li"><a class="bcp-t-a" href="https://be-connectpay.co.uk/payment-gateway/">Payment gateway</a></li><li class="bcp-t-li"><a class="bcp-t-a" href="https://be-connectpay.co.uk/pay-by-link/">Pay by Link</a></li><li class="bcp-t-li"><a class="bcp-t-a" href="https://be-connectpay.co.uk/payment-app/">Payment app</a></li><li class="bcp-t-li"><a class="bcp-t-a" href="#bcp-funding">Business funding</a></li></ul></div>
+      <div class="bcp-t-div"><h4 class="bcp-t-h4">Company</h4><ul class="bcp-t-ul"><li class="bcp-t-li"><a class="bcp-t-a" href="https://be-connectpay.co.uk/about-us/">About us</a></li><li class="bcp-t-li"><a class="bcp-t-a" href="#">Careers</a></li><li class="bcp-t-li"><a class="bcp-t-a" href="#">Blog</a></li><li class="bcp-t-li"><a class="bcp-t-a" href="#">Contact</a></li><li class="bcp-t-li"><a class="bcp-t-a" href="#">Privacy policy</a></li><li class="bcp-t-li"><a class="bcp-t-a" href="#">Terms &amp; conditions</a></li></ul></div>
+      <div class="bcp-t-div"><h4 class="bcp-t-h4">Get in touch</h4><ul class="bcp-f-contact bcp-t-ul"><li class="bcp-t-li"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-phone"/></svg><a class="bcp-t-a" href="tel:+442070527978">020 7052 7978</a></li><li class="bcp-t-li"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-mail"/></svg><a class="bcp-t-a" href="mailto:info@be-connect.co.uk">info@be-connect.co.uk</a></li><li class="bcp-t-li"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-map-pin"/></svg><span class="bcp-t-span">Bizniz Point, Crown House, Home Gardens, Dartford DA1 1DZ</span></li></ul></div>
+    </div>
+    <div class="bcp-f-bottom bcp-t-div">
+      <span class="bcp-t-span">© 2026 Be-Connect Pay Ltd · Registered in England &amp; Wales · Company no. 15411775</span>
+      <div class="bcp-logo-row bcp-t-div" aria-hidden="true">
+        <svg class="bcp-t-svg" viewbox="0 0 24 24" style="fill:#fff"><use href="#bcp-b-visa"/></svg>
+        <svg class="bcp-t-svg" viewbox="0 0 24 24" style="fill:#fff"><use href="#bcp-b-mastercard"/></svg>
+        <svg class="bcp-t-svg" viewbox="0 0 24 24" style="fill:#fff"><use href="#bcp-b-americanexpress"/></svg>
+        <svg class="bcp-w bcp-t-svg" viewbox="0 0 24 24" style="fill:#fff"><use href="#bcp-b-applepay"/></svg>
+        <svg class="bcp-w bcp-t-svg" viewbox="0 0 24 24" style="fill:#fff"><use href="#bcp-b-googlepay"/></svg>
+      </div>
+      <span class="bcp-tp bcp-t-span"><svg class="bcp-t-svg" viewbox="0 0 24 24"><use href="#bcp-star"/></svg>Review us on Trustpilot</span>
+    </div>
+  </div>
+</footer>
+<div class="bcp-mbar bcp-t-div" id="bcp-mbar">
+  <a class="bcp-btn bcp-call bcp-t-a" href="tel:+442070527978" aria-label="Call 020 7052 7978"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-phone"/></svg></a>
+  <a class="bcp-btn bcp-btn-sky bcp-t-a" href="#bcp-quote" data-quote>Get a free quote <svg class="bcp-ic bcp-arrow bcp-t-svg"><use href="#bcp-i-arrow-right"/></svg></a>
+</div>
+<div class="bcp-quote bcp-t-div" id="bcp-quote" role="dialog" aria-modal="true" aria-labelledby="bcp-qTitle" aria-hidden="true">
+  <form class="bcp-q-panel bcp-t-form" id="bcp-qForm" novalidate>
+    <div class="bcp-q-top bcp-t-div">
+      <div class="bcp-t-div"><h3 class="bcp-t-h3" id="bcp-qTitle">Get your free quote</h3><p class="bcp-t-p">Three quick steps. No obligation.</p></div>
+      <button type="button" class="bcp-q-close bcp-t-button" id="bcp-qClose" aria-label="Close"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-x"/></svg></button>
+    </div>
+    <div class="bcp-q-prog bcp-t-div" aria-hidden="true"><i class="bcp-on bcp-t-i"></i><i class="bcp-t-i"></i><i class="bcp-t-i"></i></div>
+    <fieldset class="bcp-q-step bcp-t-fieldset" data-s="1">
+      <legend class="bcp-t-legend">What do you need?</legend>
+      <div class="bcp-opts bcp-t-div">
+        <div class="bcp-opt bcp-t-div"><input class="bcp-t-input" type="checkbox" id="bcp-n1" name="need" value="Card machine" checked><label class="bcp-t-label" for="bcp-n1"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-credit-card"/></svg>Card machine</label></div>
+        <div class="bcp-opt bcp-t-div"><input class="bcp-t-input" type="checkbox" id="bcp-n2" name="need" value="POS system"><label class="bcp-t-label" for="bcp-n2"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-monitor"/></svg>POS system</label></div>
+        <div class="bcp-opt bcp-t-div"><input class="bcp-t-input" type="checkbox" id="bcp-n3" name="need" value="Online payments"><label class="bcp-t-label" for="bcp-n3"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-shopping-cart"/></svg>Online payments</label></div>
+        <div class="bcp-opt bcp-t-div"><input class="bcp-t-input" type="checkbox" id="bcp-n4" name="need" value="Business funding"><label class="bcp-t-label" for="bcp-n4"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-badge-pound-sterling"/></svg>Business funding</label></div>
+      </div>
+    </fieldset>
+    <fieldset class="bcp-q-step bcp-t-fieldset" data-s="2" hidden>
+      <legend class="bcp-t-legend">Monthly card takings</legend>
+      <div class="bcp-opts bcp-t-div">
+        <div class="bcp-opt bcp-t-div"><input class="bcp-t-input" type="radio" id="bcp-t1" name="turn" value="Under £5k"><label class="bcp-t-label" for="bcp-t1">Under £5k</label></div>
+        <div class="bcp-opt bcp-t-div"><input class="bcp-t-input" type="radio" id="bcp-t2" name="turn" value="£5k–£20k" checked><label class="bcp-t-label" for="bcp-t2">£5k – £20k</label></div>
+        <div class="bcp-opt bcp-t-div"><input class="bcp-t-input" type="radio" id="bcp-t3" name="turn" value="£20k–£50k"><label class="bcp-t-label" for="bcp-t3">£20k – £50k</label></div>
+        <div class="bcp-opt bcp-t-div"><input class="bcp-t-input" type="radio" id="bcp-t4" name="turn" value="£50k+"><label class="bcp-t-label" for="bcp-t4">£50k+</label></div>
+      </div>
+    </fieldset>
+    <fieldset class="bcp-q-step bcp-t-fieldset" data-s="3" hidden>
+      <legend class="bcp-t-legend">Where should we send it?</legend>
+      <div class="bcp-field bcp-t-div"><label class="bcp-t-label" for="bcp-qn">Your name</label><input class="bcp-t-input" id="bcp-qn" autocomplete="name" placeholder="Sam Patel"></div>
+      <div class="bcp-field bcp-t-div"><label class="bcp-t-label" for="bcp-qp">Phone or email</label><input class="bcp-t-input" id="bcp-qp" autocomplete="tel" placeholder="07700 900123"></div>
+    </fieldset>
+    <div class="bcp-q-done bcp-t-div" data-s="4" hidden>
+      <span class="bcp-t bcp-t-span"><svg class="bcp-ic bcp-t-svg"><use href="#bcp-i-check"/></svg></span>
+      <h3 class="bcp-t-h3" id="bcp-qDoneTitle">Thanks, you're all set.</h3>
+      <p class="bcp-t-p">A Be-Connect specialist will be in touch with your tailored quote.</p>
+      <span class="bcp-note bcp-t-span">Design preview: this form is not connected yet.</span>
+    </div>
+    <p class="bcp-q-msg bcp-t-p" id="bcp-qMsg" role="alert"></p>
+    <div class="bcp-q-nav bcp-t-div" id="bcp-qNav">
+      <button type="button" class="bcp-q-back bcp-t-button" id="bcp-qBack" hidden>← Back</button>
+      <button type="submit" class="bcp-btn bcp-btn-sky bcp-t-button" id="bcp-qNext" style="margin-left:auto">Continue <svg class="bcp-ic bcp-arrow bcp-t-svg"><use href="#bcp-i-arrow-right"/></svg></button>
+    </div>
+  </form>
+</div>
+</div>
+<script>
+(function(){
+  var root=document.getElementById('bcp-home');
+  if(!root||root.getAttribute('data-bcp-ready'))return;
+  root.setAttribute('data-bcp-ready','1');
+  root.classList.add('bcp-js');
+  var IMG='https://raw.githubusercontent.com/ritesh5001/be-connectpay/claude/be-connectpay-homepage-redesign-5wiwc8/assets/';
+  function $(id){return document.getElementById('bcp-'+id);}
+  function $$(s){return root.querySelectorAll(s);}
+  function icon(n){return '<svg class="bcp-ic bcp-arrow bcp-t-svg"><use href="#bcp-i-'+n+'"/></svg>';}
+
+  /* Header + mobile bar */
+  var header=$('header'),mbar=$('mbar');
+  function onScroll(){var y=window.pageYOffset||document.documentElement.scrollTop;header.classList.toggle('bcp-solid',y>40);mbar.classList.toggle('bcp-show',y>600);}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  /* Smooth scrolling for in-page links */
+  $$('a[href^="#bcp-"]').forEach(function(a){if(a.hasAttribute('data-quote'))return;a.addEventListener('click',function(e){var t=document.getElementById(a.getAttribute('href').slice(1));if(!t)return;e.preventDefault();var top=t.getBoundingClientRect().top+window.pageYOffset-(t.id==='bcp-top'?0:70);window.scrollTo({top:top,behavior:'smooth'});});});
+
+  /* Drawer */
+  var drawer=$('drawer'),menuBtn=$('menuBtn');
+  function setDrawer(o){drawer.classList.toggle('bcp-open',o);drawer.setAttribute('aria-hidden',!o);menuBtn.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':'';}
+  menuBtn.addEventListener('click',function(){setDrawer(true);});
+  $('closeBtn').addEventListener('click',function(){setDrawer(false);});
+  drawer.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setDrawer(false);});});
+
+  /* Reveal on scroll (content stays visible without IntersectionObserver) */
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.remove('bcp-pre');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
+    $$('.bcp-rv').forEach(function(el){if(el.getBoundingClientRect().top>window.innerHeight){el.classList.add('bcp-pre');io.observe(el);}});
+  }
+
+  /* Card machine switcher */
+  var M=[
+    {img:'terminal-a920.png',w:273,h:579,alt:'Be-Connect A920 mobile card machine',label:'Mobile · 4G',s:[['Connection','Built-in GPRS SIM'],['Coverage','Anywhere with 4G'],['Battery','Long battery life']]},
+    {img:'terminal-move.png',w:155,h:328,alt:'Be-Connect smart card terminal',label:'Smart terminal',s:[['Speed','Fast, secure payments'],['Reporting','Real time on screen'],['Setup','Easy set up']]},
+    {img:'terminal-compact.png',w:135,h:288,alt:'Compact countertop card machine',label:'Countertop',s:[['Design','Small and compact'],['Connection','Broadband or phone'],['Receipts','Fast receipt printing']]}
+  ];
+  var tabs=$$('.bcp-mtab'),mImg=$('mImg');
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    var m=M[+t.getAttribute('data-m')];tabs.forEach(function(x){x.setAttribute('aria-selected',x===t);});
+    mImg.classList.add('bcp-swap');
+    setTimeout(function(){mImg.src=IMG+m.img;mImg.width=m.w;mImg.height=m.h;mImg.alt=m.alt;mImg.classList.remove('bcp-swap');},220);
+    $('mLabel').textContent=m.label;
+    m.s.forEach(function(p,i){$('s'+(i+1)+'k').textContent=p[0];$('s'+(i+1)).textContent=p[1];});
+  });});
+
+  /* Fee checker */
+  var gbp=new Intl.NumberFormat('en-GB',{style:'currency',currency:'GBP'}),gbp0=new Intl.NumberFormat('en-GB',{style:'currency',currency:'GBP',maximumFractionDigits:0}),n0=new Intl.NumberFormat('en-GB');
+  var sT=$('sTurn'),sX=$('sTx'),sF=$('sFees');
+  function set(id,v){$(id).textContent=v;}
+  function calc(){
+    var t=+sT.value,x=+sX.value,f=+sF.value;
+    [sT,sX,sF].forEach(function(r){r.style.setProperty('--p',((r.value-r.min)/(r.max-r.min)*100)+'%');});
+    set('oTurn',gbp0.format(t));set('oTx',n0.format(x));set('oFees',gbp0.format(f));
+    set('rRate',(f/t*100).toFixed(2)+'%');set('rYear',gbp0.format(f*12));set('rPer',gbp.format(f/x));set('rAvg',gbp.format(t/x));set('rTenth',gbp0.format(t*.001*12));
+  }
+  [sT,sX,sF].forEach(function(r){r.addEventListener('input',calc);});calc();
+
+  /* Quote dialog */
+  var q=$('quote'),form=$('qForm'),steps=form.querySelectorAll('[data-s]'),prog=form.querySelectorAll('.bcp-q-prog .bcp-t-i'),cur=1;
+  var back=$('qBack'),next=$('qNext'),msg=$('qMsg'),nav=$('qNav'),last=null;
+  function show(n){cur=n;steps.forEach(function(s){s.hidden=+s.getAttribute('data-s')!==n;});prog.forEach(function(p,i){p.classList.toggle('bcp-on',i<n);});back.hidden=n===1||n>3;nav.hidden=n>3;msg.textContent='';
+    next.innerHTML=(n===3?'Get my quote':'Continue')+' '+icon('arrow-right');}
+  function open(e){if(e)e.preventDefault();last=document.activeElement;show(1);q.classList.add('bcp-open');q.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';setTimeout(function(){next.focus();},50);}
+  function close(){q.classList.remove('bcp-open');q.setAttribute('aria-hidden','true');document.body.style.overflow='';if(last)last.focus();}
+  $$('[data-quote]').forEach(function(a){a.addEventListener('click',open);});
+  $('qClose').addEventListener('click',close);
+  q.addEventListener('click',function(e){if(e.target===q)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&q.classList.contains('bcp-open'))close();});
+  back.addEventListener('click',function(){show(cur-1);});
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(cur===1&&!form.querySelector('[name=need]:checked')){msg.textContent='Choose at least one option to continue.';return;}
+    if(cur===3){var nm=$('qn').value.trim(),ct=$('qp').value.trim();
+      if(!nm){msg.textContent='Add your name so we know who to ask for.';$('qn').focus();return;}
+      if(!ct){msg.textContent='Add a phone number or email so we can send your quote.';$('qp').focus();return;}
+      $('qDoneTitle').textContent='Thanks, '+nm.split(' ')[0]+'. You’re all set.';}
+    show(cur+1);
+  });
+})();
+</script>

@@ -37,3 +37,11 @@ Premium fintech direction (in the spirit of Stripe / Dojo / Revolut Business) bu
 ## Live preview (GitHub Pages)
 
 In the repo: Settings → Pages → Source "Deploy from a branch" → pick the branch → folder `/ (root)` → Save. The site is then at https://ritesh5001.github.io/be-connectpay/.
+
+## Elementor version
+
+`elementor/be-connect-home.html` is the whole homepage as one block for an Elementor **HTML** widget.
+
+- All classes and ids start with `bcp-` and every CSS rule is scoped under `.bcp-home`. There are no styles on bare tags (h1, p, a, img…), so it won't affect other pages or widgets.
+- Images load from this repo on GitHub. To host them in WordPress, upload `assets/` to the media library and find/replace the GitHub address in the code.
+- Rebuild after editing the source: `python3 tools/build.py && python3 tools/build_elementor.py`.
