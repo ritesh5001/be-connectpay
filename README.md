@@ -32,4 +32,8 @@ Premium fintech direction (in the spirit of Stripe / Dojo / Revolut Business) bu
 - Each `<section>` maps to an Elementor/Gutenberg section.
 - Product images were cut from a screenshot of the current homepage. Use the original high-resolution files from the WordPress media library for the live build.
 - The quote dialog, machine switcher and fee checker are front-end JavaScript only. Connect the quote dialog to Gravity Forms / WPForms / the CRM.
-- Links to existing pages (`/pos-system/`, `/payment-gateway/`, `/pay-by-link/`, `/payment-app/`, `/about-us/`) are kept. Careers, blog, contact, privacy, terms and social links are `#` placeholders.
+- Links to existing pages (POS system, payment gateway, Pay by Link, payment app, About us) point at https://be-connectpay.co.uk/... so they work from the preview. Make them relative in WordPress. Careers, blog, contact, privacy, terms and social links are `#` placeholders.
+
+## Live preview (GitHub Pages)
+
+In the repo: Settings → Pages → Source "Deploy from a branch" → pick the branch → folder `/ (root)` → Save. The site is then at https://ritesh5001.github.io/be-connectpay/.
