@@ -1,0 +1,988 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Be-Connect Homepage</title>
+<meta name="description" content="Card machines, POS systems and online payments for UK businesses. Next-day settlement and 24/7 UK-based support from Be-Connect.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: conversion-led fintech homepage. Hero copy + quote card, then alternating light/deep bands, 1200px container. */
+:root{
+  --bg:#F4F7FB; --surface:#FFFFFF; --surface-2:#EAF0F8; --ink:#0D1B2E; --muted:#56647B; --line:#D9E1ED;
+  --brand:#1B46D8; --brand-hover:#1438B4; --brand-ink:#FFFFFF; --brand-soft:#E5ECFF;
+  --mint:#0B9E72; --mint-soft:#DAF4EA; --sun:#FFC23D;
+  --deep:#0A1630; --deep-2:#122248; --deep-fg:#E9EFFB; --deep-muted:#A6B4D0; --deep-line:#22345C;
+  --brand-on-deep:#8EA8FF; --chip:#FFFFFF; --term-body:#16233D; --term-edge:#2A3B5E; --term-key:#2A3A5C; --term-screen:#E9F8F1; --term-screen-ink:#0B3B2B; --paper:#FFFFFF; --paper-ink:#2B3546;
+  --shadow:0 1px 2px rgb(13 27 46 / .06), 0 18px 40px -18px rgb(13 27 46 / .28);
+  --shadow-sm:0 1px 2px rgb(13 27 46 / .06), 0 6px 16px -8px rgb(13 27 46 / .18);
+  --f-display:"Sora", "Segoe UI", system-ui, sans-serif;
+  --f-body:"Figtree", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --r-sm:10px; --r:16px; --r-lg:24px;
+  --wrap:1200px; --gutter:20px;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#08111F; --surface:#0F1B2E; --surface-2:#14233A; --ink:#E8EEF8; --muted:#9BA9C0; --line:#203049;
+  --brand:#6A8CFF; --brand-hover:#87A2FF; --brand-ink:#07112B; --brand-soft:#16264A;
+  --mint:#35D3A0; --mint-soft:#0D3327; --sun:#FFC94F;
+  --deep:#050C19; --deep-2:#0D1A35; --deep-fg:#E9EFFB; --deep-muted:#A1AFCB; --deep-line:#1C2C4D;
+  --chip:#F3F6FB; --term-body:#1A2945; --term-edge:#33476E; --term-key:#2F4166; --term-screen:#D9F3E8; --term-screen-ink:#0B3B2B; --paper:#F3F5F9; --paper-ink:#2B3546;
+  --shadow:0 1px 2px rgb(0 0 0 / .3), 0 18px 40px -18px rgb(0 0 0 / .7);
+  --shadow-sm:0 1px 2px rgb(0 0 0 / .3), 0 6px 16px -8px rgb(0 0 0 / .6);
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#08111F; --surface:#0F1B2E; --surface-2:#14233A; --ink:#E8EEF8; --muted:#9BA9C0; --line:#203049;
+  --brand:#6A8CFF; --brand-hover:#87A2FF; --brand-ink:#07112B; --brand-soft:#16264A;
+  --mint:#35D3A0; --mint-soft:#0D3327; --sun:#FFC94F;
+  --deep:#050C19; --deep-2:#0D1A35; --deep-fg:#E9EFFB; --deep-muted:#A1AFCB; --deep-line:#1C2C4D;
+  --chip:#F3F6FB; --term-body:#1A2945; --term-edge:#33476E; --term-key:#2F4166; --term-screen:#D9F3E8; --term-screen-ink:#0B3B2B; --paper:#F3F5F9; --paper-ink:#2B3546;
+  --shadow:0 1px 2px rgb(0 0 0 / .3), 0 18px 40px -18px rgb(0 0 0 / .7);
+  --shadow-sm:0 1px 2px rgb(0 0 0 / .3), 0 6px 16px -8px rgb(0 0 0 / .6);
+  color-scheme:dark;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *,*::before,*::after{animation:none!important;transition:none!important} }
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{max-width:100%}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--f-display);line-height:1.12;margin:0;text-wrap:balance;letter-spacing:-.02em}
+p{margin:0}
+:focus-visible{outline:3px solid var(--brand);outline-offset:3px;border-radius:6px}
+.ic{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.wrap{width:100%;max-width:calc(var(--wrap) + var(--gutter)*2);margin-inline:auto;padding-inline:var(--gutter)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-mono);font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--brand)}
+.sec{padding-block:clamp(64px,9vw,112px)}
+.sec-head{display:grid;gap:14px;max-width:720px;margin-bottom:clamp(32px,5vw,52px)}
+.sec-head h2{font-size:clamp(30px,4.2vw,46px);font-weight:700}
+.sec-head p{color:var(--muted);font-size:18.5px;max-width:62ch}
+.sec-head.center{margin-inline:auto;text-align:center;justify-items:center}
+
+/* Buttons */
+.btn{--b:var(--brand);display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;border:2px solid transparent;font:600 16.5px/1 var(--f-body);text-decoration:none;cursor:pointer;transition:background .18s,transform .18s,border-color .18s,color .18s;white-space:nowrap}
+.btn .ic{width:20px;height:20px}
+.btn-primary{background:var(--brand);color:var(--brand-ink)}
+.btn-primary:hover{background:var(--brand-hover);transform:translateY(-1px)}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:var(--surface)}
+.btn-ghost:hover{border-color:var(--brand);color:var(--brand)}
+.btn-sun{background:var(--sun);color:#1B1300}
+.btn-sun:hover{transform:translateY(-1px);filter:brightness(1.04)}
+.btn-line-light{border-color:var(--deep-line);color:var(--deep-fg)}
+.btn-line-light:hover{border-color:var(--deep-fg)}
+.link-arrow{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--brand);text-decoration:none}
+.link-arrow .ic{width:18px;height:18px;transition:transform .18s}
+.link-arrow:hover .ic{transform:translateX(3px)}
+
+/* Utility bar + header */
+.topbar{background:var(--deep);color:var(--deep-muted);font-size:14px}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:40px;flex-wrap:wrap;padding-block:6px}
+.topbar ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.topbar li{display:flex;align-items:center;gap:7px}
+.topbar .ic{width:15px;height:15px;color:var(--mint)}
+.topbar a{color:var(--deep-fg);text-decoration:none;font-weight:600}
+.header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line)}
+.header .wrap{display:flex;align-items:center;gap:28px;min-height:76px}
+.logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);flex:none}
+.logo-mark{width:40px;height:40px}
+.logo-word{font-family:var(--f-display);font-weight:800;font-size:22px;letter-spacing:-.03em;line-height:1}
+.logo-word span{color:var(--brand)}
+.logo-word small{display:block;font-family:var(--f-mono);font-size:9.5px;letter-spacing:.32em;font-weight:600;color:var(--muted);margin-top:4px}
+.nav{display:flex;gap:4px;margin-left:auto}
+.nav a{white-space:nowrap;padding:10px 14px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15.5px;color:var(--ink)}
+.nav a:hover{background:var(--surface-2);color:var(--brand)}
+.header-cta{display:flex;align-items:center;gap:12px}
+.header-cta .btn{min-height:46px;padding:0 20px;font-size:15.5px}
+.menu-btn{display:none;margin-left:auto;width:46px;height:46px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);align-items:center;justify-content:center;cursor:pointer}
+.mobile-nav{display:none;border-top:1px solid var(--line);background:var(--surface)}
+.mobile-nav .wrap{display:grid;gap:4px;padding-block:12px 20px}
+.mobile-nav a:not(.btn){padding:13px 4px;border-bottom:1px solid var(--line);text-decoration:none;font-weight:600}
+.mobile-nav .btn{margin-top:12px}
+.header.open .mobile-nav{display:block}
+@media (max-width:1240px){ .header-cta .btn-ghost{display:none} }
+@media (max-width:1000px){ .nav{display:none} .menu-btn{display:inline-flex;margin-left:0} .header-cta{margin-left:auto} }
+@media (max-width:760px){ .header-cta{display:none} .menu-btn{display:inline-flex;margin-left:auto} .topbar .hide-sm{display:none} }
+
+/* Hero */
+.hero{position:relative;overflow:hidden;padding-block:clamp(48px,7vw,96px) clamp(56px,8vw,104px)}
+.hero::before{content:"";position:absolute;inset:-30% -10% auto auto;width:min(900px,120vw);aspect-ratio:1;background:radial-gradient(closest-side,var(--brand-soft),transparent 72%);pointer-events:none}
+.waves{position:absolute;right:-120px;top:40px;width:620px;height:620px;color:var(--brand);opacity:.08;pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(36px,5vw,72px);align-items:center}
+.hero-copy{display:grid;gap:24px;min-width:0}
+.hero h1{font-size:clamp(38px,5.4vw,66px);font-weight:800;letter-spacing:-.035em}
+.hero h1 .hl{color:var(--brand);text-decoration:underline;text-decoration-color:var(--sun);text-decoration-thickness:.12em;text-underline-offset:.1em;text-decoration-skip-ink:none}
+.hero .lede{font-size:clamp(18px,1.6vw,20.5px);color:var(--muted);max-width:54ch}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.ticks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 24px;list-style:none;margin:0;padding:0;max-width:560px}
+.ticks li{display:flex;align-items:center;gap:10px;font-weight:600;font-size:16px}
+.ticks .dot{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--mint-soft);color:var(--mint);flex:none}
+.ticks .dot .ic{width:14px;height:14px;stroke-width:3}
+
+/* Quote card */
+.quote-wrap{position:relative;min-width:0}
+.receipt-chip{position:absolute;z-index:2;left:-28px;top:-42px;display:flex;align-items:center;gap:12px;padding:12px 16px 12px 12px;border-radius:14px;background:var(--surface);box-shadow:var(--shadow);border:1px solid var(--line);animation:floaty 6s ease-in-out infinite}
+.receipt-chip .badge{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;background:var(--mint-soft);color:var(--mint)}
+.receipt-chip .badge .ic{width:20px;height:20px;stroke-width:2.6}
+.receipt-chip b{display:block;font-family:var(--f-mono);font-size:15px;letter-spacing:.02em}
+.receipt-chip span{font-size:13px;color:var(--muted)}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.quote{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:clamp(22px,3vw,32px);display:grid;gap:20px}
+.quote-head{display:grid;gap:6px}
+.quote-head h2{font-size:24px;font-weight:700}
+.quote-head p{color:var(--muted);font-size:15.5px}
+.progress{display:flex;align-items:center;gap:12px;font-family:var(--f-mono);font-size:12.5px;color:var(--muted);font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.progress .bar{flex:1;height:6px;border-radius:99px;background:var(--surface-2);overflow:hidden}
+.progress .bar i{display:block;height:100%;width:25%;background:var(--brand);border-radius:inherit;transition:width .35s ease}
+.step{display:grid;gap:16px;border:0;margin:0;padding:0;min-width:0}
+.step legend{font-weight:700;font-size:17px;padding:0;margin-bottom:14px}
+.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.tile{position:relative}
+.tile input{position:absolute;opacity:0;pointer-events:none}
+.tile label{display:grid;gap:8px;align-content:start;height:100%;padding:14px;border:1.5px solid var(--line);border-radius:var(--r);cursor:pointer;background:var(--surface);transition:border-color .15s,background .15s,box-shadow .15s}
+.tile label:hover{border-color:var(--brand)}
+.tile .ti{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;background:var(--brand-soft);color:var(--brand)}
+.tile .ti .ic{width:20px;height:20px}
+.tile strong{font-size:15.5px;line-height:1.25}
+.tile small{color:var(--muted);font-size:13px;line-height:1.35}
+.tile input:checked + label{border-color:var(--brand);background:var(--brand-soft);box-shadow:inset 0 0 0 1px var(--brand)}
+.tile input:checked + label .ti{background:var(--brand);color:var(--brand-ink)}
+.tile input:focus-visible + label{outline:3px solid var(--brand);outline-offset:2px}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{position:relative}
+.pill input{position:absolute;opacity:0;pointer-events:none}
+.pill label{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1.5px solid var(--line);border-radius:999px;cursor:pointer;font-weight:600;font-size:15px;font-variant-numeric:tabular-nums;background:var(--surface)}
+.pill label:hover{border-color:var(--brand)}
+.pill input:checked + label{border-color:var(--brand);background:var(--brand);color:var(--brand-ink)}
+.pill input:focus-visible + label{outline:3px solid var(--brand);outline-offset:2px}
+.field{display:grid;gap:6px;min-width:0}
+.field label{font-weight:600;font-size:14.5px}
+.field input,.field select{width:100%;min-height:50px;padding:0 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);font:500 16px var(--f-body)}
+.field input:focus,.field select:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 4px var(--brand-soft)}
+.field-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--muted);line-height:1.45}
+.consent input{margin-top:3px;width:18px;height:18px;accent-color:var(--brand);flex:none}
+.quote-nav{display:flex;gap:10px;align-items:center;justify-content:space-between}
+.quote-nav .btn{min-height:50px}
+.quote-nav .back{background:none;border:0;color:var(--muted);font:600 15px var(--f-body);cursor:pointer;padding:8px 4px}
+.quote-nav .back:hover{color:var(--ink)}
+.quote-msg{font-size:14px;color:#C2410C;min-height:1px}
+.quote-note{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--muted);border-top:1px dashed var(--line);padding-top:16px}
+.quote-note .ic{width:16px;height:16px;color:var(--mint)}
+.done{display:grid;gap:14px;text-align:center;justify-items:center;padding-block:18px}
+.done .big-tick{display:grid;place-items:center;width:72px;height:72px;border-radius:50%;background:var(--mint-soft);color:var(--mint)}
+.done .big-tick .ic{width:36px;height:36px;stroke-width:2.6}
+.done h3{font-size:24px}
+.done p{color:var(--muted);max-width:40ch}
+.done .preview{font-family:var(--f-mono);font-size:12px;color:var(--muted);letter-spacing:.04em}
+
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:minmax(0,1fr)}
+  .receipt-chip{left:auto;right:12px;top:-42px}
+  .quote-wrap{margin-top:24px}
+}
+@media (max-width:480px){
+  .btn{white-space:normal;text-align:center;line-height:1.25;padding-block:10px}
+  .ticks{grid-template-columns:minmax(0,1fr)}
+  .tiles,.field-row{grid-template-columns:minmax(0,1fr)}
+  .receipt-chip{display:none}
+}
+
+/* Trust strip */
+.trust{border-block:1px solid var(--line);background:var(--surface)}
+.trust .wrap{display:grid;grid-template-columns:auto minmax(0,1fr);gap:28px;align-items:center;padding-block:22px}
+.trust-label{font-family:var(--f-mono);font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.brands{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:flex-end}
+.brand-chip{display:grid;place-items:center;height:52px;min-width:86px;padding:0 14px;border-radius:12px;background:var(--chip);border:1px solid var(--line)}
+.brand-chip svg{height:34px;width:auto}
+.brand-chip.wide svg{height:44px}
+@media (max-width:860px){ .trust .wrap{grid-template-columns:minmax(0,1fr)} .brands{justify-content:flex-start} }
+
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;margin-top:clamp(40px,6vw,64px)}
+.stat{background:var(--surface);padding:24px;display:grid;gap:6px;align-content:start}
+.stat b{font-family:var(--f-display);font-size:clamp(26px,3vw,34px);letter-spacing:-.03em;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat span{color:var(--muted);font-size:15px}
+@media (max-width:860px){ .stats{grid-template-columns:repeat(2,minmax(0,1fr))} }
+
+/* Solutions bento */
+.bento{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px}
+.card{position:relative;display:grid;gap:14px;align-content:start;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(22px,2.6vw,30px);overflow:hidden;min-width:0;transition:transform .2s,box-shadow .2s,border-color .2s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:color-mix(in srgb,var(--brand) 40%,var(--line))}
+.card h3{font-size:22px;font-weight:700}
+.card p{color:var(--muted);font-size:16px}
+.card .ci{display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:var(--brand-soft);color:var(--brand)}
+.card .tag{justify-self:start;font-family:var(--f-mono);font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:99px;background:var(--mint-soft);color:var(--mint)}
+.card .link-arrow{margin-top:4px}
+.b-machines{grid-column:span 4;grid-row:span 2;background:linear-gradient(160deg,var(--surface) 30%,var(--brand-soft));grid-template-rows:auto auto auto auto 1fr}
+.b-machines .devices{display:flex;align-items:flex-end;justify-content:center;gap:clamp(10px,3vw,34px);padding-top:12px;margin-top:auto}
+.b-machines .devices svg{height:auto;filter:drop-shadow(0 18px 22px rgb(13 27 46 / .22))}
+.b-pos{grid-column:span 2}
+.b-gw{grid-column:span 2}
+.b-link{grid-column:span 3}
+.b-app{grid-column:span 3}
+.mini-ui{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:14px;background:var(--surface-2);border:1px solid var(--line);font-size:14px;min-width:0}
+.mini-ui .ic{color:var(--brand);width:20px;height:20px}
+.mini-ui code{font-family:var(--f-mono);font-size:13px;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.mini-ui .pay{margin-left:auto;font-weight:700;color:var(--mint);font-family:var(--f-mono);font-size:13px;flex:none}
+@media (max-width:960px){ .b-machines{grid-column:span 6;grid-row:auto} .b-pos,.b-gw{grid-column:span 3} }
+@media (max-width:640px){ .bento{grid-template-columns:minmax(0,1fr)} .b-machines,.b-pos,.b-gw,.b-link,.b-app{grid-column:auto} }
+
+/* Machines comparison */
+.alt{background:var(--surface)}
+.machines{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.machine{display:grid;grid-template-rows:auto auto auto 1fr auto;gap:18px;border:1px solid var(--line);border-radius:var(--r-lg);padding:24px;background:var(--bg);min-width:0}
+.machine.featured{border-color:var(--brand);box-shadow:0 0 0 1px var(--brand),var(--shadow)}
+.machine .stage{display:grid;place-items:center;height:220px;border-radius:var(--r);background:radial-gradient(circle at 50% 70%,var(--brand-soft),transparent 70%)}
+.machine .stage svg{height:190px;width:auto;filter:drop-shadow(0 16px 18px rgb(13 27 46 / .22))}
+.machine-title{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.machine h3{font-size:23px}
+.machine .best{color:var(--muted);font-size:15.5px}
+.badge-pop{font-family:var(--f-mono);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:99px;background:var(--brand);color:var(--brand-ink)}
+.specs{display:grid;margin:0;border-top:1px solid var(--line)}
+.specs div{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:start;padding:11px 0;border-bottom:1px solid var(--line);font-size:15px}
+.specs dt{display:flex;align-items:center;gap:8px;color:var(--muted);min-width:118px}
+.specs dt .ic{width:17px;height:17px;color:var(--brand)}
+.specs dd{margin:0;font-weight:600;text-align:right}
+.machine .btn{width:100%}
+@media (max-width:960px){ .machines{grid-template-columns:minmax(0,1fr)} .machine{grid-template-columns:minmax(0,220px) minmax(0,1fr);grid-template-rows:auto;column-gap:28px} .machine .stage{grid-row:span 4;height:100%;min-height:220px} }
+@media (max-width:620px){ .machine{grid-template-columns:minmax(0,1fr)} .machine .stage{grid-row:auto;height:200px;min-height:0} }
+
+/* Calculator */
+.calc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+.calc-in{background:var(--surface);padding:clamp(24px,4vw,44px);display:grid;gap:20px;align-content:start}
+.calc-in h3{font-size:clamp(24px,2.6vw,30px)}
+.calc-in > p{color:var(--muted)}
+.money{position:relative}
+.money span{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-weight:700;color:var(--muted);pointer-events:none}
+.money input{padding-left:30px!important;font-variant-numeric:tabular-nums}
+.calc-out{background:var(--deep);color:var(--deep-fg);padding:clamp(24px,4vw,44px);display:grid;grid-template-columns:minmax(0,1fr);gap:22px;align-content:start;position:relative}
+.receipt{background:var(--paper);color:var(--paper-ink);border-radius:6px 6px 0 0;padding:22px 22px 30px;font-family:var(--f-mono);font-size:14px;position:relative;box-shadow:0 20px 40px -20px rgb(0 0 0 / .6);--zig:10px;mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/var(--zig) 100%;-webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/var(--zig) 100%}
+.receipt .r-head{text-align:center;display:grid;gap:2px;padding-bottom:12px;border-bottom:1px dashed #B9C1CF;margin-bottom:10px;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.receipt .r-head b{font-size:14px;letter-spacing:.2em}
+.receipt .row{display:flex;justify-content:space-between;gap:12px;padding:6px 0;font-variant-numeric:tabular-nums}
+.receipt .row.total{border-top:1px dashed #B9C1CF;margin-top:6px;padding-top:12px;font-weight:600;font-size:16px}
+.receipt .big{font-size:clamp(34px,4vw,44px);font-weight:600;letter-spacing:-.02em;text-align:center;padding:6px 0 2px;color:#0D1B2E}
+.receipt .cap{text-align:center;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#6B7486}
+.calc-out .insight{font-size:16.5px;color:var(--deep-muted)}
+.calc-out .insight b{color:var(--sun);font-weight:700}
+.calc-out .btn{justify-self:start}
+@media (max-width:860px){ .calc{grid-template-columns:minmax(0,1fr)} }
+
+/* Steps */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;counter-reset:s;list-style:none;margin:0;padding:0}
+.steps li{position:relative;display:grid;gap:12px;align-content:start;padding:28px;border-radius:var(--r-lg);background:var(--surface);border:1px solid var(--line)}
+.steps .n{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--ink);color:var(--bg);font-family:var(--f-display);font-weight:700;font-size:18px}
+.steps h3{font-size:21px}
+.steps p{color:var(--muted);font-size:16px}
+.steps li:not(:last-child)::after{content:"";position:absolute;top:50px;right:-14px;width:10px;height:10px;border-top:2px solid var(--line);border-right:2px solid var(--line);transform:rotate(45deg);z-index:1}
+@media (max-width:860px){ .steps{grid-template-columns:minmax(0,1fr)} .steps li::after{display:none} }
+
+/* Why + settlement timeline */
+.why{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(32px,5vw,72px);align-items:start}
+.timeline{margin-top:28px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:24px;display:grid;gap:4px}
+.timeline h4{font-family:var(--f-mono);font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.tl{display:grid;grid-template-columns:86px 22px minmax(0,1fr);gap:12px;align-items:start}
+.tl time{font-family:var(--f-mono);font-size:13.5px;font-weight:600;color:var(--muted);padding-top:2px;font-variant-numeric:tabular-nums}
+.tl .rail{position:relative;display:grid;justify-items:center;height:100%}
+.tl .rail i{width:14px;height:14px;border-radius:50%;background:var(--surface);border:3px solid var(--brand);margin-top:5px;position:relative;z-index:1}
+.tl .rail::after{content:"";position:absolute;top:18px;bottom:-8px;width:2px;background:var(--line)}
+.tl:last-child .rail::after{display:none}
+.tl:last-child .rail i{background:var(--mint);border-color:var(--mint)}
+.tl div p{font-weight:600}
+.tl div span{display:block;color:var(--muted);font-size:14.5px;padding-bottom:16px}
+.features{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 32px}
+.feature{display:grid;gap:10px;align-content:start}
+.feature .fi{display:grid;place-items:center;width:46px;height:46px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--brand)}
+.feature h3{font-size:18.5px}
+.feature p{color:var(--muted);font-size:15.5px}
+@media (max-width:900px){ .why{grid-template-columns:minmax(0,1fr)} }
+@media (max-width:520px){ .features{grid-template-columns:minmax(0,1fr)} .tl{grid-template-columns:70px 22px minmax(0,1fr)} }
+
+/* Industries */
+.inds{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.ind{display:flex;align-items:center;gap:14px;padding:18px;border-radius:var(--r);border:1px solid var(--line);background:var(--bg);text-decoration:none;font-weight:600;transition:border-color .15s,transform .15s;min-width:0}
+.ind:hover{border-color:var(--brand);transform:translateY(-2px)}
+.ind .ii{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--brand-soft);color:var(--brand);flex:none}
+.ind small{display:block;font-weight:500;color:var(--muted);font-size:13.5px;line-height:1.35}
+@media (max-width:960px){ .inds{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:520px){ .inds{grid-template-columns:minmax(0,1fr)} }
+
+/* Funding band */
+.deep{background:var(--deep);color:var(--deep-fg);position:relative;overflow:hidden}
+.deep .eyebrow{color:var(--sun)}
+.deep .sec-head p{color:var(--deep-muted)}
+.funding{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:center}
+.funding ul{list-style:none;margin:24px 0 32px;padding:0;display:grid;gap:14px}
+.funding li{display:flex;gap:12px;align-items:flex-start;color:var(--deep-fg)}
+.funding li .ic{color:var(--sun);width:22px;height:22px;margin-top:2px}
+.funding .actions{display:flex;gap:12px;flex-wrap:wrap}
+.chart{background:var(--deep-2);border:1px solid var(--deep-line);border-radius:var(--r-lg);padding:24px;display:grid;gap:16px;min-width:0}
+.chart-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.chart-top b{font-family:var(--f-display);font-size:18px}
+.chart-top span{font-family:var(--f-mono);font-size:12px;color:var(--deep-muted);letter-spacing:.06em;text-transform:uppercase}
+.bars{display:grid;grid-template-columns:repeat(14,minmax(0,1fr));gap:6px;align-items:end;height:200px;border-bottom:1px solid var(--deep-line);padding-top:8px}
+.bars div{display:grid;grid-template-rows:auto 1fr;border-radius:5px 5px 2px 2px;overflow:hidden;min-width:0}
+.bars div i{display:block;background:var(--sun)}
+.bars div s{display:block;background:color-mix(in srgb,var(--deep-fg) 26%,transparent);text-decoration:none}
+.bar-days{display:grid;grid-template-columns:repeat(14,minmax(0,1fr));gap:6px;font-family:var(--f-mono);font-size:11px;color:var(--deep-muted);text-align:center}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;color:var(--deep-muted)}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.legend i{width:12px;height:12px;border-radius:3px;background:color-mix(in srgb,var(--deep-fg) 26%,transparent)}
+.legend i.y{background:var(--sun)}
+.fine{font-size:13px;color:var(--deep-muted)}
+@media (max-width:900px){ .funding{grid-template-columns:minmax(0,1fr)} }
+@media (max-width:460px){ .bars,.bar-days{gap:3px} }
+
+/* FAQ */
+.faq-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,5vw,72px);align-items:start}
+.help-card{margin-top:28px;display:grid;gap:12px;padding:24px;border-radius:var(--r-lg);background:var(--surface);border:1px solid var(--line)}
+.help-card .who{display:flex;gap:12px;align-items:center}
+.help-card .who .ci{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--mint-soft);color:var(--mint)}
+.help-card .num{font-family:var(--f-mono);font-size:22px;font-weight:600;letter-spacing:.02em;user-select:all}
+.help-card p{color:var(--muted);font-size:15px}
+.faq{display:grid;gap:12px}
+.faq details{border:1px solid var(--line);border-radius:var(--r);background:var(--surface);transition:border-color .2s}
+.faq details[open]{border-color:color-mix(in srgb,var(--brand) 45%,var(--line))}
+.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 22px;cursor:pointer;font-weight:700;font-size:17.5px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .ic{width:22px;height:22px;color:var(--brand);transition:transform .2s}
+.faq details[open] summary .ic{transform:rotate(180deg)}
+.faq .a{padding:0 22px 22px;color:var(--muted);max-width:68ch}
+@media (max-width:900px){ .faq-grid{grid-template-columns:minmax(0,1fr)} }
+
+/* CTA band */
+.cta-band{padding-block:0 clamp(64px,9vw,112px)}
+.cta-box{position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,1.2fr) auto;gap:32px;align-items:center;padding:clamp(28px,5vw,56px);border-radius:28px;background:var(--brand);color:var(--brand-ink)}
+.cta-box h2{font-size:clamp(28px,3.6vw,42px);font-weight:800}
+.cta-box p{opacity:.85;margin-top:12px;font-size:18px;max-width:52ch}
+.cta-box .actions{display:flex;gap:12px;flex-wrap:wrap;position:relative}
+.cta-box .btn-light{background:var(--brand-ink);color:var(--brand)}
+.cta-box .btn-light:hover{transform:translateY(-1px)}
+.cta-box .btn-outline{border-color:color-mix(in srgb,var(--brand-ink) 45%,transparent);color:var(--brand-ink)}
+.cta-box .btn-outline:hover{border-color:var(--brand-ink)}
+.cta-box .waves{right:-160px;top:-160px;width:520px;height:520px;color:var(--brand-ink);opacity:.12}
+@media (max-width:860px){ .cta-box{grid-template-columns:minmax(0,1fr)} }
+
+/* Footer */
+.footer{background:var(--deep);color:var(--deep-muted);padding-block:64px 32px;font-size:15px}
+.footer-grid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:36px}
+.footer .logo{color:var(--deep-fg)}
+.footer .logo-word small{color:var(--deep-muted)}
+.footer .logo-word span{color:var(--brand-on-deep)}
+.footer h4{font-family:var(--f-mono);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--deep-fg);margin-bottom:16px;font-weight:600}
+.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.footer a{text-decoration:none;color:var(--deep-muted)}
+.footer a:hover{color:var(--deep-fg)}
+.footer address{font-style:normal;display:grid;gap:10px;margin-top:20px}
+.footer address strong{color:var(--deep-fg)}
+.footer-base{margin-top:48px;padding-top:24px;border-top:1px solid var(--deep-line);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13.5px}
+.footer-base .brands{justify-content:flex-start}
+.footer-base .brand-chip{height:34px;min-width:58px;padding:0 10px;border-radius:8px}
+.footer-base .brand-chip svg{height:26px}
+@media (max-width:900px){ .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))} .footer-grid > :first-child{grid-column:1/-1} }
+@media (max-width:480px){ .footer-grid{grid-template-columns:minmax(0,1fr)} }
+
+/* Mobile sticky action bar */
+.mbar{display:none}
+@media (max-width:760px){
+  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1.4fr;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:var(--surface);border-top:1px solid var(--line);box-shadow:0 -8px 24px -12px rgb(13 27 46 / .25)}
+  .mbar .btn{min-height:48px;padding:0 14px;font-size:15.5px}
+  .footer{padding-bottom:110px}
+}
+
+/* Terminal illustration parts */
+.t-body{fill:var(--term-body);stroke:var(--term-edge);stroke-width:2}
+.t-key{fill:var(--term-key)}
+.t-key-g{fill:#16A374}.t-key-r{fill:#E2483D}.t-key-y{fill:#F2B531}
+.t-screen{fill:var(--term-screen)}
+.t-ink{fill:var(--term-screen-ink);font-family:var(--f-mono)}
+.t-paper{fill:var(--paper)}
+.t-paper-line{fill:#C9D0DC}
+.t-slot{fill:#0B1322}
+.t-cl{fill:none;stroke:var(--deep-muted);stroke-width:3;stroke-linecap:round}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><symbol id="i-arrow-right" viewBox="0 0 24 24"><svg class="lucide lucide-arrow-right" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14"/> <path d="m12 5 7 7-7 7"/></symbol><symbol id="i-bar-chart-3" viewBox="0 0 24 24"><svg class="lucide lucide-bar-chart-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M3 3v16a2 2 0 0 0 2 2h16"/> <path d="M18 17V9"/> <path d="M13 17V5"/> <path d="M8 17v-3"/></symbol><symbol id="i-battery-full" viewBox="0 0 24 24"><svg class="lucide lucide-battery-full" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M10 10v4"/> <path d="M14 10v4"/> <path d="M22 14v-4"/> <path d="M6 10v4"/> <rect x="2" y="6" width="16" height="12" rx="2"/></symbol><symbol id="i-car-taxi-front" viewBox="0 0 24 24"><svg class="lucide lucide-car-taxi-front" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M10 2h4"/> <path d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8"/> <path d="M7 14h.01"/> <path d="M17 14h.01"/> <rect width="18" height="8" x="3" y="10" rx="2"/> <path d="M5 18v2"/> <path d="M19 18v2"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><svg class="lucide lucide-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5"/></symbol><symbol id="i-chevron-down" viewBox="0 0 24 24"><svg class="lucide lucide-chevron-down" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 9 6 6 6-6"/></symbol><symbol id="i-clock" viewBox="0 0 24 24"><svg class="lucide lucide-clock" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <circle cx="12" cy="12" r="10"/> <path d="M12 6v6l4 2"/></symbol><symbol id="i-coffee" viewBox="0 0 24 24"><svg class="lucide lucide-coffee" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M10 2v2"/> <path d="M14 2v2"/> <path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/> <path d="M6 2v2"/></symbol><symbol id="i-credit-card" viewBox="0 0 24 24"><svg class="lucide lucide-credit-card" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <rect width="20" height="14" x="2" y="5" rx="2"/> <line x1="2" x2="22" y1="10" y2="10"/> <path d="M6 14h2"/></symbol><symbol id="i-headset" viewBox="0 0 24 24"><svg class="lucide lucide-headset" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/> <path d="M21 16v2a4 4 0 0 1-4 4h-5"/></symbol><symbol id="i-layers" viewBox="0 0 24 24"><svg class="lucide lucide-layers" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/> <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/> <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></symbol><symbol id="i-link" viewBox="0 0 24 24"><svg class="lucide lucide-link" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/> <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><svg class="lucide lucide-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M4 5h16"/> <path d="M4 12h16"/> <path d="M4 19h16"/></symbol><symbol id="i-monitor" viewBox="0 0 24 24"><svg class="lucide lucide-monitor" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <rect width="20" height="14" x="2" y="3" rx="2"/> <line x1="8" x2="16" y1="21" y2="21"/> <line x1="12" x2="12" y1="17" y2="21"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><svg class="lucide lucide-phone" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></symbol><symbol id="i-printer" viewBox="0 0 24 24"><svg class="lucide lucide-printer" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/> <path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/> <rect x="6" y="14" width="12" height="8" rx="1"/></symbol><symbol id="i-scissors" viewBox="0 0 24 24"><svg class="lucide lucide-scissors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <circle cx="6" cy="6" r="3"/> <path d="M8.12 8.12 12 12"/> <path d="M20 4 8.12 15.88"/> <circle cx="6" cy="18" r="3"/> <path d="M14.8 14.8 20 20"/></symbol><symbol id="i-shield-check" viewBox="0 0 24 24"><svg class="lucide lucide-shield-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/> <path d="m9 12 2 2 4-4"/></symbol><symbol id="i-shopping-cart" viewBox="0 0 24 24"><svg class="lucide lucide-shopping-cart" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18"/> <path d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25"/> <circle cx="18" cy="20" r="2"/> <circle cx="8" cy="20" r="2"/></symbol><symbol id="i-signal" viewBox="0 0 24 24"><svg class="lucide lucide-signal" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M2 20h.01"/> <path d="M7 20v-4"/> <path d="M12 20v-8"/> <path d="M17 20V8"/> <path d="M22 4v16"/></symbol><symbol id="i-smartphone" viewBox="0 0 24 24"><svg class="lucide lucide-smartphone" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <rect width="14" height="20" x="5" y="2" rx="2" ry="2"/> <path d="M12 18h.01"/></symbol><symbol id="i-stethoscope" viewBox="0 0 24 24"><svg class="lucide lucide-stethoscope" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M11 2v2"/> <path d="M5 2v2"/> <path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/> <path d="M8 15a6 6 0 0 0 12 0v-3"/> <circle cx="20" cy="10" r="2"/></symbol><symbol id="i-store" viewBox="0 0 24 24"><svg class="lucide lucide-store" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5"/> <path d="M17.774 10.31a1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.451 0 1.12 1.12 0 0 0-1.548 0 2.5 2.5 0 0 1-3.452 0 1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.77-3.248l2.889-4.184A2 2 0 0 1 7 2h10a2 2 0 0 1 1.653.873l2.895 4.192a2.5 2.5 0 0 1-3.774 3.244"/> <path d="M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05"/></symbol><symbol id="i-ticket" viewBox="0 0 24 24"><svg class="lucide lucide-ticket" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/> <path d="M13 5v2"/> <path d="M13 17v2"/> <path d="M13 11v2"/></symbol><symbol id="i-utensils-crossed" viewBox="0 0 24 24"><svg class="lucide lucide-utensils-crossed" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m16 2-2.3 2.3a3 3 0 0 0 0 4.2l1.8 1.8a3 3 0 0 0 4.2 0L22 8"/> <path d="M15 15 3.3 3.3a4.2 4.2 0 0 0 0 6l7.3 7.3c.7.7 2 .7 2.8 0L15 15Zm0 0 7 7"/> <path d="m2.1 21.8 6.4-6.3"/> <path d="m19 5-7 7"/></symbol><symbol id="i-wifi" viewBox="0 0 24 24"><svg class="lucide lucide-wifi" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12 20h.01"/> <path d="M2 8.82a15 15 0 0 1 20 0"/> <path d="M5 12.859a10 10 0 0 1 14 0"/> <path d="M8.5 16.429a5 5 0 0 1 7 0"/></symbol><symbol id="i-wrench" viewBox="0 0 24 24"><svg class="lucide lucide-wrench" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z"/></symbol><symbol id="i-zap" viewBox="0 0 24 24"><svg class="lucide lucide-zap" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"/></symbol><symbol id="b-americanexpress" viewBox="0 0 24 24"><path d="M16.015 14.378c0-.32-.135-.496-.344-.622-.21-.12-.464-.135-.81-.135h-1.543v2.82h.675v-1.027h.72c.24 0 .39.024.478.125.12.13.104.38.104.55v.35h.66v-.555c-.002-.25-.017-.376-.108-.516-.06-.08-.18-.18-.33-.234l.02-.008c.18-.072.48-.297.48-.747zm-.87.407l-.028-.002c-.09.053-.195.058-.33.058h-.81v-.63h.824c.12 0 .24 0 .33.05.098.048.156.147.15.255 0 .12-.045.215-.134.27zM20.297 15.837H19v.6h1.304c.676 0 1.05-.278 1.05-.884 0-.28-.066-.448-.187-.582-.153-.133-.392-.193-.73-.207l-.376-.015c-.104 0-.18 0-.255-.03-.09-.03-.15-.105-.15-.21 0-.09.017-.166.09-.21.083-.046.177-.066.272-.06h1.23v-.602h-1.35c-.704 0-.958.437-.958.84 0 .9.776.855 1.407.87.104 0 .18.015.225.06.046.03.082.106.082.18 0 .077-.035.15-.08.18-.06.053-.15.07-.277.07zM0 0v10.096L.81 8.22h1.75l.225.464V8.22h2.043l.45 1.02.437-1.013h6.502c.295 0 .56.057.756.236v-.23h1.787v.23c.307-.17.686-.23 1.12-.23h2.606l.24.466v-.466h1.918l.254.465v-.466h1.858v3.948H20.87l-.36-.6v.585h-2.353l-.256-.63h-.583l-.27.614h-1.213c-.48 0-.84-.104-1.08-.24v.24h-2.89v-.884c0-.12-.03-.12-.105-.135h-.105v1.036H6.067v-.48l-.21.48H4.69l-.202-.48v.465H2.235l-.256-.624H1.4l-.256.624H0V24h23.786v-7.108c-.27.135-.613.18-.973.18H21.09v-.255c-.21.165-.57.255-.914.255H14.71v-.9c0-.12-.018-.12-.12-.12h-.075v1.022h-1.8v-1.066c-.298.136-.643.15-.928.136h-.214v.915h-2.18l-.54-.617-.57.6H4.742v-3.93h3.61l.518.602.554-.6h2.412c.28 0 .74.03.942.225v-.24h2.177c.202 0 .644.045.903.225v-.24h3.265v.24c.163-.164.508-.24.803-.24h1.89v.24c.194-.15.464-.24.84-.24h1.176V0H0zM21.156 14.955c.004.005.006.012.01.016.01.01.024.01.032.02l-.042-.035zM23.828 13.082h.065v.555h-.065zM23.865 15.03v-.005c-.03-.025-.046-.048-.075-.07-.15-.153-.39-.215-.764-.225l-.36-.012c-.12 0-.194-.007-.27-.03-.09-.03-.15-.105-.15-.21 0-.09.03-.16.09-.204.076-.045.15-.05.27-.05h1.223v-.588h-1.283c-.69 0-.96.437-.96.84 0 .9.78.855 1.41.87.104 0 .18.015.224.06.046.03.076.106.076.18 0 .07-.034.138-.09.18-.045.056-.136.07-.27.07h-1.288v.605h1.287c.42 0 .734-.118.9-.36h.03c.09-.134.135-.3.135-.523 0-.24-.045-.39-.135-.526zM18.597 14.208v-.583h-2.235V16.458h2.235v-.585h-1.57v-.57h1.533v-.584h-1.532v-.51M13.51 8.787h.685V11.6h-.684zM13.126 9.543l-.007.006c0-.314-.13-.5-.34-.624-.217-.125-.47-.135-.81-.135H10.43v2.82h.674v-1.034h.72c.24 0 .39.03.487.12.122.136.107.378.107.548v.354h.677v-.553c0-.25-.016-.375-.11-.516-.09-.107-.202-.19-.33-.237.172-.07.472-.3.472-.75zm-.855.396h-.015c-.09.054-.195.056-.33.056H11.1v-.623h.825c.12 0 .24.004.33.05.09.04.15.128.15.25s-.047.22-.134.266zM15.92 9.373h.632v-.6h-.644c-.464 0-.804.105-1.02.33-.286.3-.362.69-.362 1.11 0 .512.123.833.36 1.074.232.238.645.31.97.31h.78l.255-.627h1.39l.262.627h1.36v-2.11l1.272 2.11h.95l.002.002V8.786h-.684v1.963l-1.18-1.96h-1.02V11.4L18.11 8.744h-1.004l-.943 2.22h-.3c-.177 0-.362-.03-.468-.134-.125-.15-.186-.36-.186-.662 0-.285.08-.51.194-.63.133-.135.272-.165.516-.165zm1.668-.108l.464 1.118v.002h-.93l.466-1.12zM2.38 10.97l.254.628H4V9.393l.972 2.205h.584l.973-2.202.015 2.202h.69v-2.81H6.118l-.807 1.904-.876-1.905H3.343v2.663L2.205 8.787h-.997L.01 11.597h.72l.26-.626h1.39zm-.688-1.705l.46 1.118-.003.002h-.915l.457-1.12zM11.856 13.62H9.714l-.85.923-.825-.922H5.346v2.82H8l.855-.932.824.93h1.302v-.94h.838c.6 0 1.17-.164 1.17-.945l-.006-.003c0-.78-.598-.93-1.128-.93zM7.67 15.853l-.014-.002H6.02v-.557h1.47v-.574H6.02v-.51H7.7l.733.82-.764.824zm2.642.33l-1.03-1.147 1.03-1.108v2.253zm1.553-1.258h-.885v-.717h.885c.24 0 .42.098.42.344 0 .243-.15.372-.42.372zM9.967 9.373v-.586H7.73V11.6h2.237v-.58H8.4v-.564h1.527V9.88H8.4v-.507"/></symbol><symbol id="b-applepay" viewBox="0 0 24 24"><path d="M2.15 4.318a42.16 42.16 0 0 0-.454.003c-.15.005-.303.013-.452.04a1.44 1.44 0 0 0-1.06.772c-.07.138-.114.278-.14.43-.028.148-.037.3-.04.45A10.2 10.2 0 0 0 0 6.222v11.557c0 .07.002.138.003.207.004.15.013.303.04.452.027.15.072.291.142.429a1.436 1.436 0 0 0 .63.63c.138.07.278.115.43.142.148.027.3.036.45.04l.208.003h20.194l.207-.003c.15-.004.303-.013.452-.04.15-.027.291-.071.428-.141a1.432 1.432 0 0 0 .631-.631c.07-.138.115-.278.141-.43.027-.148.036-.3.04-.45.002-.07.003-.138.003-.208l.001-.246V6.221c0-.07-.002-.138-.004-.207a2.995 2.995 0 0 0-.04-.452 1.446 1.446 0 0 0-1.2-1.201 3.022 3.022 0 0 0-.452-.04 10.448 10.448 0 0 0-.453-.003zm0 .512h19.942c.066 0 .131.002.197.003.115.004.25.01.375.032.109.02.2.05.287.094a.927.927 0 0 1 .407.407.997.997 0 0 1 .094.288c.022.123.028.258.031.374.002.065.003.13.003.197v11.552c0 .065 0 .13-.003.196-.003.115-.009.25-.032.375a.927.927 0 0 1-.5.693 1.002 1.002 0 0 1-.286.094 2.598 2.598 0 0 1-.373.032l-.2.003H1.906c-.066 0-.133-.002-.196-.003a2.61 2.61 0 0 1-.375-.032c-.109-.02-.2-.05-.288-.094a.918.918 0 0 1-.406-.407 1.006 1.006 0 0 1-.094-.288 2.531 2.531 0 0 1-.032-.373 9.588 9.588 0 0 1-.002-.197V6.224c0-.065 0-.131.002-.197.004-.114.01-.248.032-.375.02-.108.05-.199.094-.287a.925.925 0 0 1 .407-.406 1.03 1.03 0 0 1 .287-.094c.125-.022.26-.029.375-.032.065-.002.131-.002.196-.003zm4.71 3.7c-.3.016-.668.199-.88.456-.191.22-.36.58-.316.918.338.03.675-.169.888-.418.205-.258.345-.603.308-.955zm2.207.42v5.493h.852v-1.877h1.18c1.078 0 1.835-.739 1.835-1.812 0-1.07-.742-1.805-1.808-1.805zm.852.719h.982c.739 0 1.161.396 1.161 1.089 0 .692-.422 1.092-1.164 1.092h-.979zm-3.154.3c-.45.01-.83.28-1.05.28-.235 0-.593-.264-.981-.257a1.446 1.446 0 0 0-1.23.747c-.527.908-.139 2.255.374 2.995.249.366.549.769.944.754.373-.014.52-.242.973-.242.454 0 .586.242.98.235.41-.007.667-.366.915-.733.286-.417.403-.82.41-.841-.007-.008-.79-.308-.797-1.209-.008-.754.615-1.113.644-1.135-.352-.52-.9-.578-1.09-.593a1.123 1.123 0 0 0-.092-.002zm8.204.397c-.99 0-1.606.533-1.652 1.256h.777c.072-.358.369-.586.845-.586.502 0 .803.266.803.711v.309l-1.097.064c-.951.054-1.488.484-1.488 1.184 0 .72.548 1.207 1.332 1.207.526 0 1.032-.281 1.264-.727h.019v.659h.788v-2.76c0-.803-.62-1.317-1.591-1.317zm1.94.072l1.446 4.009c0 .003-.073.24-.073.247-.125.41-.33.571-.711.571-.069 0-.206 0-.267-.015v.666c.06.011.267.019.335.019.83 0 1.226-.312 1.568-1.283l1.5-4.214h-.868l-1.012 3.259h-.015l-1.013-3.26zm-1.167 2.189v.316c0 .521-.45.917-1.024.917-.442 0-.731-.228-.731-.579 0-.342.278-.56.769-.593z"/></symbol><symbol id="b-googlepay" viewBox="0 0 24 24"><path d="M3.963 7.235A3.963 3.963 0 00.422 9.419a3.963 3.963 0 000 3.559 3.963 3.963 0 003.541 2.184c1.07 0 1.97-.352 2.627-.957.748-.69 1.18-1.71 1.18-2.916a4.722 4.722 0 00-.07-.806H3.964v1.526h2.14a1.835 1.835 0 01-.79 1.205c-.356.241-.814.379-1.35.379-1.034 0-1.911-.697-2.225-1.636a2.375 2.375 0 010-1.517c.314-.94 1.191-1.636 2.225-1.636a2.152 2.152 0 011.52.594l1.132-1.13a3.808 3.808 0 00-2.652-1.033zm6.501.55v6.9h.886V11.89h1.465c.603 0 1.11-.196 1.522-.588a1.911 1.911 0 00.635-1.464 1.92 1.92 0 00-.635-1.456 2.125 2.125 0 00-1.522-.598zm2.427.85a1.156 1.156 0 01.823.365 1.176 1.176 0 010 1.686 1.171 1.171 0 01-.877.357H11.35V8.635h1.487a1.156 1.156 0 01.054 0zm4.124 1.175c-.842 0-1.477.308-1.907.925l.781.491c.288-.417.68-.626 1.175-.626a1.255 1.255 0 01.856.323 1.009 1.009 0 01.366.785v.202c-.34-.193-.774-.289-1.3-.289-.617 0-1.11.145-1.479.434-.37.288-.554.677-.554 1.165a1.476 1.476 0 00.525 1.156c.35.308.785.463 1.305.463.61 0 1.098-.27 1.465-.81h.038v.655h.848v-2.909c0-.61-.19-1.09-.568-1.44-.38-.35-.896-.525-1.551-.525zm2.263.154l1.946 4.422-1.098 2.38h.915L24 9.963h-.965l-1.368 3.391h-.02l-1.406-3.39zm-2.146 2.368c.494 0 .88.11 1.156.33 0 .372-.147.696-.44.973a1.413 1.413 0 01-.997.414 1.081 1.081 0 01-.69-.232.708.708 0 01-.293-.578c0-.257.12-.47.363-.647.24-.173.54-.26.9-.26Z"/></symbol><symbol id="b-mastercard" viewBox="0 0 24 24"><path d="M11.343 18.031c.058.049.12.098.181.146-1.177.783-2.59 1.238-4.107 1.238C3.32 19.416 0 16.096 0 12c0-4.095 3.32-7.416 7.416-7.416 1.518 0 2.931.456 4.105 1.238-.06.051-.12.098-.165.15C9.6 7.489 8.595 9.688 8.595 12c0 2.311 1.001 4.51 2.748 6.031zm5.241-13.447c-1.52 0-2.931.456-4.105 1.238.06.051.12.098.165.15C14.4 7.489 15.405 9.688 15.405 12c0 2.31-1.001 4.507-2.748 6.031-.058.049-.12.098-.181.146 1.177.783 2.588 1.238 4.107 1.238C20.68 19.416 24 16.096 24 12c0-4.094-3.32-7.416-7.416-7.416zM12 6.174c-.096.075-.189.15-.28.231C10.156 7.764 9.169 9.765 9.169 12c0 2.236.987 4.236 2.551 5.595.09.08.185.158.28.232.096-.074.189-.152.28-.232 1.563-1.359 2.551-3.359 2.551-5.595 0-2.235-.987-4.236-2.551-5.595-.09-.08-.184-.156-.28-.231z"/></symbol><symbol id="b-samsungpay" viewBox="0 0 24 24"><path d="m6.703 17.387.617-1.5-1.205-2.795h.724l.817 1.98.776-1.98h.711l-1.752 4.295Zm-2.492-1.295c-.708 0-1.445-.569-1.445-1.528 0-.975.712-1.531 1.455-1.531.387 0 .735.16.946.411v-.352h.677v2.94h-.677v-.382a1.222 1.222 0 0 1-.956.442Zm-4.206-.06v-3.666h1.258c.759 0 1.32.581 1.32 1.305 0 .728-.562 1.312-1.325 1.312H.69v1.05zm4.315-.562c.503 0 .88-.407.88-.914 0-.497-.377-.906-.88-.906a.886.886 0 0 0-.888.906c0 .512.386.914.888.914zM.69 14.348h.52c.408 0 .686-.3.686-.677a.66.66 0 0 0-.685-.672H.69Zm.557-4.063C.603 10.285 0 10.055 0 9.29v-.265h.92l.002.333c0 .187.13.31.344.31.228 0 .305-.117.333-.232a.44.44 0 0 0-.005-.252C1.417 8.74.198 8.538.049 7.837a1.192 1.192 0 0 1-.007-.463c.09-.56.588-.76 1.198-.76.485 0 1.156.114 1.156.861v.242h-.854v-.213c0-.187-.12-.31-.32-.31-.215 0-.289.122-.313.232a.435.435 0 0 0 .002.18c.098.401 1.4.615 1.545 1.333.014.072.044.266.002.562-.081.573-.59.784-1.21.784zm11.154-.018c-.638 0-1.234-.227-1.234-.984V9.02h.911v.328c0 .185.129.31.341.31.227 0 .303-.117.331-.23a.438.438 0 0 0-.005-.25c-.175-.44-1.382-.641-1.529-1.336a1.166 1.166 0 0 1-.008-.458c.09-.554.585-.753 1.188-.753.48 0 1.143.115 1.143.855v.24h-.846v-.212c0-.185-.116-.307-.315-.307-.212 0-.289.12-.313.23a.435.435 0 0 0 .005.176c.096.398 1.385.61 1.529 1.32.015.073.044.265.003.558-.081.567-.586.776-1.2.776zm3.224-.013c-.63 0-1.138-.21-1.198-.85a2.792 2.792 0 0 1-.008-.223V6.72h.867v2.538c0 .044 0 .093.008.13.017.085.092.248.331.248.238 0 .311-.163.328-.248a.718.718 0 0 0 .008-.13V6.72h.867v2.461a2.94 2.94 0 0 1-.008.224c-.06.64-.564.849-1.195.849zm7.156-.037c-.608 0-1.148-.221-1.205-.846a2.518 2.518 0 0 1-.014-.227V7.702c0-.061.009-.17.016-.227.077-.641.595-.846 1.203-.846.608 0 1.14.203 1.203.846.011.11.008.227.008.227v.114h-.864v-.193s0-.08-.01-.13c-.016-.075-.082-.25-.345-.25-.249 0-.322.166-.34.25a.816.816 0 0 0-.014.162v1.567a.89.89 0 0 0 .008.13c.016.092.104.25.352.25s.333-.158.349-.25a.722.722 0 0 0 .008-.13v-.497h-.352v-.5H24v.92c0 .064-.003.112-.013.226-.057.625-.598.846-1.206.846zm-19.745-.065.636-3.432h1.526l.633 3.432h-.922l-.456-3.114-.02.002-.47 3.112Zm3.48 0L6.59 6.72h1.4l.421 2.625h.021l.422-2.625h1.399l.075 3.432h-.857l-.02-3.083H9.43l-.573 3.083h-.87L7.414 7.07h-.018l-.021 3.083Zm11.268-.036V6.72h1.273l.79 2.693h.018l-.047-2.693h.851v3.396h-1.221l-.849-2.787h-.018l.047 2.787z"/></symbol><symbol id="b-visa" viewBox="0 0 24 24"><path d="M9.112 8.262L5.97 15.758H3.92L2.374 9.775c-.094-.368-.175-.503-.461-.658C1.447 8.864.677 8.627 0 8.479l.046-.217h3.3a.904.904 0 01.894.764l.817 4.338 2.018-5.102zm8.033 5.049c.008-1.979-2.736-2.088-2.717-2.972.006-.269.262-.555.822-.628a3.66 3.66 0 011.913.336l.34-1.59a5.207 5.207 0 00-1.814-.333c-1.917 0-3.266 1.02-3.278 2.479-.012 1.079.963 1.68 1.698 2.04.756.367 1.01.603 1.006.931-.005.504-.602.725-1.16.734-.975.015-1.54-.263-1.992-.473l-.351 1.642c.453.208 1.289.39 2.156.398 2.037 0 3.37-1.006 3.377-2.564m5.061 2.447H24l-1.565-7.496h-1.656a.883.883 0 00-.826.55l-2.909 6.946h2.036l.405-1.12h2.488zm-2.163-2.656l1.02-2.815.588 2.815zm-8.16-4.84l-1.603 7.496H8.34l1.605-7.496z"/></symbol></defs></svg>
+
+<div class="topbar">
+  <div class="wrap">
+    <ul>
+      <li><svg class="ic"><use href="#i-clock"/></svg>Next-day settlement</li>
+      <li class="hide-sm"><svg class="ic"><use href="#i-headset"/></svg>24/7 UK-based support</li>
+      <li class="hide-sm"><svg class="ic"><use href="#i-shield-check"/></svg>Secure, encrypted payments</li>
+    </ul>
+    <a href="tel:+442070527978">Call 020 7052 7978</a>
+  </div>
+</div>
+
+<header class="header" id="header">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Be-Connect home">
+      <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+        <rect width="40" height="40" rx="11" fill="var(--brand)"/>
+        <g fill="none" stroke="var(--brand-ink)" stroke-width="3" stroke-linecap="round">
+          <path d="M14 13.5a9 9 0 0 1 0 13"/><path d="M19.5 10a14 14 0 0 1 0 20"/><path d="M25 7a19 19 0 0 1 0 26" opacity=".55"/>
+        </g>
+        <circle cx="9.5" cy="20" r="2.6" fill="var(--sun)"/>
+      </svg>
+      <span class="logo-word">Be-<span>Connect</span><small>PAY</small></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#machines">Card Machines</a>
+      <a href="#solutions">POS &amp; Online</a>
+      <a href="#industries">Industries</a>
+      <a href="#funding">Funding</a>
+      <a href="#faq">Help</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-ghost" href="tel:+442070527978"><svg class="ic"><use href="#i-phone"/></svg>020 7052 7978</a>
+      <a class="btn btn-primary" href="#quote">Get a quote</a>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu"><svg class="ic"><use href="#i-menu"/></svg></button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <div class="wrap">
+      <a href="#machines">Card Machines</a>
+      <a href="#solutions">POS &amp; Online Payments</a>
+      <a href="#industries">Industries</a>
+      <a href="#funding">Business Funding</a>
+      <a href="#faq">Help &amp; FAQs</a>
+      <a class="btn btn-primary" href="#quote">Get a free quote</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <svg class="waves" viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"><path d="M30 35a21 21 0 0 1 0 30"/><path d="M43 25a35 35 0 0 1 0 50"/><path d="M56 15a49 49 0 0 1 0 70"/><path d="M69 5a63 63 0 0 1 0 90"/></g></svg>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">UK payment solutions for every business</span>
+      <h1>Take payments anywhere. <span class="hl">Get paid tomorrow.</span></h1>
+      <p class="lede">Card machines, POS systems and online payments in one place. Money from today's sales lands in your account the next day, and our UK team is on hand 24/7 when you need us.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#quote">Get my free quote <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+        <a class="btn btn-ghost" href="#machines">Compare card machines</a>
+      </div>
+      <ul class="ticks">
+        <li><span class="dot"><svg class="ic"><use href="#i-check"/></svg></span>Next-day settlement</li>
+        <li><span class="dot"><svg class="ic"><use href="#i-check"/></svg></span>24/7 UK-based support</li>
+        <li><span class="dot"><svg class="ic"><use href="#i-check"/></svg></span>4G, Wi-Fi &amp; countertop terminals</li>
+        <li><span class="dot"><svg class="ic"><use href="#i-check"/></svg></span>In-person, online &amp; phone</li>
+      </ul>
+    </div>
+
+    <div class="quote-wrap" id="quote">
+      <div class="receipt-chip" aria-hidden="true">
+        <span class="badge"><svg class="ic"><use href="#i-check"/></svg></span>
+        <div><b>£24.50 APPROVED</b><span>Contactless · paid out tomorrow</span></div>
+      </div>
+      <form class="quote" id="quoteForm" novalidate>
+        <div class="quote-head">
+          <h2>Get your free quote</h2>
+          <p>Answer four quick questions. No obligation, no hard sell.</p>
+        </div>
+        <div class="progress" aria-live="polite"><span id="stepLabel">Step 1 of 4</span><span class="bar"><i id="stepBar"></i></span></div>
+
+        <fieldset class="step" data-step="1">
+          <legend>What do you need?</legend>
+          <div class="tiles">
+            <div class="tile"><input type="checkbox" id="need-machine" name="need" value="Card machine" checked><label for="need-machine"><span class="ti"><svg class="ic"><use href="#i-credit-card"/></svg></span><strong>Card machine</strong><small>Countertop, portable or mobile</small></label></div>
+            <div class="tile"><input type="checkbox" id="need-pos" name="need" value="POS system"><label for="need-pos"><span class="ti"><svg class="ic"><use href="#i-monitor"/></svg></span><strong>POS system</strong><small>Till, stock and reporting</small></label></div>
+            <div class="tile"><input type="checkbox" id="need-online" name="need" value="Online payments"><label for="need-online"><span class="ti"><svg class="ic"><use href="#i-shopping-cart"/></svg></span><strong>Online payments</strong><small>Gateway for your website</small></label></div>
+            <div class="tile"><input type="checkbox" id="need-link" name="need" value="Pay by Link"><label for="need-link"><span class="ti"><svg class="ic"><use href="#i-link"/></svg></span><strong>Pay by Link</strong><small>Requests by email or text</small></label></div>
+          </div>
+        </fieldset>
+
+        <fieldset class="step" data-step="2" hidden>
+          <legend>Roughly how much do you take by card each month?</legend>
+          <div class="pills">
+            <div class="pill"><input type="radio" id="t1" name="turnover" value="Under £5,000"><label for="t1">Under £5k</label></div>
+            <div class="pill"><input type="radio" id="t2" name="turnover" value="£5,000 to £20,000" checked><label for="t2">£5k – £20k</label></div>
+            <div class="pill"><input type="radio" id="t3" name="turnover" value="£20,000 to £50,000"><label for="t3">£20k – £50k</label></div>
+            <div class="pill"><input type="radio" id="t4" name="turnover" value="£50,000 to £100,000"><label for="t4">£50k – £100k</label></div>
+            <div class="pill"><input type="radio" id="t5" name="turnover" value="Over £100,000"><label for="t5">£100k+</label></div>
+            <div class="pill"><input type="radio" id="t6" name="turnover" value="New business"><label for="t6">Just starting</label></div>
+          </div>
+        </fieldset>
+
+        <fieldset class="step" data-step="3" hidden>
+          <legend>Tell us about your business</legend>
+          <div class="field">
+            <label for="bizType">Type of business</label>
+            <select id="bizType" name="bizType">
+              <option>Retail shop</option><option>Restaurant, café or bar</option><option>Takeaway</option><option>Hair, beauty or wellness</option><option>Trades and home services</option><option>Healthcare or clinic</option><option>Events and markets</option><option>Online shop</option><option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <span style="font-weight:600;font-size:14.5px">Do you take card payments today?</span>
+            <div class="pills">
+              <div class="pill"><input type="radio" id="cur-yes" name="current" value="Yes, switching provider" checked><label for="cur-yes">Yes, I'm switching</label></div>
+              <div class="pill"><input type="radio" id="cur-no" name="current" value="No, first time"><label for="cur-no">No, first time</label></div>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="step" data-step="4" hidden>
+          <legend>Where should we send your quote?</legend>
+          <div class="field-row">
+            <div class="field"><label for="qName">Your name</label><input id="qName" name="name" autocomplete="name" placeholder="Sam Patel"></div>
+            <div class="field"><label for="qBiz">Business name</label><input id="qBiz" name="biz" autocomplete="organization" placeholder="Patel's Deli"></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="qPhone">Phone</label><input id="qPhone" name="phone" type="tel" autocomplete="tel" placeholder="07700 900123"></div>
+            <div class="field"><label for="qEmail">Email</label><input id="qEmail" name="email" type="email" autocomplete="email" placeholder="sam@patelsdeli.co.uk"></div>
+          </div>
+          <label class="consent" for="qConsent"><input type="checkbox" id="qConsent" checked>I'm happy for Be-Connect to contact me about my quote. We never share your details.</label>
+        </fieldset>
+
+        <div class="step done" data-step="5" hidden>
+          <span class="big-tick"><svg class="ic"><use href="#i-check"/></svg></span>
+          <h3 id="doneTitle">Thanks, your request is in</h3>
+          <p id="doneText">A Be-Connect payments specialist will be in touch with a tailored quote.</p>
+          <span class="preview">Design preview: this form is not connected yet</span>
+        </div>
+
+        <p class="quote-msg" id="quoteMsg" role="alert"></p>
+        <div class="quote-nav" id="quoteNav">
+          <button type="button" class="back" id="backBtn" hidden>← Back</button>
+          <button type="submit" class="btn btn-primary" id="nextBtn" style="margin-left:auto">Continue <svg class="ic"><use href="#i-arrow-right"/></svg></button>
+        </div>
+        <div class="quote-note"><svg class="ic"><use href="#i-shield-check"/></svg>Free, no-obligation quote. Takes about 60 seconds.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="trust" aria-label="Accepted payment methods">
+  <div class="wrap">
+    <span class="trust-label">Accept every way your customers pay</span>
+    <div class="brands">
+      <span class="brand-chip" title="Visa"><svg viewBox="0 0 24 24" role="img" aria-label="Visa"><use href="#b-visa" fill="#1A1F71"/></svg></span>
+      <span class="brand-chip" title="Mastercard"><svg viewBox="0 0 24 24" role="img" aria-label="Mastercard"><use href="#b-mastercard" fill="#EB001B"/></svg></span>
+      <span class="brand-chip" title="American Express"><svg viewBox="0 0 24 24" role="img" aria-label="American Express"><use href="#b-americanexpress" fill="#2E77BC"/></svg></span>
+      <span class="brand-chip wide" title="Apple Pay"><svg viewBox="0 0 24 24" role="img" aria-label="Apple Pay"><use href="#b-applepay" fill="#000000"/></svg></span>
+      <span class="brand-chip wide" title="Google Pay"><svg viewBox="0 0 24 24" role="img" aria-label="Google Pay"><use href="#b-googlepay" fill="#3C4043"/></svg></span>
+      <span class="brand-chip wide" title="Samsung Pay"><svg viewBox="0 0 24 24" role="img" aria-label="Samsung Pay"><use href="#b-samsungpay" fill="#1428A0"/></svg></span>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTIONS -->
+<section class="sec" id="solutions">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Our payment solutions</span>
+      <h2>One provider for in-person, online and phone payments</h2>
+      <p>Whether you serve customers over the counter, at the table, on the doorstep or on your website, Be-Connect gives you the right way to get paid.</p>
+    </div>
+    <div class="bento">
+      <article class="card b-machines">
+        <span class="tag">Most popular</span>
+        <h3>Card machines</h3>
+        <p>Fast, secure terminals with real-time reporting on screen and easy setup. Choose countertop, portable or mobile with a built-in SIM that works anywhere with 4G signal.</p>
+        <a class="link-arrow" href="#machines">Compare card machines <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+        <div class="devices" aria-hidden="true">
+          <svg viewBox="0 0 160 300" width="150" role="img" aria-label="Countertop card machine"><rect class="t-paper" x="40" y="4" width="80" height="56" rx="2"/><rect class="t-paper-line" x="50" y="16" width="60" height="3" rx="1.5"/><rect class="t-paper-line" x="50" y="25" width="44" height="3" rx="1.5"/><rect class="t-paper-line" x="50" y="34" width="60" height="3" rx="1.5"/><rect class="t-paper-line" x="50" y="43" width="44" height="3" rx="1.5"/><rect class="t-body" x="12" y="48" width="136" height="246" rx="24"/><rect class="t-slot" x="36" y="54" width="88" height="6" rx="3"/><rect class="t-screen" x="28" y="74" width="104" height="78" rx="8"/><text class="t-ink" x="80.0" y="109.88" text-anchor="middle" font-size="19.8" font-weight="600">£24.50</text><circle cx="51.9" cy="131.7" r="5.7" fill="#16A374"/><path d="M48.8 131.7l2.3 2.3 4.2 -4.7" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text class="t-ink" x="87.3" y="135.6" text-anchor="middle" font-size="10.9" font-weight="600" letter-spacing="1">APPROVED</text><g class="t-cl" transform="translate(80 168) scale(0.8)"><path d="M0 -6a8 8 0 0 1 0 12"/><path d="M5 -10a14 14 0 0 1 0 20"/><path d="M10 -14a20 20 0 0 1 0 28"/></g><rect class="t-key" x="32" y="186" width="26" height="13" rx="5"/><rect class="t-key" x="67" y="186" width="26" height="13" rx="5"/><rect class="t-key" x="102" y="186" width="26" height="13" rx="5"/><rect class="t-key" x="32" y="205" width="26" height="13" rx="5"/><rect class="t-key" x="67" y="205" width="26" height="13" rx="5"/><rect class="t-key" x="102" y="205" width="26" height="13" rx="5"/><rect class="t-key" x="32" y="224" width="26" height="13" rx="5"/><rect class="t-key" x="67" y="224" width="26" height="13" rx="5"/><rect class="t-key" x="102" y="224" width="26" height="13" rx="5"/><rect class="t-key" x="32" y="243" width="26" height="13" rx="5"/><rect class="t-key" x="67" y="243" width="26" height="13" rx="5"/><rect class="t-key" x="102" y="243" width="26" height="13" rx="5"/><rect class="t-key-r" x="32" y="262" width="26" height="13" rx="5"/><rect class="t-key-y" x="67" y="262" width="26" height="13" rx="5"/><rect class="t-key-g" x="102" y="262" width="26" height="13" rx="5"/><rect class="t-slot" x="50" y="286" width="60" height="4" rx="2"/></svg>
+          <svg viewBox="0 0 130 300" width="118" role="img" aria-label="Portable card machine"><rect class="t-paper" x="30" y="4" width="70" height="50" rx="2"/><rect class="t-paper-line" x="40" y="16" width="50" height="3" rx="1.5"/><rect class="t-paper-line" x="40" y="25" width="34" height="3" rx="1.5"/><rect class="t-paper-line" x="40" y="34" width="50" height="3" rx="1.5"/><rect class="t-body" x="8" y="42" width="114" height="252" rx="22"/><rect class="t-slot" x="28" y="48" width="74" height="6" rx="3"/><rect class="t-screen" x="20" y="66" width="90" height="84" rx="8"/><text class="t-ink" x="65.0" y="104.64" text-anchor="middle" font-size="17.1" font-weight="600">£24.50</text><circle cx="40.7" cy="128.2" r="5.0" fill="#16A374"/><path d="M38.0 128.2l2.0 2.0 3.6 -4.0" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text class="t-ink" x="71.3" y="132.4" text-anchor="middle" font-size="9.4" font-weight="600" letter-spacing="1">APPROVED</text><g class="t-cl" transform="translate(65 166) scale(0.75)"><path d="M0 -6a8 8 0 0 1 0 12"/><path d="M5 -10a14 14 0 0 1 0 20"/><path d="M10 -14a20 20 0 0 1 0 28"/></g><rect class="t-key" x="24" y="184" width="22" height="13" rx="5"/><rect class="t-key" x="54" y="184" width="22" height="13" rx="5"/><rect class="t-key" x="84" y="184" width="22" height="13" rx="5"/><rect class="t-key" x="24" y="203" width="22" height="13" rx="5"/><rect class="t-key" x="54" y="203" width="22" height="13" rx="5"/><rect class="t-key" x="84" y="203" width="22" height="13" rx="5"/><rect class="t-key" x="24" y="222" width="22" height="13" rx="5"/><rect class="t-key" x="54" y="222" width="22" height="13" rx="5"/><rect class="t-key" x="84" y="222" width="22" height="13" rx="5"/><rect class="t-key" x="24" y="241" width="22" height="13" rx="5"/><rect class="t-key" x="54" y="241" width="22" height="13" rx="5"/><rect class="t-key" x="84" y="241" width="22" height="13" rx="5"/><rect class="t-key-r" x="24" y="260" width="22" height="13" rx="5"/><rect class="t-key-y" x="54" y="260" width="22" height="13" rx="5"/><rect class="t-key-g" x="84" y="260" width="22" height="13" rx="5"/><rect class="t-slot" x="40" y="286" width="50" height="4" rx="2"/></svg>
+          <svg viewBox="0 0 110 200" width="96" role="img" aria-label="Mobile card machine"><rect class="t-body" x="6" y="6" width="98" height="188" rx="20"/><rect class="t-screen" x="16" y="20" width="78" height="92" rx="8"/><text class="t-ink" x="55.0" y="62.32" text-anchor="middle" font-size="14.8" font-weight="600">£9.80</text><circle cx="33.9" cy="88.1" r="4.3" fill="#16A374"/><path d="M31.6 88.1l1.7 1.7 3.1 -3.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text class="t-ink" x="60.5" y="92.7" text-anchor="middle" font-size="8.2" font-weight="600" letter-spacing="1">APPROVED</text><g class="t-cl" transform="translate(55 128) scale(0.65)"><path d="M0 -6a8 8 0 0 1 0 12"/><path d="M5 -10a14 14 0 0 1 0 20"/><path d="M10 -14a20 20 0 0 1 0 28"/></g><rect class="t-key" x="20" y="144" width="18" height="6" rx="5"/><rect class="t-key" x="49" y="144" width="18" height="6" rx="5"/><rect class="t-key" x="78" y="144" width="18" height="6" rx="5"/><rect class="t-key-r" x="20" y="154" width="18" height="6" rx="5"/><rect class="t-key-y" x="49" y="154" width="18" height="6" rx="5"/><rect class="t-key-g" x="78" y="154" width="18" height="6" rx="5"/><rect class="t-key" x="20" y="164" width="70" height="12" rx="6"/><rect class="t-slot" x="34" y="186" width="42" height="4" rx="2"/></svg>
+        </div>
+      </article>
+      <article class="card b-pos">
+        <span class="ci"><svg class="ic"><use href="#i-monitor"/></svg></span>
+        <h3>POS system</h3>
+        <p>An all-in-one point-of-sale built to help independent businesses thrive, with easy reports on any device.</p>
+        <a class="link-arrow" href="/pos-system/">Explore POS <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+      </article>
+      <article class="card b-gw">
+        <span class="ci"><svg class="ic"><use href="#i-shopping-cart"/></svg></span>
+        <h3>Payment gateway</h3>
+        <p>Plugs into most shopping carts. Accept Visa, Mastercard, Amex, Apple Pay and Google Pay online.</p>
+        <a class="link-arrow" href="/payment-gateway/">Take payments online <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+      </article>
+      <article class="card b-link">
+        <span class="ci"><svg class="ic"><use href="#i-link"/></svg></span>
+        <h3>Pay by Link</h3>
+        <p>Send a secure payment request by email or text and get paid in minutes. Ideal for bookings, deposits and tradespeople.</p>
+        <div class="mini-ui" aria-hidden="true"><svg class="ic"><use href="#i-link"/></svg><code>pay.be-connect.co.uk/inv-2041</code><span class="pay">£180.00 PAID</span></div>
+        <a class="link-arrow" href="/pay-by-link/">See how Pay by Link works <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+      </article>
+      <article class="card b-app">
+        <span class="ci"><svg class="ic"><use href="#i-smartphone"/></svg></span>
+        <h3>Payment app</h3>
+        <p>Turn your smartphone or tablet into a payment terminal and take contactless payments on the go, with no extra hardware.</p>
+        <div class="mini-ui" aria-hidden="true"><svg class="ic"><use href="#i-smartphone"/></svg><code>Tap to pay · Table 6</code><span class="pay">£42.80 PAID</span></div>
+        <a class="link-arrow" href="/payment-app/">Get the payment app <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+      </article>
+    </div>
+
+    <div class="stats" aria-label="Be-Connect at a glance">
+      <div class="stat"><b>Next day</b><span>Settlement into your business bank account</span></div>
+      <div class="stat"><b>24/7</b><span>UK-based support, 7 days a week</span></div>
+      <div class="stat"><b>4G + Wi-Fi</b><span>Terminals that work wherever you trade</span></div>
+      <div class="stat"><b>5 ways</b><span>To get paid: terminal, POS, online, link and app</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- MACHINES -->
+<section class="sec alt" id="machines">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Compare card machines</span>
+      <h2>Find the right card machine for how you trade</h2>
+      <p>Every Be-Connect terminal takes chip &amp; PIN, contactless, Apple Pay and Google Pay, with real-time reporting and next-day settlement as standard.</p>
+    </div>
+    <div class="machines">
+      <article class="machine">
+        <div class="stage" aria-hidden="true"><svg viewBox="0 0 160 300" width="150" role="img" aria-label="Countertop card machine"><rect class="t-paper" x="40" y="4" width="80" height="56" rx="2"/><rect class="t-paper-line" x="50" y="16" width="60" height="3" rx="1.5"/><rect class="t-paper-line" x="50" y="25" width="44" height="3" rx="1.5"/><rect class="t-paper-line" x="50" y="34" width="60" height="3" rx="1.5"/><rect class="t-paper-line" x="50" y="43" width="44" height="3" rx="1.5"/><rect class="t-body" x="12" y="48" width="136" height="246" rx="24"/><rect class="t-slot" x="36" y="54" width="88" height="6" rx="3"/><rect class="t-screen" x="28" y="74" width="104" height="78" rx="8"/><text class="t-ink" x="80.0" y="109.88" text-anchor="middle" font-size="19.8" font-weight="600">£24.50</text><circle cx="51.9" cy="131.7" r="5.7" fill="#16A374"/><path d="M48.8 131.7l2.3 2.3 4.2 -4.7" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text class="t-ink" x="87.3" y="135.6" text-anchor="middle" font-size="10.9" font-weight="600" letter-spacing="1">APPROVED</text><g class="t-cl" transform="translate(80 168) scale(0.8)"><path d="M0 -6a8 8 0 0 1 0 12"/><path d="M5 -10a14 14 0 0 1 0 20"/><path d="M10 -14a20 20 0 0 1 0 28"/></g><rect class="t-key" x="32" y="186" width="26" height="13" rx="5"/><rect class="t-key" x="67" y="186" width="26" height="13" rx="5"/><rect class="t-key" x="102" y="186" width="26" height="13" rx="5"/><rect class="t-key" x="32" y="205" width="26" height="13" rx="5"/><rect class="t-key" x="67" y="205" width="26" height="13" rx="5"/><rect class="t-key" x="102" y="205" width="26" height="13" rx="5"/><rect class="t-key" x="32" y="224" width="26" height="13" rx="5"/><rect class="t-key" x="67" y="224" width="26" height="13" rx="5"/><rect class="t-key" x="102" y="224" width="26" height="13" rx="5"/><rect class="t-key" x="32" y="243" width="26" height="13" rx="5"/><rect class="t-key" x="67" y="243" width="26" height="13" rx="5"/><rect class="t-key" x="102" y="243" width="26" height="13" rx="5"/><rect class="t-key-r" x="32" y="262" width="26" height="13" rx="5"/><rect class="t-key-y" x="67" y="262" width="26" height="13" rx="5"/><rect class="t-key-g" x="102" y="262" width="26" height="13" rx="5"/><rect class="t-slot" x="50" y="286" width="60" height="4" rx="2"/></svg></div>
+        <div class="machine-title"><h3>Countertop</h3></div>
+        <p class="best">For shops, salons and reception desks with a fixed till point.</p>
+        <dl class="specs">
+          <div><dt><svg class="ic"><use href="#i-wifi"/></svg>Connection</dt><dd>Broadband or Wi-Fi</dd></div>
+          <div><dt><svg class="ic"><use href="#i-battery-full"/></svg>Power</dt><dd>Mains powered</dd></div>
+          <div><dt><svg class="ic"><use href="#i-printer"/></svg>Receipts</dt><dd>Built-in printer</dd></div>
+          <div><dt><svg class="ic"><use href="#i-store"/></svg>Best for</dt><dd>Retail, salons, clinics</dd></div>
+        </dl>
+        <a class="btn btn-ghost" href="#quote" data-pick="Card machine">Get a countertop quote</a>
+      </article>
+      <article class="machine featured">
+        <div class="stage" aria-hidden="true"><svg viewBox="0 0 130 300" width="118" role="img" aria-label="Portable card machine"><rect class="t-paper" x="30" y="4" width="70" height="50" rx="2"/><rect class="t-paper-line" x="40" y="16" width="50" height="3" rx="1.5"/><rect class="t-paper-line" x="40" y="25" width="34" height="3" rx="1.5"/><rect class="t-paper-line" x="40" y="34" width="50" height="3" rx="1.5"/><rect class="t-body" x="8" y="42" width="114" height="252" rx="22"/><rect class="t-slot" x="28" y="48" width="74" height="6" rx="3"/><rect class="t-screen" x="20" y="66" width="90" height="84" rx="8"/><text class="t-ink" x="65.0" y="104.64" text-anchor="middle" font-size="17.1" font-weight="600">£24.50</text><circle cx="40.7" cy="128.2" r="5.0" fill="#16A374"/><path d="M38.0 128.2l2.0 2.0 3.6 -4.0" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text class="t-ink" x="71.3" y="132.4" text-anchor="middle" font-size="9.4" font-weight="600" letter-spacing="1">APPROVED</text><g class="t-cl" transform="translate(65 166) scale(0.75)"><path d="M0 -6a8 8 0 0 1 0 12"/><path d="M5 -10a14 14 0 0 1 0 20"/><path d="M10 -14a20 20 0 0 1 0 28"/></g><rect class="t-key" x="24" y="184" width="22" height="13" rx="5"/><rect class="t-key" x="54" y="184" width="22" height="13" rx="5"/><rect class="t-key" x="84" y="184" width="22" height="13" rx="5"/><rect class="t-key" x="24" y="203" width="22" height="13" rx="5"/><rect class="t-key" x="54" y="203" width="22" height="13" rx="5"/><rect class="t-key" x="84" y="203" width="22" height="13" rx="5"/><rect class="t-key" x="24" y="222" width="22" height="13" rx="5"/><rect class="t-key" x="54" y="222" width="22" height="13" rx="5"/><rect class="t-key" x="84" y="222" width="22" height="13" rx="5"/><rect class="t-key" x="24" y="241" width="22" height="13" rx="5"/><rect class="t-key" x="54" y="241" width="22" height="13" rx="5"/><rect class="t-key" x="84" y="241" width="22" height="13" rx="5"/><rect class="t-key-r" x="24" y="260" width="22" height="13" rx="5"/><rect class="t-key-y" x="54" y="260" width="22" height="13" rx="5"/><rect class="t-key-g" x="84" y="260" width="22" height="13" rx="5"/><rect class="t-slot" x="40" y="286" width="50" height="4" rx="2"/></svg></div>
+        <div class="machine-title"><h3>Portable</h3><span class="badge-pop">Hospitality pick</span></div>
+        <p class="best">Take the machine to the table and let customers pay where they sit.</p>
+        <dl class="specs">
+          <div><dt><svg class="ic"><use href="#i-wifi"/></svg>Connection</dt><dd>Wi-Fi + Bluetooth base</dd></div>
+          <div><dt><svg class="ic"><use href="#i-battery-full"/></svg>Power</dt><dd>Rechargeable, all day</dd></div>
+          <div><dt><svg class="ic"><use href="#i-printer"/></svg>Receipts</dt><dd>Built-in printer</dd></div>
+          <div><dt><svg class="ic"><use href="#i-utensils-crossed"/></svg>Best for</dt><dd>Restaurants, cafés, bars</dd></div>
+        </dl>
+        <a class="btn btn-primary" href="#quote" data-pick="Card machine">Get a portable quote</a>
+      </article>
+      <article class="machine">
+        <div class="stage" aria-hidden="true"><svg viewBox="0 0 110 200" width="96" role="img" aria-label="Mobile card machine"><rect class="t-body" x="6" y="6" width="98" height="188" rx="20"/><rect class="t-screen" x="16" y="20" width="78" height="92" rx="8"/><text class="t-ink" x="55.0" y="62.32" text-anchor="middle" font-size="14.8" font-weight="600">£9.80</text><circle cx="33.9" cy="88.1" r="4.3" fill="#16A374"/><path d="M31.6 88.1l1.7 1.7 3.1 -3.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text class="t-ink" x="60.5" y="92.7" text-anchor="middle" font-size="8.2" font-weight="600" letter-spacing="1">APPROVED</text><g class="t-cl" transform="translate(55 128) scale(0.65)"><path d="M0 -6a8 8 0 0 1 0 12"/><path d="M5 -10a14 14 0 0 1 0 20"/><path d="M10 -14a20 20 0 0 1 0 28"/></g><rect class="t-key" x="20" y="144" width="18" height="6" rx="5"/><rect class="t-key" x="49" y="144" width="18" height="6" rx="5"/><rect class="t-key" x="78" y="144" width="18" height="6" rx="5"/><rect class="t-key-r" x="20" y="154" width="18" height="6" rx="5"/><rect class="t-key-y" x="49" y="154" width="18" height="6" rx="5"/><rect class="t-key-g" x="78" y="154" width="18" height="6" rx="5"/><rect class="t-key" x="20" y="164" width="70" height="12" rx="6"/><rect class="t-slot" x="34" y="186" width="42" height="4" rx="2"/></svg></div>
+        <div class="machine-title"><h3>Mobile</h3></div>
+        <p class="best">Built-in SIM card, so you can take payments anywhere with 4G signal.</p>
+        <dl class="specs">
+          <div><dt><svg class="ic"><use href="#i-signal"/></svg>Connection</dt><dd>4G SIM + Wi-Fi</dd></div>
+          <div><dt><svg class="ic"><use href="#i-battery-full"/></svg>Power</dt><dd>Long battery life</dd></div>
+          <div><dt><svg class="ic"><use href="#i-printer"/></svg>Receipts</dt><dd>Printed or digital</dd></div>
+          <div><dt><svg class="ic"><use href="#i-wrench"/></svg>Best for</dt><dd>Trades, markets, deliveries</dd></div>
+        </dl>
+        <a class="btn btn-ghost" href="#quote" data-pick="Card machine">Get a mobile quote</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="sec" id="calculator">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Card fee checker</span>
+      <h2>What are you really paying to take cards?</h2>
+      <p>Most providers bury the true cost across rates, terminal rental and extra charges. Pop in the figures from your last statement to see your effective rate.</p>
+    </div>
+    <div class="calc">
+      <div class="calc-in">
+        <h3>Your last monthly statement</h3>
+        <div class="field">
+          <label for="cTurn">Card turnover this month</label>
+          <div class="money"><span>£</span><input id="cTurn" type="number" inputmode="decimal" min="0" step="100" value="20000"></div>
+        </div>
+        <div class="field">
+          <label for="cTx">Number of card transactions</label>
+          <input id="cTx" type="number" inputmode="numeric" min="0" step="10" value="800" style="font-variant-numeric:tabular-nums">
+        </div>
+        <div class="field">
+          <label for="cFees">Total fees charged (rates, rental and extras)</label>
+          <div class="money"><span>£</span><input id="cFees" type="number" inputmode="decimal" min="0" step="5" value="340"></div>
+        </div>
+        <p style="color:var(--muted);font-size:14.5px">Example figures shown. Your numbers stay on this page.</p>
+      </div>
+      <div class="calc-out">
+        <div class="receipt" aria-live="polite">
+          <div class="r-head"><b>Be-Connect</b><span>Fee check · statement review</span></div>
+          <div class="cap">Your effective rate</div>
+          <div class="big" id="oRate">1.70%</div>
+          <div class="row"><span>Average fee per sale</span><span id="oPer">£0.43</span></div>
+          <div class="row"><span>Average sale value</span><span id="oAvg">£25.00</span></div>
+          <div class="row total"><span>Fees per year</span><span id="oYear">£4,080</span></div>
+        </div>
+        <p class="insight">On your turnover, every 0.1% you shave off your rate is worth <b id="oTenth">£240 a year</b>.</p>
+        <a class="btn btn-sun" href="#quote">Get a free statement review <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="sec alt" id="how">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">How it works</span>
+      <h2>Up and running in three simple steps</h2>
+      <p>No jargon and no lengthy paperwork. Just a straightforward setup with a real person to help.</p>
+    </div>
+    <ol class="steps">
+      <li><span class="n">1</span><h3>Tell us about your business</h3><p>Fill in our 60-second form or give us a call. We'll ask how you trade and what you take each month.</p></li>
+      <li><span class="n">2</span><h3>Get a clear, tailored quote</h3><p>We recommend the right setup for you and show every cost up front, so there are no surprises later.</p></li>
+      <li><span class="n">3</span><h3>Start taking payments</h3><p>Your terminal arrives ready to go and our UK team helps you set up. Money from your sales lands the next day.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="sec" id="why">
+  <div class="wrap why">
+    <div>
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="eyebrow">Why Be-Connect</span>
+        <h2>Payments that keep your cash flowing</h2>
+        <p>We're a UK payments provider supporting independent businesses with state-of-the-art terminals, online payments and POS, backed by people who pick up the phone.</p>
+      </div>
+      <div class="timeline" aria-label="How next-day settlement works">
+        <h4>How next-day settlement works</h4>
+        <div class="tl"><time>Mon 17:42</time><span class="rail"><i></i></span><div><p>Customer taps to pay £86.00</p><span>Approved in seconds on your Be-Connect terminal</span></div></div>
+        <div class="tl"><time>Mon close</time><span class="rail"><i></i></span><div><p>Your day's takings are batched</p><span>See every sale in real time in your reporting</span></div></div>
+        <div class="tl"><time>Tue</time><span class="rail"><i></i></span><div><p>Funds land in your bank account</p><span>Next working day, ready to pay suppliers and staff</span></div></div>
+      </div>
+    </div>
+    <div class="features">
+      <div class="feature"><span class="fi"><svg class="ic"><use href="#i-zap"/></svg></span><h3>Next-day settlement</h3><p>Get your money the next working day instead of waiting days for it to clear.</p></div>
+      <div class="feature"><span class="fi"><svg class="ic"><use href="#i-headset"/></svg></span><h3>24/7 UK-based support</h3><p>Real people in the UK, available 7 days a week, including evenings and weekends when you're busiest.</p></div>
+      <div class="feature"><span class="fi"><svg class="ic"><use href="#i-credit-card"/></svg></span><h3>Every card and wallet</h3><p>Visa, Mastercard, Amex, Apple Pay and Google Pay, by chip &amp; PIN or contactless.</p></div>
+      <div class="feature"><span class="fi"><svg class="ic"><use href="#i-bar-chart-3"/></svg></span><h3>Real-time reporting</h3><p>Track sales on the terminal screen or from any device, and know exactly where you stand.</p></div>
+      <div class="feature"><span class="fi"><svg class="ic"><use href="#i-shield-check"/></svg></span><h3>Secure by design</h3><p>Encrypted transactions that keep your customers' card details protected.</p></div>
+      <div class="feature"><span class="fi"><svg class="ic"><use href="#i-layers"/></svg></span><h3>Everything in one place</h3><p>Terminals, POS, online and phone payments from one provider and one point of contact.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="sec alt" id="industries">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Industries we support</span>
+      <h2>Built for businesses like yours</h2>
+      <p>From the corner shop to the busy restaurant, we set you up with the payment tools that fit how you work.</p>
+    </div>
+    <div class="inds">
+      <a class="ind" href="#quote"><span class="ii"><svg class="ic"><use href="#i-store"/></svg></span><span>Retail<small>Shops, convenience, boutiques</small></span></a>
+      <a class="ind" href="#quote"><span class="ii"><svg class="ic"><use href="#i-utensils-crossed"/></svg></span><span>Restaurants<small>Pay-at-table, tips, split bills</small></span></a>
+      <a class="ind" href="#quote"><span class="ii"><svg class="ic"><use href="#i-coffee"/></svg></span><span>Cafés &amp; takeaways<small>Fast contactless at the counter</small></span></a>
+      <a class="ind" href="#quote"><span class="ii"><svg class="ic"><use href="#i-scissors"/></svg></span><span>Hair &amp; beauty<small>Deposits by Pay by Link</small></span></a>
+      <a class="ind" href="#quote"><span class="ii"><svg class="ic"><use href="#i-wrench"/></svg></span><span>Trades<small>Get paid on the job over 4G</small></span></a>
+      <a class="ind" href="#quote"><span class="ii"><svg class="ic"><use href="#i-stethoscope"/></svg></span><span>Healthcare<small>Clinics, dentists, therapists</small></span></a>
+      <a class="ind" href="#quote"><span class="ii"><svg class="ic"><use href="#i-ticket"/></svg></span><span>Events &amp; markets<small>Mobile terminals that roam</small></span></a>
+      <a class="ind" href="#quote"><span class="ii"><svg class="ic"><use href="#i-car-taxi-front"/></svg></span><span>Taxis &amp; transport<small>Card payments on the move</small></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- FUNDING -->
+<section class="sec deep" id="funding">
+  <div class="wrap funding">
+    <div>
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="eyebrow">Business funding</span>
+        <h2>Funding that flexes with your card takings</h2>
+        <p>Need cash for new stock, a refit or a quiet season? Unlock funding based on your card sales and repay it automatically as a small share of what you take.</p>
+      </div>
+      <ul>
+        <li><svg class="ic"><use href="#i-check"/></svg>Repayments rise and fall with your sales, so quiet days cost you less</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>No fixed monthly payment to plan around</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Decision based on your card turnover, not just your credit history</li>
+      </ul>
+      <div class="actions">
+        <a class="btn btn-sun" href="#quote">Check what you could get</a>
+        <a class="btn btn-line-light" href="tel:+442070527978">Talk to the team</a>
+      </div>
+    </div>
+    <figure class="chart" style="margin:0">
+      <div class="chart-top"><b>Two weeks of card takings</b><span>Illustrative example</span></div>
+      <div class="bars" id="bars" aria-hidden="true"></div>
+      <div class="bar-days" aria-hidden="true"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>
+      <figcaption class="legend"><span><i></i>Kept by you</span><span><i class="y"></i>Repayment share</span></figcaption>
+      <p class="fine">On a busy Saturday you repay more. On a quiet Tuesday you repay less. Funding subject to eligibility.</p>
+    </figure>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq">
+  <div class="wrap faq-grid">
+    <div>
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="eyebrow">Help &amp; FAQs</span>
+        <h2>Questions, answered</h2>
+        <p>Can't find what you need? Our UK team is available 24/7.</p>
+      </div>
+      <div class="help-card">
+        <div class="who"><span class="ci"><svg class="ic"><use href="#i-headset"/></svg></span><div><strong>Speak to a specialist</strong><p>24 hours a day, 7 days a week</p></div></div>
+        <span class="num">020 7052 7978</span>
+        <p>Or email <strong style="color:var(--ink);user-select:all">info@be-connect.co.uk</strong></p>
+      </div>
+    </div>
+    <div class="faq">
+      <details open><summary>How quickly will I receive my money?<svg class="ic"><use href="#i-chevron-down"/></svg></summary><div class="a">With next-day settlement, card payments you take today are paid into your business bank account on the next working day.</div></details>
+      <details><summary>Which payment methods can I accept?<svg class="ic"><use href="#i-chevron-down"/></svg></summary><div class="a">All major credit and debit cards including Visa, Mastercard and American Express, plus Apple Pay and Google Pay, by chip &amp; PIN or contactless.</div></details>
+      <details><summary>Do I need Wi-Fi to use a card machine?<svg class="ic"><use href="#i-chevron-down"/></svg></summary><div class="a">Not with a mobile terminal. It has a built-in SIM card and connects anywhere with 4G signal. Countertop and portable machines use your broadband or Wi-Fi.</div></details>
+      <details><summary>Can I take payments online or over the phone?<svg class="ic"><use href="#i-chevron-down"/></svg></summary><div class="a">Yes. Our payment gateway integrates with most shopping carts, and Pay by Link lets you send a secure payment request by email or text for bookings, deposits and phone orders.</div></details>
+      <details><summary>Will I get help setting up?<svg class="ic"><use href="#i-chevron-down"/></svg></summary><div class="a">Yes. Your terminal is easy to set up, and our UK-based support team is available 24/7 to walk you through it or help with anything afterwards.</div></details>
+      <details><summary>How do I get started?<svg class="ic"><use href="#i-chevron-down"/></svg></summary><div class="a">Complete the quick quote form at the top of this page or call us on 020 7052 7978. A payments specialist will recommend the right setup and send you a clear quote.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="wrap">
+    <div class="cta-box">
+      <svg class="waves" viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"><path d="M30 35a21 21 0 0 1 0 30"/><path d="M43 25a35 35 0 0 1 0 50"/><path d="M56 15a49 49 0 0 1 0 70"/><path d="M69 5a63 63 0 0 1 0 90"/></g></svg>
+      <div style="position:relative">
+        <h2>Ready to get paid faster?</h2>
+        <p>Get a free, no-obligation quote today and start taking payments with next-day settlement.</p>
+      </div>
+      <div class="actions">
+        <a class="btn btn-light" href="#quote">Get my free quote</a>
+        <a class="btn btn-outline" href="tel:+442070527978"><svg class="ic"><use href="#i-phone"/></svg>020 7052 7978</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="#top" aria-label="Be-Connect home">
+          <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+            <rect width="40" height="40" rx="11" fill="var(--brand)"/>
+            <g fill="none" stroke="var(--brand-ink)" stroke-width="3" stroke-linecap="round"><path d="M14 13.5a9 9 0 0 1 0 13"/><path d="M19.5 10a14 14 0 0 1 0 20"/><path d="M25 7a19 19 0 0 1 0 26" opacity=".55"/></g>
+            <circle cx="9.5" cy="20" r="2.6" fill="var(--sun)"/>
+          </svg>
+          <span class="logo-word">Be-<span>Connect</span><small>PAY</small></span>
+        </a>
+        <address>
+          <span><strong>Be-Connect Pay Ltd</strong><br>Bizniz Point, Crown House, Home Gardens,<br>Dartford, Kent DA1 1DZ</span>
+          <span><a href="tel:+442070527978">020 7052 7978</a> · <a href="mailto:info@be-connect.co.uk">info@be-connect.co.uk</a></span>
+        </address>
+      </div>
+      <div>
+        <h4>Solutions</h4>
+        <ul><li><a href="#machines">Card machines</a></li><li><a href="/pos-system/">POS system</a></li><li><a href="/payment-gateway/">Payment gateway</a></li><li><a href="/pay-by-link/">Pay by Link</a></li><li><a href="/payment-app/">Payment app</a></li></ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul><li><a href="/about-us/">About us</a></li><li><a href="#industries">Industries</a></li><li><a href="#funding">Business funding</a></li><li><a href="#quote">Get a quote</a></li></ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul><li><a href="#faq">Help &amp; FAQs</a></li><li><a href="#">Contact us</a></li><li><a href="#">Privacy policy</a></li><li><a href="#">Terms &amp; conditions</a></li><li><a href="#">Cookie policy</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>© 2026 Be-Connect Pay Ltd. Registered in England &amp; Wales, company no. 15411775.</span>
+      <div class="brands">
+        <span class="brand-chip"><svg viewBox="0 0 24 24" role="img" aria-label="Visa"><use href="#b-visa" fill="#1A1F71"/></svg></span>
+        <span class="brand-chip"><svg viewBox="0 0 24 24" role="img" aria-label="Mastercard"><use href="#b-mastercard" fill="#EB001B"/></svg></span>
+        <span class="brand-chip"><svg viewBox="0 0 24 24" role="img" aria-label="American Express"><use href="#b-americanexpress" fill="#2E77BC"/></svg></span>
+        <span class="brand-chip"><svg viewBox="0 0 24 24" role="img" aria-label="Apple Pay"><use href="#b-applepay" fill="#000000"/></svg></span>
+        <span class="brand-chip"><svg viewBox="0 0 24 24" role="img" aria-label="Google Pay"><use href="#b-googlepay" fill="#3C4043"/></svg></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-ghost" href="tel:+442070527978"><svg class="ic"><use href="#i-phone"/></svg>Call</a>
+  <a class="btn btn-primary" href="#quote">Get a free quote</a>
+</div>
+
+<script>
+(function(){
+  // Mobile menu
+  var header=document.getElementById('header'),menuBtn=document.getElementById('menuBtn');
+  menuBtn.addEventListener('click',function(){
+    var open=header.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded',open);
+    menuBtn.innerHTML='<svg class="ic"><use href="#i-'+(open?'x':'menu')+'"/></svg>';
+  });
+  document.querySelectorAll('#mobileNav a').forEach(function(a){a.addEventListener('click',function(){header.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.innerHTML='<svg class="ic"><use href="#i-menu"/></svg>';});});
+
+  // Quote form stepper
+  var form=document.getElementById('quoteForm'),steps=form.querySelectorAll('[data-step]'),cur=1,total=4;
+  var label=document.getElementById('stepLabel'),bar=document.getElementById('stepBar'),back=document.getElementById('backBtn'),next=document.getElementById('nextBtn'),msg=document.getElementById('quoteMsg'),nav=document.getElementById('quoteNav');
+  function show(n){
+    cur=n;
+    steps.forEach(function(s){s.hidden=+s.dataset.step!==n;});
+    var done=n>total;
+    label.textContent=done?'Complete':'Step '+n+' of '+total;
+    bar.style.width=(done?100:n/total*100)+'%';
+    back.hidden=n===1||done;
+    nav.hidden=done;
+    next.innerHTML=n===total?'Get my quote <svg class="ic"><use href="#i-arrow-right"/></svg>':'Continue <svg class="ic"><use href="#i-arrow-right"/></svg>';
+    msg.textContent='';
+  }
+  function valid(){
+    if(cur===1&&!form.querySelector('input[name="need"]:checked')){msg.textContent='Choose at least one option to continue.';return false;}
+    if(cur===4){
+      var name=form.qName.value.trim(),phone=form.qPhone.value.trim(),email=form.qEmail.value.trim();
+      if(!name){msg.textContent='Add your name so we know who to ask for.';form.qName.focus();return false;}
+      if(!phone&&!email){msg.textContent='Add a phone number or email so we can send your quote.';form.qPhone.focus();return false;}
+      if(email&&!/^\S+@\S+\.\S+$/.test(email)){msg.textContent='Check your email address. It should look like name@business.co.uk.';form.qEmail.focus();return false;}
+    }
+    return true;
+  }
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!valid())return;
+    if(cur===total){
+      var first=form.qName.value.trim().split(' ')[0];
+      document.getElementById('doneTitle').textContent='Thanks, '+first+'. Your request is in.';
+      var needs=[].map.call(form.querySelectorAll('input[name="need"]:checked'),function(i){return i.value.toLowerCase();});
+      document.getElementById('doneText').textContent='A Be-Connect payments specialist will be in touch about your '+needs.join(', ')+' quote.';
+    }
+    show(cur+1);
+  });
+  back.addEventListener('click',function(){show(cur-1);});
+  document.querySelectorAll('[data-pick]').forEach(function(a){a.addEventListener('click',function(){if(cur<=total)show(1);});});
+  show(1);
+
+  // Fee checker
+  var fmt=new Intl.NumberFormat('en-GB',{style:'currency',currency:'GBP'}),fmt0=new Intl.NumberFormat('en-GB',{style:'currency',currency:'GBP',maximumFractionDigits:0});
+  var cT=document.getElementById('cTurn'),cX=document.getElementById('cTx'),cF=document.getElementById('cFees');
+  function calc(){
+    var t=Math.max(0,parseFloat(cT.value)||0),x=Math.max(0,parseFloat(cX.value)||0),f=Math.max(0,parseFloat(cF.value)||0);
+    document.getElementById('oRate').textContent=t?(f/t*100).toFixed(2)+'%':'–';
+    document.getElementById('oPer').textContent=x?fmt.format(f/x):'–';
+    document.getElementById('oAvg').textContent=x?fmt.format(t/x):'–';
+    document.getElementById('oYear').textContent=fmt0.format(f*12);
+    document.getElementById('oTenth').textContent=fmt0.format(t*0.001*12)+' a year';
+  }
+  [cT,cX,cF].forEach(function(i){i.addEventListener('input',calc);});
+  calc();
+
+  // Funding chart (illustrative takings, £)
+  var days=[620,540,580,690,980,1320,1150,600,510,640,720,1040,1380,1100],max=1400,share=.1,bars=document.getElementById('bars');
+  days.forEach(function(v){
+    var d=document.createElement('div');d.style.height=(v/max*100)+'%';
+    var y=document.createElement('i'),k=document.createElement('s');
+    d.style.gridTemplateRows=(share*100)+'% 1fr';
+    d.title='£'+v+' taken, £'+Math.round(v*share)+' repaid';
+    d.appendChild(y);d.appendChild(k);bars.appendChild(d);
+  });
+})();
+</script>
+
+</body>
+</html>
