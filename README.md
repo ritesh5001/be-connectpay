@@ -2,10 +2,28 @@
 
 New homepage for https://be-connectpay.co.uk/, laid out like the reference site (suchitagroup.com) and built around the four Be-Connect banners.
 
-- **`wordpress-plugin/be-connect-home.zip`**: **recommended.** WordPress plugin that adds the `[bcpay_home]` shortcode.
-- **`index.html`** + **`assets/`**: the homepage as a static page. Open `index.html` in a browser to preview.
-- **`elementor/be-connect-home.html`**: the same page as one block for an Elementor **HTML** widget. Only works for accounts with the `unfiltered_html` permission (see below).
-- `tools/build_elementor.py`: rebuilds the plugin and the Elementor file from `index.html` (`python3 tools/build_elementor.py`).
+- **`elementor/be-connect-home-paste.html`**: **copy-paste version.** Paste it into one Elementor **HTML** widget and it works for any account, including ones without the `unfiltered_html` permission.
+- `wordpress-plugin/be-connect-home.zip`: plugin version with `[bcpay_home]` shortcode, including the autoplay slider, live calculators and animations.
+- `elementor/be-connect-home.html`: full version for an HTML widget. Only works for accounts with the `unfiltered_html` permission.
+- **`index.html`** + **`assets/`**: the homepage as a static page for previewing.
+- `tools/build_paste.py`: rebuilds the copy-paste version. `tools/build_elementor.py`: rebuilds the plugin and full HTML version.
+
+## Copy-paste version (recommended for this site)
+
+1. Edit the home page with Elementor. Set **Page Settings → Page Layout → Elementor Full Width** (keeps your theme header and footer).
+2. Add a section/container set to **Full Width** with **0 padding**, then drag in an **HTML** widget.
+3. Open `elementor/be-connect-home-paste.html`, copy everything and paste it into the widget. **Update**.
+
+This version has no `<style>` or `<script>`. Everything is inline styles that WordPress's content filter keeps, checked by running it through `wp_kses_post` (the same filter Elementor applies) with nothing removed. Layout uses floats plus `clamp()` breakpoints, so it switches between 4, 2 and 1 columns without media queries.
+
+Because WordPress removes all JavaScript in this mode:
+- The **banner slider** works by swipe/trackpad and by its arrows and dots, but doesn't autoplay.
+- The **calculators** become worked tables: monthly funding repayments by amount and term at an example 12% rate, and yearly savings from a lower card fee rate.
+- There are no hover animations or count-up numbers.
+
+For those extras, use the plugin version.
+
+**Fonts:** headings use Montserrat and body text uses Inter, if your site loads them. Otherwise they fall back to Segoe UI/Roboto/Arial. To load them, pick Montserrat and Inter in **Elementor → Site Settings → Global Fonts**.
 
 ## Page sections (top to bottom)
 
