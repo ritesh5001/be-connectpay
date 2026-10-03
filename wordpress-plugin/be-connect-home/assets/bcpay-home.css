@@ -1,0 +1,421 @@
+/* ==========================================================================
+   Be-Connect Pay homepage
+   Every class/id starts with "bcpay-" and every rule is scoped to .bcpay-home,
+   so nothing here touches the theme or other Elementor widgets.
+   ========================================================================== */
+.bcpay-home{
+  --bcpay-blue:#00A5EA; --bcpay-blue-d:#008CCB; --bcpay-blue-l:#5CC8F5; --bcpay-blue-50:#EDF8FE; --bcpay-blue-100:#D6EFFD;
+  --bcpay-royal:#1857C9; --bcpay-navy:#0A1F4E; --bcpay-navy-2:#102B66; --bcpay-navy-d:#061538;
+  --bcpay-ink:#0A1F4E; --bcpay-text:#4A5674; --bcpay-muted:#7A86A1; --bcpay-line:#E3EAF3; --bcpay-soft:#F3F9FD;
+  --bcpay-green:#12A866; --bcpay-star:#FFB400; --bcpay-white:#FFFFFF;
+  --bcpay-fh:"Montserrat","Segoe UI",system-ui,-apple-system,sans-serif;
+  --bcpay-fb:"Inter","Segoe UI",system-ui,-apple-system,sans-serif;
+  --bcpay-r:16px; --bcpay-r-lg:24px;
+  --bcpay-sh:0 12px 34px -14px rgb(10 31 78 / .22);
+  --bcpay-sh-lg:0 30px 60px -24px rgb(10 31 78 / .35);
+  --bcpay-wrap:1240px;
+  position:relative;display:block;width:100%;margin:0;padding:0;background:#fff;color:var(--bcpay-text);
+  font-family:var(--bcpay-fb);font-size:16px;font-weight:400;line-height:1.7;letter-spacing:normal;text-align:left;text-transform:none;
+  -webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;overflow-x:hidden;overflow-x:clip;
+}
+/* Scoped reset */
+.bcpay-home [class*="bcpay-"],.bcpay-home [class*="bcpay-"]::before,.bcpay-home [class*="bcpay-"]::after{box-sizing:border-box}
+.bcpay-home [class*="bcpay-"]{margin:0;padding:0;border:0 solid transparent;border-radius:0;background:none;box-shadow:none;outline:0;font:inherit;color:inherit;letter-spacing:inherit;line-height:inherit;text-transform:none;text-align:inherit;text-decoration:none;text-shadow:none;list-style:none;min-width:0;float:none;vertical-align:baseline;transition:none}
+.bcpay-home [hidden]{display:none!important}
+.bcpay-home :where(img[class*="bcpay-"]){display:block;max-width:100%;height:auto}
+.bcpay-home a[class*="bcpay-"],.bcpay-home button[class*="bcpay-"]{cursor:pointer}
+.bcpay-home button[class*="bcpay-"]{-webkit-appearance:none;appearance:none}
+.bcpay-home [class*="bcpay-"]:focus-visible{outline:3px solid var(--bcpay-blue);outline-offset:3px;border-radius:8px}
+.bcpay-home .bcpay-ic{display:inline-block;width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle;overflow:visible}
+.bcpay-home .bcpay-ic-fill{fill:currentColor;stroke:none}
+.bcpay-home .bcpay-sprite{position:absolute;width:0;height:0;overflow:hidden}
+.bcpay-home .bcpay-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (prefers-reduced-motion:reduce){.bcpay-home [class*="bcpay-"]{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Layout helpers */
+.bcpay-home .bcpay-wrap{width:100%;max-width:calc(var(--bcpay-wrap) + 40px);margin-inline:auto;padding-inline:20px}
+.bcpay-home .bcpay-sec{padding-block:clamp(64px,8vw,110px)}
+.bcpay-home .bcpay-sec-soft{background:var(--bcpay-soft)}
+.bcpay-home .bcpay-head{display:grid;gap:14px;margin-bottom:clamp(36px,4.5vw,56px)}
+.bcpay-home .bcpay-head-center{text-align:center;justify-items:center;max-width:780px;margin-inline:auto}
+.bcpay-home .bcpay-sub{display:inline-flex;align-items:center;gap:10px;font-family:var(--bcpay-fh);font-size:13.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--bcpay-blue)}
+.bcpay-home .bcpay-sub::before,.bcpay-home .bcpay-head-center .bcpay-sub::after{content:"";width:28px;height:2px;border-radius:2px;background:currentColor}
+.bcpay-home .bcpay-title{font-family:var(--bcpay-fh);font-size:clamp(28px,3.6vw,44px);font-weight:800;line-height:1.15;letter-spacing:-.02em;color:var(--bcpay-ink)}
+.bcpay-home .bcpay-hl{color:var(--bcpay-blue)}
+.bcpay-home .bcpay-nowrap{white-space:nowrap}
+.bcpay-home .bcpay-lead{font-size:clamp(16px,1.3vw,17.5px);color:var(--bcpay-text);max-width:62ch}
+
+/* Buttons */
+.bcpay-home .bcpay-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:999px;border:2px solid transparent;font-family:var(--bcpay-fh);font-size:15px;font-weight:700;line-height:1;white-space:nowrap;transition:background-color .25s,color .25s,border-color .25s,transform .25s,box-shadow .25s}
+.bcpay-home .bcpay-btn .bcpay-ic{width:18px;height:18px;transition:transform .25s}
+.bcpay-home .bcpay-btn:hover .bcpay-ic-arrow{transform:translateX(4px)}
+.bcpay-home .bcpay-btn-primary{background:var(--bcpay-blue);color:#fff;box-shadow:0 12px 24px -12px rgb(0 165 234 / .9)}
+.bcpay-home .bcpay-btn-primary:hover{background:var(--bcpay-blue-d);color:#fff;transform:translateY(-2px)}
+.bcpay-home .bcpay-btn-navy{background:var(--bcpay-navy);color:#fff}
+.bcpay-home .bcpay-btn-navy:hover{background:var(--bcpay-navy-2);color:#fff;transform:translateY(-2px)}
+.bcpay-home .bcpay-btn-outline{border-color:var(--bcpay-line);color:var(--bcpay-ink);background:#fff}
+.bcpay-home .bcpay-btn-outline:hover{border-color:var(--bcpay-blue);color:var(--bcpay-blue)}
+.bcpay-home .bcpay-btn-white{background:#fff;color:var(--bcpay-navy)}
+.bcpay-home .bcpay-btn-white:hover{background:var(--bcpay-navy);color:#fff;transform:translateY(-2px)}
+.bcpay-home .bcpay-btn-ghost{border-color:rgb(255 255 255 / .45);color:#fff}
+.bcpay-home .bcpay-btn-ghost:hover{background:#fff;color:var(--bcpay-navy);border-color:#fff}
+.bcpay-home .bcpay-link{display:inline-flex;align-items:center;gap:8px;font-family:var(--bcpay-fh);font-weight:700;font-size:14.5px;color:var(--bcpay-blue);transition:gap .25s,color .25s}
+.bcpay-home .bcpay-link .bcpay-ic{width:17px;height:17px}
+.bcpay-home .bcpay-link:hover{gap:12px;color:var(--bcpay-blue-d)}
+
+/* ---------- Top bar ---------- */
+.bcpay-home .bcpay-topbar{background:var(--bcpay-navy);color:#C9D5EC;font-size:13.5px}
+.bcpay-home .bcpay-topbar-in{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:44px}
+.bcpay-home .bcpay-topbar-list{display:flex;align-items:center;gap:26px}
+.bcpay-home .bcpay-topbar-item{display:inline-flex;align-items:center;gap:8px;color:#C9D5EC;transition:color .2s}
+.bcpay-home a.bcpay-topbar-item:hover{color:#fff}
+.bcpay-home .bcpay-topbar-item .bcpay-ic{width:15px;height:15px;color:var(--bcpay-blue-l)}
+.bcpay-home .bcpay-social{display:flex;gap:8px}
+.bcpay-home .bcpay-social-a{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:rgb(255 255 255 / .08);color:#fff;transition:background-color .2s}
+.bcpay-home .bcpay-social-a:hover{background:var(--bcpay-blue);color:#fff}
+.bcpay-home .bcpay-social-a .bcpay-ic{width:13px;height:13px}
+@media (max-width:900px){.bcpay-home .bcpay-topbar-hide{display:none}}
+@media (max-width:600px){.bcpay-home .bcpay-topbar .bcpay-social{display:none}.bcpay-home .bcpay-topbar-in{justify-content:center}.bcpay-home .bcpay-topbar-list{gap:18px}}
+
+/* ---------- Header ---------- */
+.bcpay-home .bcpay-header{position:sticky;top:0;z-index:90;background:#fff;border-bottom:1px solid var(--bcpay-line);transition:box-shadow .3s}
+body.admin-bar .bcpay-home .bcpay-header{top:32px}
+@media (max-width:782px){body.admin-bar .bcpay-home .bcpay-header{top:0}}
+.bcpay-home .bcpay-header.bcpay-is-stuck{box-shadow:0 10px 30px -18px rgb(10 31 78 / .35)}
+.bcpay-home .bcpay-header-in{display:flex;align-items:center;gap:24px;height:86px}
+.bcpay-home .bcpay-logo{display:block;flex:none}
+.bcpay-home .bcpay-logo-img{height:58px;width:auto}
+.bcpay-home .bcpay-nav{display:flex;align-items:center;gap:4px;margin-left:auto}
+.bcpay-home .bcpay-nav-item{position:relative}
+.bcpay-home .bcpay-nav-link{display:inline-flex;align-items:center;gap:5px;height:86px;padding:0 12px;white-space:nowrap;font-family:var(--bcpay-fh);font-size:15px;font-weight:600;color:var(--bcpay-ink);position:relative;transition:color .2s}
+.bcpay-home .bcpay-nav-link::after{content:"";position:absolute;left:12px;right:12px;bottom:24px;height:2px;border-radius:2px;background:var(--bcpay-blue);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.bcpay-home .bcpay-nav-link:hover,.bcpay-home .bcpay-nav-link.bcpay-is-current,.bcpay-home .bcpay-nav-item:hover>.bcpay-nav-link{color:var(--bcpay-blue)}
+.bcpay-home .bcpay-nav-link:hover::after,.bcpay-home .bcpay-nav-link.bcpay-is-current::after{transform:scaleX(1)}
+.bcpay-home .bcpay-nav-link .bcpay-ic{width:16px;height:16px;transition:transform .25s}
+.bcpay-home .bcpay-nav-item:hover>.bcpay-nav-link .bcpay-ic,.bcpay-home .bcpay-nav-item.bcpay-is-open>.bcpay-nav-link .bcpay-ic{transform:rotate(180deg)}
+.bcpay-home .bcpay-dd{position:absolute;top:100%;left:50%;width:640px;padding:18px;border-radius:0 0 var(--bcpay-r) var(--bcpay-r);background:#fff;border-top:3px solid var(--bcpay-blue);box-shadow:var(--bcpay-sh-lg);display:grid;grid-template-columns:1fr 1fr;gap:4px;opacity:0;visibility:hidden;transform:translate(-50%,12px);transition:opacity .25s,transform .25s,visibility .25s}
+.bcpay-home .bcpay-nav-item:hover>.bcpay-dd,.bcpay-home .bcpay-nav-item:focus-within>.bcpay-dd,.bcpay-home .bcpay-nav-item.bcpay-is-open>.bcpay-dd{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.bcpay-home .bcpay-dd-sm{width:250px;grid-template-columns:1fr}
+.bcpay-home .bcpay-dd-a{display:grid;grid-template-columns:42px 1fr;gap:12px;align-items:center;padding:12px;border-radius:12px;transition:background-color .2s}
+.bcpay-home .bcpay-dd-a:hover{background:var(--bcpay-blue-50)}
+.bcpay-home .bcpay-dd-ic{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:var(--bcpay-blue-100);color:var(--bcpay-royal)}
+.bcpay-home .bcpay-dd-t{display:block;font-family:var(--bcpay-fh);font-weight:700;font-size:14.5px;color:var(--bcpay-ink);line-height:1.3}
+.bcpay-home .bcpay-dd-d{display:block;font-size:13px;color:var(--bcpay-muted);line-height:1.4}
+.bcpay-home .bcpay-header-cta{display:flex;align-items:center;gap:16px;margin-left:12px}
+.bcpay-home .bcpay-call{display:flex;align-items:center;gap:10px}
+.bcpay-home .bcpay-call-ic{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--bcpay-blue-50);color:var(--bcpay-blue)}
+.bcpay-home .bcpay-call-t{display:block;font-size:12px;color:var(--bcpay-muted);line-height:1.2}
+.bcpay-home .bcpay-call-n{display:block;font-family:var(--bcpay-fh);font-weight:700;font-size:15px;color:var(--bcpay-ink);line-height:1.3;white-space:nowrap}
+.bcpay-home .bcpay-header-cta .bcpay-btn{min-height:48px;padding:0 22px;font-size:14.5px}
+.bcpay-home .bcpay-burger{display:none;place-items:center;width:46px;height:46px;margin-left:auto;border-radius:12px;background:var(--bcpay-blue-50);color:var(--bcpay-navy)}
+@media (max-width:1340px){.bcpay-home .bcpay-header-cta .bcpay-call{display:none}}
+@media (max-width:1180px){.bcpay-home .bcpay-nav-link{padding:0 9px;font-size:14.5px}.bcpay-home .bcpay-nav-link::after{left:9px;right:9px}.bcpay-home .bcpay-header-in{gap:16px}}
+@media (max-width:1060px){.bcpay-home .bcpay-nav,.bcpay-home .bcpay-header-cta{display:none}.bcpay-home .bcpay-burger{display:grid}.bcpay-home .bcpay-header-in{height:74px}.bcpay-home .bcpay-logo-img{height:50px}}
+
+/* Mobile drawer */
+.bcpay-home .bcpay-overlay{position:fixed;inset:0;z-index:98;background:rgb(6 21 56 / .55);opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.bcpay-home .bcpay-drawer{position:fixed;top:0;right:0;bottom:0;z-index:99;width:min(88vw,380px);background:#fff;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .4s cubic-bezier(.7,0,.2,1);overflow-y:auto}
+.bcpay-home.bcpay-menu-open .bcpay-overlay{opacity:1;visibility:visible}
+.bcpay-home.bcpay-menu-open .bcpay-drawer{transform:none}
+.bcpay-home .bcpay-drawer-top{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--bcpay-line)}
+.bcpay-home .bcpay-drawer-top .bcpay-logo-img{height:46px}
+.bcpay-home .bcpay-close{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--bcpay-blue-50);color:var(--bcpay-navy)}
+.bcpay-home .bcpay-mnav{display:grid;padding:8px 20px}
+.bcpay-home .bcpay-mnav-a{display:flex;align-items:center;justify-content:space-between;width:100%;padding:15px 0;border-bottom:1px solid var(--bcpay-line);font-family:var(--bcpay-fh);font-weight:700;font-size:16px;color:var(--bcpay-ink);text-align:left}
+.bcpay-home .bcpay-mnav-a .bcpay-ic{width:18px;height:18px;color:var(--bcpay-blue);transition:transform .25s}
+.bcpay-home .bcpay-mnav-a[aria-expanded="true"] .bcpay-ic{transform:rotate(180deg)}
+.bcpay-home .bcpay-msub{display:grid;padding:6px 0 10px 14px;border-bottom:1px solid var(--bcpay-line)}
+.bcpay-home .bcpay-msub-a{padding:9px 0;font-size:15px;font-weight:500;color:var(--bcpay-text)}
+.bcpay-home .bcpay-msub-a:hover{color:var(--bcpay-blue)}
+.bcpay-home .bcpay-drawer-foot{margin-top:auto;padding:20px;display:grid;gap:10px;background:var(--bcpay-soft)}
+.bcpay-home .bcpay-drawer-foot .bcpay-btn{width:100%}
+
+/* ---------- Hero slider ---------- */
+.bcpay-home .bcpay-hero{position:relative;background:#fff}
+.bcpay-home .bcpay-hero-track{position:relative;max-width:1920px;margin-inline:auto;aspect-ratio:1916/821;overflow:hidden;background:var(--bcpay-blue-50);touch-action:pan-y}
+.bcpay-home .bcpay-slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .9s ease,visibility .9s}
+.bcpay-home .bcpay-slide.bcpay-is-active{opacity:1;visibility:visible;z-index:1}
+.bcpay-home .bcpay-slide-img{width:100%;height:100%;object-fit:cover;transform:scale(1.03);transition:transform 7s ease-out}
+.bcpay-home .bcpay-slide.bcpay-is-active .bcpay-slide-img{transform:scale(1)}
+/* "Explore More" sits in the empty strip under each banner's icon row */
+.bcpay-home .bcpay-hero-cta{position:absolute;left:4.65%;top:var(--bcpay-cta-top,90%);display:inline-flex;align-items:center;gap:.6em;padding:.85em 1.7em;border-radius:999px;background:var(--bcpay-blue);color:#fff;font-family:var(--bcpay-fh);font-size:clamp(11.5px,.86vw,17px);font-weight:700;line-height:1;white-space:nowrap;box-shadow:0 14px 26px -12px rgb(0 120 190 / .9);opacity:0;transform:translateY(14px);transition:opacity .6s .45s,transform .6s .45s,background-color .25s}
+.bcpay-home .bcpay-hero-cta .bcpay-ic{width:1.15em;height:1.15em;transition:transform .25s}
+.bcpay-home .bcpay-hero-cta:hover{background:var(--bcpay-navy);color:#fff}
+.bcpay-home .bcpay-hero-cta:hover .bcpay-ic{transform:translateX(4px)}
+.bcpay-home .bcpay-slide.bcpay-is-active .bcpay-hero-cta{opacity:1;transform:none}
+.bcpay-home .bcpay-hero-arrow{position:absolute;top:50%;z-index:3;display:grid;place-items:center;width:48px;height:48px;margin-top:-24px;border-radius:50%;background:rgb(255 255 255 / .92);color:var(--bcpay-navy);box-shadow:var(--bcpay-sh);opacity:0;transition:opacity .3s,background-color .2s,color .2s}
+.bcpay-home .bcpay-hero-arrow:hover{background:var(--bcpay-blue);color:#fff}
+.bcpay-home .bcpay-hero-prev{left:14px}
+.bcpay-home .bcpay-hero-next{right:14px}
+.bcpay-home .bcpay-hero-track:hover .bcpay-hero-arrow,.bcpay-home .bcpay-hero-arrow:focus-visible{opacity:1}
+.bcpay-home .bcpay-hero-dots{position:absolute;right:2.6%;bottom:3.4%;z-index:3;display:flex;gap:8px;padding:7px 10px;border-radius:999px;background:rgb(255 255 255 / .75);backdrop-filter:blur(6px)}
+.bcpay-home .bcpay-hero-dot{width:10px;height:10px;border-radius:999px;background:#9FB4D3;transition:width .3s,background-color .3s}
+.bcpay-home .bcpay-hero-dot[aria-current="true"]{width:28px;background:var(--bcpay-blue)}
+.bcpay-home .bcpay-hero-mbar{display:none}
+@media (max-width:767px){
+  .bcpay-home .bcpay-hero-cta{display:none}
+  .bcpay-home .bcpay-hero-arrow{opacity:1;width:34px;height:34px;margin-top:-17px}
+  .bcpay-home .bcpay-hero-arrow .bcpay-ic{width:16px;height:16px}
+  .bcpay-home .bcpay-hero-prev{left:6px}.bcpay-home .bcpay-hero-next{right:6px}
+  .bcpay-home .bcpay-hero-dots{right:auto;left:50%;bottom:6px;transform:translateX(-50%);padding:5px 7px;gap:6px}
+  .bcpay-home .bcpay-hero-dot{width:7px;height:7px}
+  .bcpay-home .bcpay-hero-dot[aria-current="true"]{width:18px}
+  .bcpay-home .bcpay-hero-mbar{display:block;padding:14px 20px 4px}
+  .bcpay-home .bcpay-hero-mbar .bcpay-btn{width:100%}
+}
+
+/* ---------- About ---------- */
+.bcpay-home .bcpay-about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(40px,6vw,90px);align-items:center}
+.bcpay-home .bcpay-about-media{position:relative;padding:0 13% 15% 0}
+.bcpay-home .bcpay-about-media::before{content:"";position:absolute;left:-22px;top:-22px;width:130px;height:130px;background-image:radial-gradient(var(--bcpay-blue) 2px,transparent 2.5px);background-size:16px 16px;opacity:.35;z-index:0}
+.bcpay-home .bcpay-about-main{position:relative;z-index:1;width:100%;aspect-ratio:4/4.3;object-fit:cover;object-position:50% 30%;border-radius:var(--bcpay-r-lg);box-shadow:var(--bcpay-sh-lg)}
+.bcpay-home .bcpay-about-sm{position:absolute;right:0;bottom:0;z-index:2;width:52%;aspect-ratio:1;object-fit:cover;border-radius:var(--bcpay-r-lg);border:8px solid #fff;box-shadow:var(--bcpay-sh-lg)}
+.bcpay-home .bcpay-about-badge{position:absolute;z-index:3;left:-14px;bottom:22%;display:grid;gap:2px;padding:20px 24px;border-radius:var(--bcpay-r);background:var(--bcpay-blue);color:#fff;box-shadow:0 20px 40px -18px rgb(0 165 234 / .9);animation:bcpay-float 6s ease-in-out infinite}
+.bcpay-home .bcpay-about-badge-n{font-family:var(--bcpay-fh);font-size:38px;font-weight:800;line-height:1}
+.bcpay-home .bcpay-about-badge-t{font-size:13.5px;font-weight:600;line-height:1.35;color:#E6F6FE}
+@keyframes bcpay-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.bcpay-home .bcpay-about-copy{display:grid;gap:20px}
+.bcpay-home .bcpay-about-p{color:var(--bcpay-text)}
+.bcpay-home .bcpay-checks{display:grid;grid-template-columns:1fr 1fr;gap:12px 20px;margin-top:4px}
+.bcpay-home .bcpay-check{display:flex;align-items:flex-start;gap:10px;font-weight:600;color:var(--bcpay-ink);font-size:15px;line-height:1.5}
+.bcpay-home .bcpay-check .bcpay-ic{width:22px;height:22px;padding:4px;border-radius:50%;background:var(--bcpay-blue);color:#fff;stroke-width:3;margin-top:-1px}
+.bcpay-home .bcpay-about-boxes{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:6px}
+.bcpay-home .bcpay-about-box{display:grid;grid-template-columns:52px 1fr;gap:14px;align-items:start;padding:18px;border-radius:var(--bcpay-r);background:var(--bcpay-soft);border:1px solid var(--bcpay-line)}
+.bcpay-home .bcpay-about-box-ic{display:grid;place-items:center;width:52px;height:52px;border-radius:14px;background:#fff;color:var(--bcpay-royal);box-shadow:var(--bcpay-sh)}
+.bcpay-home .bcpay-about-box-ic .bcpay-ic{width:24px;height:24px}
+.bcpay-home .bcpay-about-box-t{display:block;font-family:var(--bcpay-fh);font-weight:700;font-size:16px;color:var(--bcpay-ink);line-height:1.3;margin-bottom:4px}
+.bcpay-home .bcpay-about-box-d{display:block;font-size:14px;line-height:1.55}
+.bcpay-home .bcpay-about-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:8px}
+@media (max-width:980px){.bcpay-home .bcpay-about{grid-template-columns:minmax(0,1fr)}.bcpay-home .bcpay-about-media{max-width:560px;width:100%;justify-self:center}}
+@media (max-width:560px){.bcpay-home .bcpay-checks,.bcpay-home .bcpay-about-boxes{grid-template-columns:minmax(0,1fr)}.bcpay-home .bcpay-about-badge{left:0;padding:14px 16px}.bcpay-home .bcpay-about-badge-n{font-size:28px}.bcpay-home .bcpay-about-actions .bcpay-btn{width:100%}}
+
+/* ---------- Calculator ---------- */
+.bcpay-home .bcpay-tabs{display:flex;justify-content:center;gap:8px;margin:0 auto 28px;padding:6px;border-radius:999px;background:#fff;border:1px solid var(--bcpay-line);width:max-content;max-width:100%;box-shadow:var(--bcpay-sh)}
+.bcpay-home .bcpay-tab{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;font-family:var(--bcpay-fh);font-weight:700;font-size:14.5px;color:var(--bcpay-ink);background:transparent;transition:background-color .25s,color .25s}
+.bcpay-home .bcpay-tab .bcpay-ic{width:18px;height:18px;color:var(--bcpay-blue)}
+.bcpay-home .bcpay-tab:hover{color:var(--bcpay-blue);background:var(--bcpay-blue-50)}
+.bcpay-home .bcpay-tab[aria-selected="true"]{background:var(--bcpay-navy);color:#fff}
+.bcpay-home .bcpay-tab[aria-selected="true"] .bcpay-ic{color:var(--bcpay-blue-l)}
+.bcpay-home .bcpay-calc{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);border-radius:28px;overflow:hidden;background:#fff;border:1px solid var(--bcpay-line);box-shadow:var(--bcpay-sh-lg)}
+.bcpay-home .bcpay-calc-form{display:grid;gap:30px;align-content:start;padding:clamp(24px,4vw,48px)}
+.bcpay-home .bcpay-calc-h{font-family:var(--bcpay-fh);font-size:22px;font-weight:800;color:var(--bcpay-ink);line-height:1.25}
+.bcpay-home .bcpay-calc-hp{font-size:15px;margin-top:6px}
+.bcpay-home .bcpay-ctl{display:grid;gap:12px}
+.bcpay-home .bcpay-ctl-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.bcpay-home .bcpay-ctl-label{font-weight:600;color:var(--bcpay-ink);font-size:15px}
+.bcpay-home .bcpay-ctl-box{display:flex;align-items:center;gap:4px;height:44px;padding:0 12px;border-radius:10px;border:1.5px solid var(--bcpay-line);background:var(--bcpay-soft);font-family:var(--bcpay-fh);font-weight:700;color:var(--bcpay-ink);transition:border-color .2s}
+.bcpay-home .bcpay-ctl-box:focus-within{border-color:var(--bcpay-blue);background:#fff;box-shadow:0 0 0 4px var(--bcpay-blue-100)}
+.bcpay-home .bcpay-ctl-num:focus-visible{outline:0}
+.bcpay-home .bcpay-ctl-unit{font-size:15px;color:var(--bcpay-muted)}
+.bcpay-home .bcpay-ctl-num{width:96px;height:100%;font-family:var(--bcpay-fh);font-size:16px;font-weight:700;color:var(--bcpay-ink);text-align:right;background:transparent;-moz-appearance:textfield}
+.bcpay-home .bcpay-ctl-num::-webkit-outer-spin-button,.bcpay-home .bcpay-ctl-num::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.bcpay-home .bcpay-range{-webkit-appearance:none;appearance:none;display:block;width:100%;height:8px;border-radius:8px;background:linear-gradient(90deg,var(--bcpay-blue) var(--bcpay-p,50%),#E4ECF5 var(--bcpay-p,50%));cursor:pointer}
+.bcpay-home .bcpay-range::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:#fff;border:6px solid var(--bcpay-blue);box-shadow:0 4px 12px rgb(0 165 234 / .45)}
+.bcpay-home .bcpay-range::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#fff;border:6px solid var(--bcpay-blue);box-shadow:0 4px 12px rgb(0 165 234 / .45)}
+.bcpay-home .bcpay-range:focus-visible{outline:3px solid var(--bcpay-blue-100);outline-offset:6px}
+.bcpay-home .bcpay-ticks{display:flex;justify-content:space-between;font-size:12.5px;font-weight:600;color:var(--bcpay-muted)}
+.bcpay-home .bcpay-calc-out{position:relative;overflow:hidden;display:grid;gap:22px;align-content:start;padding:clamp(24px,4vw,48px);background:linear-gradient(160deg,var(--bcpay-navy-2),var(--bcpay-navy-d));color:#C9D5EC}
+.bcpay-home .bcpay-calc-out::before{content:"";position:absolute;right:-35%;top:-30%;width:90%;aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,rgb(0 165 234 / .38),transparent)}
+.bcpay-home .bcpay-calc-out>*{position:relative}
+.bcpay-home .bcpay-out-label{font-size:14px;font-weight:600;color:#9FB0D0}
+.bcpay-home .bcpay-out-big{font-family:var(--bcpay-fh);font-size:clamp(40px,4.6vw,58px);font-weight:800;line-height:1;color:#fff;letter-spacing:-.03em;font-variant-numeric:tabular-nums;margin-top:6px}
+.bcpay-home .bcpay-out-big-s{font-size:16px;font-weight:600;color:#9FB0D0;letter-spacing:0}
+.bcpay-home .bcpay-donut-row{display:flex;align-items:center;gap:22px}
+.bcpay-home .bcpay-donut{width:120px;height:120px;flex:none;transform:rotate(-90deg)}
+.bcpay-home .bcpay-donut-bg{fill:none;stroke:var(--bcpay-blue-l);stroke-width:16}
+.bcpay-home .bcpay-donut-fg{fill:none;stroke:#fff;stroke-width:16;transition:stroke-dasharray .4s}
+.bcpay-home .bcpay-legend{display:grid;gap:10px;font-size:14px}
+.bcpay-home .bcpay-legend-i{display:flex;align-items:center;gap:10px}
+.bcpay-home .bcpay-legend-i::before{content:"";width:12px;height:12px;border-radius:4px;background:#fff}
+.bcpay-home .bcpay-legend-i.bcpay-legend-int::before{background:var(--bcpay-blue-l)}
+.bcpay-home .bcpay-kv{display:grid;border-top:1px solid rgb(255 255 255 / .12)}
+.bcpay-home .bcpay-kv-row{display:flex;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid rgb(255 255 255 / .12);font-size:15px}
+.bcpay-home .bcpay-kv-v{font-family:var(--bcpay-fh);font-weight:700;color:#fff;font-variant-numeric:tabular-nums}
+.bcpay-home .bcpay-save{padding:14px 16px;border-radius:14px;background:rgb(0 165 234 / .14);border:1px solid rgb(0 165 234 / .35);font-size:14.5px;color:#DDF3FC}
+.bcpay-home .bcpay-save-b{font-weight:700;color:#fff}
+.bcpay-home .bcpay-calc-out .bcpay-btn{width:100%}
+.bcpay-home .bcpay-fine{font-size:12.5px;color:#8D9DBE;line-height:1.5}
+@media (max-width:900px){.bcpay-home .bcpay-calc{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:560px){.bcpay-home .bcpay-tabs{width:100%}.bcpay-home .bcpay-tab{flex:1;justify-content:center;padding:0 10px;font-size:13px;white-space:normal;line-height:1.2;text-align:center}.bcpay-home .bcpay-tab .bcpay-ic{display:none}.bcpay-home .bcpay-ctl-top{flex-wrap:wrap}.bcpay-home .bcpay-donut{width:96px;height:96px}}
+
+/* ---------- Stats ---------- */
+.bcpay-home .bcpay-stats{position:relative;overflow:hidden;background:linear-gradient(120deg,var(--bcpay-navy-d) 0%,var(--bcpay-navy) 55%,#0E3C86 100%);color:#C9D5EC;padding-block:clamp(56px,6vw,80px)}
+.bcpay-home .bcpay-stats::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgb(255 255 255 / .07) 1.5px,transparent 2px);background-size:22px 22px;pointer-events:none}
+.bcpay-home .bcpay-stats::after{content:"";position:absolute;right:-10%;top:-60%;width:50%;aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,rgb(0 165 234 / .35),transparent);pointer-events:none}
+.bcpay-home .bcpay-stats-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.bcpay-home .bcpay-stat{display:flex;align-items:center;gap:18px;padding:8px 10px}
+.bcpay-home .bcpay-stat+.bcpay-stat{border-left:1px solid rgb(255 255 255 / .12);padding-left:28px}
+.bcpay-home .bcpay-stat-ic{display:grid;place-items:center;width:64px;height:64px;flex:none;border-radius:50%;background:rgb(0 165 234 / .16);border:1px solid rgb(0 165 234 / .45);color:var(--bcpay-blue-l)}
+.bcpay-home .bcpay-stat-ic .bcpay-ic{width:28px;height:28px}
+.bcpay-home .bcpay-stat-n{display:block;font-family:var(--bcpay-fh);font-size:clamp(30px,3vw,40px);font-weight:800;color:#fff;line-height:1.05;font-variant-numeric:tabular-nums}
+.bcpay-home .bcpay-stat-t{display:block;font-size:15px;color:#B9C7E2;line-height:1.4;margin-top:4px}
+@media (max-width:980px){.bcpay-home .bcpay-stats-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 20px}.bcpay-home .bcpay-stat:nth-child(3){border-left:0;padding-left:10px}}
+@media (max-width:520px){.bcpay-home .bcpay-stats-grid{grid-template-columns:minmax(0,1fr)}.bcpay-home .bcpay-stat+.bcpay-stat{border-left:0;padding-left:10px;border-top:1px solid rgb(255 255 255 / .12);padding-top:24px}}
+
+/* ---------- Services ---------- */
+.bcpay-home .bcpay-svc-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.bcpay-home .bcpay-svc{position:relative;display:flex;flex-direction:column;border-radius:var(--bcpay-r-lg);background:#fff;border:1px solid var(--bcpay-line);overflow:hidden;transition:transform .35s,box-shadow .35s,border-color .35s}
+.bcpay-home .bcpay-svc:hover{transform:translateY(-8px);box-shadow:var(--bcpay-sh-lg);border-color:transparent}
+.bcpay-home .bcpay-svc-media{position:relative;display:block;aspect-ratio:3/2;overflow:hidden}
+.bcpay-home .bcpay-svc-img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.bcpay-home .bcpay-svc:hover .bcpay-svc-img{transform:scale(1.07)}
+.bcpay-home .bcpay-svc-tag{position:absolute;left:14px;top:14px;padding:5px 12px;border-radius:999px;background:var(--bcpay-navy);color:#fff;font-size:12px;font-weight:700;letter-spacing:.04em}
+.bcpay-home .bcpay-svc-body{position:relative;display:flex;flex-direction:column;gap:12px;flex:1;padding:42px 24px 26px}
+.bcpay-home .bcpay-svc-ic{position:absolute;top:-30px;left:24px;display:grid;place-items:center;width:60px;height:60px;border-radius:18px;background:var(--bcpay-blue);color:#fff;box-shadow:0 14px 26px -12px rgb(0 165 234 / .9);transition:background-color .3s,transform .3s}
+.bcpay-home .bcpay-svc-ic .bcpay-ic{width:28px;height:28px}
+.bcpay-home .bcpay-svc:hover .bcpay-svc-ic{background:var(--bcpay-navy);transform:rotateY(180deg)}
+.bcpay-home .bcpay-svc-t{font-family:var(--bcpay-fh);font-size:20px;font-weight:800;color:var(--bcpay-ink);line-height:1.25}
+.bcpay-home .bcpay-svc-d{font-size:15px;line-height:1.6}
+.bcpay-home .bcpay-svc-list{display:grid;gap:8px;margin:2px 0 6px}
+.bcpay-home .bcpay-svc-li{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--bcpay-ink)}
+.bcpay-home .bcpay-svc-li .bcpay-ic{width:16px;height:16px;color:var(--bcpay-blue);stroke-width:3}
+.bcpay-home .bcpay-svc-foot{margin-top:auto;padding-top:16px;border-top:1px dashed var(--bcpay-line);display:flex;justify-content:space-between;align-items:center}
+.bcpay-home .bcpay-svc-go{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--bcpay-blue-50);color:var(--bcpay-blue);transition:background-color .25s,color .25s,transform .25s}
+.bcpay-home .bcpay-svc:hover .bcpay-svc-go{background:var(--bcpay-blue);color:#fff;transform:rotate(-45deg)}
+.bcpay-home .bcpay-also{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:36px}
+.bcpay-home .bcpay-also-t{font-weight:600;color:var(--bcpay-ink);margin-right:6px}
+.bcpay-home .bcpay-chip{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;background:#fff;border:1px solid var(--bcpay-line);font-size:14px;font-weight:600;color:var(--bcpay-ink);transition:border-color .2s,color .2s,background-color .2s}
+.bcpay-home .bcpay-chip .bcpay-ic{width:16px;height:16px;color:var(--bcpay-blue)}
+.bcpay-home .bcpay-chip:hover{border-color:var(--bcpay-blue);color:var(--bcpay-blue);background:var(--bcpay-blue-50)}
+@media (max-width:1100px){.bcpay-home .bcpay-svc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.bcpay-home .bcpay-svc-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- Why choose us ---------- */
+.bcpay-home .bcpay-why{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.95fr) minmax(0,1fr);gap:clamp(24px,3.5vw,48px);align-items:center}
+.bcpay-home .bcpay-why-col{display:grid;gap:22px}
+.bcpay-home .bcpay-why-item{display:grid;grid-template-columns:62px minmax(0,1fr);gap:16px;align-items:start;padding:22px;border-radius:var(--bcpay-r);background:#fff;border:1px solid var(--bcpay-line);transition:box-shadow .3s,border-color .3s,transform .3s}
+.bcpay-home .bcpay-why-item:hover{box-shadow:var(--bcpay-sh);border-color:var(--bcpay-blue-100);transform:translateY(-3px)}
+.bcpay-home .bcpay-why-left .bcpay-why-item{grid-template-columns:minmax(0,1fr) 62px;text-align:right}
+.bcpay-home .bcpay-why-left .bcpay-why-ic{order:2}
+.bcpay-home .bcpay-why-ic{display:grid;place-items:center;width:62px;height:62px;border-radius:50%;background:var(--bcpay-blue-100);color:var(--bcpay-royal);transition:background-color .3s,color .3s}
+.bcpay-home .bcpay-why-ic .bcpay-ic{width:28px;height:28px}
+.bcpay-home .bcpay-why-item:hover .bcpay-why-ic{background:var(--bcpay-blue);color:#fff}
+.bcpay-home .bcpay-why-t{display:block;font-family:var(--bcpay-fh);font-weight:700;font-size:17px;color:var(--bcpay-ink);line-height:1.3;margin-bottom:6px}
+.bcpay-home .bcpay-why-d{display:block;font-size:14.5px;line-height:1.6}
+.bcpay-home .bcpay-why-media{position:relative;padding:16px}
+.bcpay-home .bcpay-why-media::before{content:"";position:absolute;inset:0;border-radius:200px 200px 28px 28px;border:2px dashed var(--bcpay-blue-l);opacity:.7}
+.bcpay-home .bcpay-why-img{position:relative;width:100%;aspect-ratio:3/4;object-fit:cover;object-position:46% 50%;border-radius:190px 190px 22px 22px;box-shadow:var(--bcpay-sh-lg)}
+.bcpay-home .bcpay-why-badge{position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);display:flex;align-items:center;gap:12px;padding:12px 18px 12px 12px;border-radius:999px;background:#fff;box-shadow:var(--bcpay-sh-lg);white-space:nowrap}
+.bcpay-home .bcpay-why-badge-ic{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--bcpay-blue);color:#fff}
+.bcpay-home .bcpay-why-badge-t{display:block;font-family:var(--bcpay-fh);font-weight:700;font-size:14px;color:var(--bcpay-ink);line-height:1.25}
+.bcpay-home .bcpay-why-badge-s{display:block;font-size:12.5px;color:var(--bcpay-muted);line-height:1.3}
+@media (max-width:1060px){.bcpay-home .bcpay-why{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.bcpay-home .bcpay-why-media{grid-column:1/-1;grid-row:1;max-width:420px;width:100%;justify-self:center;margin-bottom:20px}.bcpay-home .bcpay-why-left .bcpay-why-item{grid-template-columns:62px minmax(0,1fr);text-align:left}.bcpay-home .bcpay-why-left .bcpay-why-ic{order:0}}
+@media (max-width:640px){.bcpay-home .bcpay-why{grid-template-columns:minmax(0,1fr)}.bcpay-home .bcpay-why-item{grid-template-columns:52px minmax(0,1fr);padding:18px}.bcpay-home .bcpay-why-left .bcpay-why-item{grid-template-columns:52px minmax(0,1fr)}.bcpay-home .bcpay-why-ic{width:52px;height:52px}.bcpay-home .bcpay-why-ic .bcpay-ic{width:24px;height:24px}}
+
+/* ---------- Industries ---------- */
+.bcpay-home .bcpay-ind-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+.bcpay-home .bcpay-ind{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:330px;padding:24px;border-radius:var(--bcpay-r-lg);overflow:hidden;isolation:isolate;color:#fff}
+.bcpay-home .bcpay-ind-img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.bcpay-home .bcpay-ind::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgb(6 21 56 / .5) 0%,rgb(6 21 56 / 0) 32%,rgb(6 21 56 / .08) 50%,rgb(6 21 56 / .9) 100%)}
+.bcpay-home .bcpay-ind::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgb(0 165 234 / .1),rgb(0 120 200 / .85));opacity:0;transition:opacity .4s}
+.bcpay-home .bcpay-ind:hover::before{opacity:1}
+.bcpay-home .bcpay-ind:hover .bcpay-ind-img{transform:scale(1.08)}
+.bcpay-home .bcpay-ind-ic{display:grid;place-items:center;width:52px;height:52px;margin-bottom:auto;border-radius:14px;background:rgb(255 255 255 / .16);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#fff;border:1px solid rgb(255 255 255 / .25)}
+.bcpay-home .bcpay-ind-ic .bcpay-ic{width:24px;height:24px}
+.bcpay-home .bcpay-ind-t{font-family:var(--bcpay-fh);font-size:20px;font-weight:800;color:#fff;line-height:1.25}
+.bcpay-home .bcpay-ind-d{font-size:14px;color:#DCE6F5;line-height:1.5;margin-top:6px;max-height:0;opacity:0;overflow:hidden;transition:max-height .45s,opacity .45s}
+.bcpay-home .bcpay-ind:hover .bcpay-ind-d,.bcpay-home .bcpay-ind:focus-visible .bcpay-ind-d{max-height:90px;opacity:1}
+.bcpay-home .bcpay-ind-more{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:13.5px;font-weight:700;color:#fff}
+.bcpay-home .bcpay-ind-more .bcpay-ic{width:16px;height:16px}
+.bcpay-home .bcpay-center{display:flex;justify-content:center;margin-top:40px}
+@media (hover:none){.bcpay-home .bcpay-ind-d{max-height:90px;opacity:1}}
+@media (max-width:1060px){.bcpay-home .bcpay-ind-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.bcpay-home .bcpay-ind-grid{gap:14px}.bcpay-home .bcpay-ind{min-height:240px;padding:16px}.bcpay-home .bcpay-ind-t{font-size:16px}.bcpay-home .bcpay-ind-d{display:none}.bcpay-home .bcpay-ind-ic{width:42px;height:42px}}
+
+/* ---------- Testimonials ---------- */
+.bcpay-home .bcpay-testi-top{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:clamp(32px,4vw,48px)}
+.bcpay-home .bcpay-testi-top .bcpay-head{margin-bottom:0}
+.bcpay-home .bcpay-arrows{display:flex;gap:10px;flex:none}
+.bcpay-home .bcpay-arrow{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:#fff;border:1px solid var(--bcpay-line);color:var(--bcpay-navy);transition:background-color .2s,color .2s,border-color .2s}
+.bcpay-home .bcpay-arrow:hover{background:var(--bcpay-blue);border-color:var(--bcpay-blue);color:#fff}
+.bcpay-home .bcpay-arrow:disabled{opacity:.4;cursor:default;background:#fff;color:var(--bcpay-navy);border-color:var(--bcpay-line)}
+.bcpay-home .bcpay-testi-track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 48px) / 3);gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding:6px 2px 20px}
+.bcpay-home .bcpay-testi-track::-webkit-scrollbar{display:none}
+.bcpay-home .bcpay-testi{position:relative;display:flex;flex-direction:column;gap:18px;padding:32px 30px 28px;border-radius:var(--bcpay-r-lg);background:#fff;border:1px solid var(--bcpay-line);scroll-snap-align:start;transition:box-shadow .3s,transform .3s}
+.bcpay-home .bcpay-testi:hover{box-shadow:var(--bcpay-sh);transform:translateY(-4px)}
+.bcpay-home .bcpay-testi-q{position:absolute;right:26px;top:24px;width:52px;height:52px;color:var(--bcpay-blue-100)}
+.bcpay-home .bcpay-stars{display:flex;gap:3px;color:var(--bcpay-star)}
+.bcpay-home .bcpay-stars .bcpay-ic{width:18px;height:18px}
+.bcpay-home .bcpay-testi-text{font-size:16.5px;line-height:1.7;color:var(--bcpay-ink)}
+.bcpay-home .bcpay-testi-who{display:flex;align-items:center;gap:14px;margin-top:auto;padding-top:20px;border-top:1px solid var(--bcpay-line)}
+.bcpay-home .bcpay-testi-av{display:grid;place-items:center;width:52px;height:52px;flex:none;border-radius:50%;background:linear-gradient(135deg,var(--bcpay-blue),var(--bcpay-royal));color:#fff;font-family:var(--bcpay-fh);font-weight:800;font-size:17px}
+.bcpay-home .bcpay-testi-n{display:block;font-family:var(--bcpay-fh);font-weight:700;color:var(--bcpay-ink);line-height:1.3}
+.bcpay-home .bcpay-testi-r{display:block;font-size:13.5px;color:var(--bcpay-muted)}
+.bcpay-home .bcpay-dots{display:none;justify-content:center;gap:8px;margin-top:8px}
+.bcpay-home .bcpay-dot{width:10px;height:10px;border-radius:999px;background:#C5D3E6;transition:width .3s,background-color .3s}
+.bcpay-home .bcpay-dot[aria-current="true"]{width:26px;background:var(--bcpay-blue)}
+.bcpay-home .bcpay-tp{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:22px;font-size:15px}
+.bcpay-home .bcpay-tp-b{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--bcpay-ink)}
+.bcpay-home .bcpay-tp-b .bcpay-ic{width:20px;height:20px;color:#00B67A}
+@media (max-width:980px){.bcpay-home .bcpay-testi-track{grid-auto-columns:calc((100% - 24px) / 2)}.bcpay-home .bcpay-dots{display:flex}}
+@media (max-width:640px){.bcpay-home .bcpay-testi-track{grid-auto-columns:88%;gap:14px}.bcpay-home .bcpay-arrows{display:none}.bcpay-home .bcpay-testi{padding:26px 22px}}
+
+/* ---------- Blog ---------- */
+.bcpay-home .bcpay-blog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+.bcpay-home .bcpay-post{display:flex;flex-direction:column;border-radius:var(--bcpay-r-lg);overflow:hidden;background:#fff;border:1px solid var(--bcpay-line);transition:box-shadow .35s,transform .35s}
+.bcpay-home .bcpay-post:hover{box-shadow:var(--bcpay-sh-lg);transform:translateY(-6px)}
+.bcpay-home .bcpay-post-media{position:relative;display:block;aspect-ratio:16/10;overflow:hidden}
+.bcpay-home .bcpay-post-img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.bcpay-home .bcpay-post:hover .bcpay-post-img{transform:scale(1.07)}
+.bcpay-home .bcpay-post-date{position:absolute;left:18px;bottom:-1px;display:grid;justify-items:center;padding:10px 14px 8px;border-radius:12px 12px 0 0;background:var(--bcpay-blue);color:#fff;line-height:1.1}
+.bcpay-home .bcpay-post-day{font-family:var(--bcpay-fh);font-size:22px;font-weight:800}
+.bcpay-home .bcpay-post-mon{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.bcpay-home .bcpay-post-body{display:flex;flex-direction:column;gap:12px;flex:1;padding:24px 24px 26px}
+.bcpay-home .bcpay-post-meta{display:flex;align-items:center;gap:16px;flex-wrap:wrap;font-size:13.5px;color:var(--bcpay-muted)}
+.bcpay-home .bcpay-post-meta-i{display:inline-flex;align-items:center;gap:6px}
+.bcpay-home .bcpay-post-meta-i .bcpay-ic{width:15px;height:15px;color:var(--bcpay-blue)}
+.bcpay-home .bcpay-post-t{font-family:var(--bcpay-fh);font-size:19px;font-weight:700;line-height:1.35;color:var(--bcpay-ink)}
+.bcpay-home .bcpay-post-t-a{color:var(--bcpay-ink);transition:color .2s}
+.bcpay-home .bcpay-post-t-a:hover{color:var(--bcpay-blue)}
+.bcpay-home .bcpay-post-d{font-size:15px;line-height:1.6}
+.bcpay-home .bcpay-post .bcpay-link{margin-top:auto;padding-top:6px}
+@media (max-width:980px){.bcpay-home .bcpay-blog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.bcpay-home .bcpay-blog-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- CTA band ---------- */
+.bcpay-home .bcpay-cta{position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:28px;padding:clamp(32px,5vw,56px) clamp(24px,5vw,64px);border-radius:28px;background:linear-gradient(115deg,var(--bcpay-blue) 0%,#0A86D6 45%,var(--bcpay-navy) 100%);color:#E6F6FE}
+.bcpay-home .bcpay-cta::before{content:"";position:absolute;right:-60px;top:-80px;width:280px;height:280px;border-radius:50%;border:40px solid rgb(255 255 255 / .08)}
+.bcpay-home .bcpay-cta::after{content:"";position:absolute;left:30%;bottom:-120px;width:220px;height:220px;border-radius:50%;background:rgb(255 255 255 / .06)}
+.bcpay-home .bcpay-cta>*{position:relative;z-index:1}
+.bcpay-home .bcpay-cta-t{font-family:var(--bcpay-fh);font-size:clamp(24px,3vw,36px);font-weight:800;line-height:1.2;color:#fff}
+.bcpay-home .bcpay-cta-p{margin-top:10px;font-size:16.5px;color:#E1F2FC;max-width:56ch}
+.bcpay-home .bcpay-cta-actions{display:flex;gap:12px;flex-wrap:wrap}
+@media (max-width:900px){.bcpay-home .bcpay-cta{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:520px){.bcpay-home .bcpay-cta-actions .bcpay-btn{width:100%}}
+
+/* ---------- Footer ---------- */
+.bcpay-home .bcpay-footer{position:relative;background:var(--bcpay-navy-d);color:#A9B8D6;font-size:15px;margin-top:clamp(64px,8vw,110px)}
+.bcpay-home .bcpay-footer-top{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.8fr) minmax(0,1fr) minmax(0,1.2fr);gap:40px;padding-block:72px 48px}
+.bcpay-home .bcpay-footer-logo{display:inline-block;padding:10px 14px;border-radius:14px;background:#fff}
+.bcpay-home .bcpay-footer-logo .bcpay-logo-img{height:56px}
+.bcpay-home .bcpay-footer-p{margin-top:20px;max-width:38ch;line-height:1.7}
+.bcpay-home .bcpay-footer .bcpay-social{margin-top:22px}
+.bcpay-home .bcpay-footer .bcpay-social-a{width:38px;height:38px}
+.bcpay-home .bcpay-footer .bcpay-social-a .bcpay-ic{width:16px;height:16px}
+.bcpay-home .bcpay-footer-h{position:relative;font-family:var(--bcpay-fh);font-size:18px;font-weight:700;color:#fff;padding-bottom:14px;margin-bottom:20px}
+.bcpay-home .bcpay-footer-h::after{content:"";position:absolute;left:0;bottom:0;width:40px;height:3px;border-radius:3px;background:var(--bcpay-blue)}
+.bcpay-home .bcpay-footer-list{display:grid;gap:11px}
+.bcpay-home .bcpay-footer-a{display:inline-flex;align-items:center;gap:8px;color:#A9B8D6;transition:color .2s,gap .2s}
+.bcpay-home .bcpay-footer-a .bcpay-ic{width:14px;height:14px;color:var(--bcpay-blue)}
+.bcpay-home .bcpay-footer-a:hover{color:#fff;gap:12px}
+.bcpay-home .bcpay-fc{display:grid;grid-template-columns:40px minmax(0,1fr);gap:12px;align-items:start}
+.bcpay-home .bcpay-fc-ic{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:rgb(0 165 234 / .14);color:var(--bcpay-blue-l)}
+.bcpay-home .bcpay-fc-ic .bcpay-ic{width:18px;height:18px}
+.bcpay-home .bcpay-fc-t{display:block;font-size:12.5px;color:#7F90B3;line-height:1.3}
+.bcpay-home .bcpay-fc-v{display:block;color:#fff;font-weight:600;line-height:1.5;transition:color .2s}
+.bcpay-home a.bcpay-fc-v:hover{color:var(--bcpay-blue-l)}
+.bcpay-home .bcpay-footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;padding-block:22px;border-top:1px solid rgb(255 255 255 / .1);font-size:13.5px;color:#8293B6}
+.bcpay-home .bcpay-footer-legal{display:flex;gap:20px;flex-wrap:wrap}
+.bcpay-home .bcpay-footer-legal .bcpay-footer-a{font-size:13.5px}
+@media (max-width:1000px){.bcpay-home .bcpay-footer-top{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.bcpay-home .bcpay-footer-top{grid-template-columns:minmax(0,1fr);padding-top:56px}}
+
+/* Back to top */
+.bcpay-home .bcpay-totop{position:fixed;right:24px;bottom:104px;z-index:80;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--bcpay-blue);color:#fff;box-shadow:0 12px 26px -10px rgb(0 165 234 / .9);opacity:0;visibility:hidden;transform:translateY(16px);transition:opacity .3s,transform .3s,visibility .3s,background-color .2s}
+.bcpay-home .bcpay-totop.bcpay-show{opacity:1;visibility:visible;transform:none}
+.bcpay-home .bcpay-totop:hover{background:var(--bcpay-navy)}
+
+/* Reveal on scroll (content stays visible without JS) */
+.bcpay-home .bcpay-rv{transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.bcpay-home.bcpay-js .bcpay-rv.bcpay-pre{opacity:0;transform:translateY(30px)}
+@media (max-width:420px){.bcpay-home .bcpay-btn{white-space:normal;text-align:center;line-height:1.25;padding-block:12px}}

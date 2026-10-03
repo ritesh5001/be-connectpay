@@ -2,14 +2,15 @@
 
 New homepage for https://be-connectpay.co.uk/, laid out like the reference site (suchitagroup.com) and built around the four Be-Connect banners.
 
-- **`index.html`** + **`assets/`**: the homepage. Open `index.html` in a browser to preview.
-- **`elementor/be-connect-home.html`**: the same page as one copy-paste block for an Elementor **HTML** widget.
-- `tools/build_elementor.py`: rebuilds the Elementor file from `index.html` (`python3 tools/build_elementor.py`).
+- **`wordpress-plugin/be-connect-home.zip`**: **recommended.** WordPress plugin that adds the `[bcpay_home]` shortcode.
+- **`index.html`** + **`assets/`**: the homepage as a static page. Open `index.html` in a browser to preview.
+- **`elementor/be-connect-home.html`**: the same page as one block for an Elementor **HTML** widget. Only works for accounts with the `unfiltered_html` permission (see below).
+- `tools/build_elementor.py`: rebuilds the plugin and the Elementor file from `index.html` (`python3 tools/build_elementor.py`).
 
 ## Page sections (top to bottom)
 
 1. **Top bar**: phone, email, 24/7 support, social icons.
-2. **Header**: logo, menu (Home, About Us, Services dropdown, Industries, Blog, Contact Us), "Call us" and **Get a Free Quote**. Sticky on scroll. Slide-in menu on mobile.
+2. **Header**: logo, menu (Home, Card Machine ▾, Online Payment ▾, Business Funding, About ▾), "Call us" and **Get a Free Quote**. Sticky on scroll. Slide-in menu on mobile. Can be switched off with `header="no"`.
 3. **Banner slider**: the 4 banners (Card Machines, Business Funding, POS System, Online Payments). Autoplays every 6s, with arrows, dots and swipe. Each slide has an **Explore More** button in the empty strip under the banner's icon row, linking to that service. On phones the button sits under the banner.
 4. **About Us**: image collage, 24/7 badge, text, checklist, mission/vision, More About Us button.
 5. **Calculators**: tabbed **Business Funding Calculator** (amount, term, rate → monthly repayment, total interest, total repayable, chart) and **Card Fee Calculator** (takings, transactions, fees → effective rate, yearly fees, savings per 0.1%).
@@ -21,17 +22,26 @@ New homepage for https://be-connectpay.co.uk/, laid out like the reference site 
 11. **Blog**: 3 latest-post cards.
 12. **Call to action** and **footer**.
 
-## Using it in Elementor
+## Installing on WordPress (plugin – recommended)
 
-1. Create or edit the Home page. In **Page Settings → Page Layout**, choose **Elementor Canvas** (the code has its own header and footer). To keep your theme's header/footer instead, delete the `TOP BAR`, `HEADER`, `Mobile menu` and `FOOTER` blocks from the code.
-2. Add a section/container set to **Full Width** with **0 padding / 0 gap**, then drag in an **HTML** widget.
-3. Open `elementor/be-connect-home.html`, copy everything and paste it into the widget.
+1. **Plugins → Add New → Upload Plugin**, choose `wordpress-plugin/be-connect-home.zip`, **Install**, **Activate**.
+2. Edit the home page with Elementor. Add a section/container set to **Full Width** with **0 padding**, then drag in a **Shortcode** widget.
+3. Enter one of:
+   - `[bcpay_home header="no" footer="no"]`: keep your theme's header and footer. Set **Page Settings → Page Layout → Elementor Full Width**.
+   - `[bcpay_home]`: use this page's own top bar, header and footer. Set **Page Layout → Elementor Canvas**.
+4. **Update** the page.
 
-**No clashes:** every class and id starts with `bcpay-` and every CSS rule is scoped to `.bcpay-home`, so nothing affects other pages, widgets or the theme. The page also resets its own elements, so theme styles for headings, buttons, links and images don't leak in (tested against Hello-theme style rules).
+The plugin loads its CSS/JS as files and its images from the plugin folder, so WordPress can't strip anything and no CDN is needed.
 
-**Images** load from this repo through jsDelivr (`https://cdn.jsdelivr.net/gh/ritesh5001/be-connectpay@main/assets/`). For production, upload `assets/` to the Media Library and find/replace that address with your uploads URL.
+### Why the HTML widget showed the CSS as text
 
-**Links** use WordPress-style paths (`/about-us/`, `/card-machines/`, `/business-funding/`, `/pos-system/`, `/online-payments/`, `/payment-gateway/`, `/pay-by-link/`, `/payment-app/`, `/phone-payment/`, `/order-and-pay-at-table/`, `/industries/`, `/blog/`, `/contact-us/`). Change them if your page slugs differ.
+WordPress removes `<style>` and `<script>` tags from content saved by accounts without the **`unfiltered_html`** permission, but leaves the CSS inside as plain text. Hosts and security plugins often remove that permission from admins (`define('DISALLOW_UNFILTERED_HTML', true);` in `wp-config.php`, or a "disable unfiltered HTML" setting in a security plugin). It was reproduced on a clean WordPress install: the `<style>`/`<script>` tags were removed and the CSS was printed on the page. The plugin avoids this entirely.
+
+If you'd rather use the HTML widget, re-enable `unfiltered_html` for your account first, then paste `elementor/be-connect-home.html` into an **HTML** widget.
+
+**No clashes:** every class and id starts with `bcpay-` and every CSS rule is scoped to `.bcpay-home`, so nothing affects other pages, widgets or the theme, and theme styles for headings, buttons, links and images don't leak in.
+
+**Menu** matches the live header: Home, Card Machine (Portable, Mobile, Countertop, POS System), Online Payment (Payment Gateway, Payment Link, Payment App, Phone Payment, Order & Pay at Table), Business Funding, About (About Us, Industries, Blog, Contact Us). The dropdown page addresses are guesses (`/portable-card-machine/`, `/mobile-card-machine/`, `/countertop-card-machine/`, `/payment-gateway/`, `/pay-by-link/`, `/payment-app/`, `/phone-payment/`, `/order-and-pay-at-table/`, …). Correct them in `index.html` and rebuild, or ask for them to be updated.
 
 ## SEO (set in Yoast / Rank Math, not in the widget)
 

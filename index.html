@@ -99,14 +99,15 @@ body.admin-bar .bcpay-home .bcpay-header{top:32px}
 .bcpay-home .bcpay-logo-img{height:58px;width:auto}
 .bcpay-home .bcpay-nav{display:flex;align-items:center;gap:4px;margin-left:auto}
 .bcpay-home .bcpay-nav-item{position:relative}
-.bcpay-home .bcpay-nav-link{display:inline-flex;align-items:center;gap:6px;height:86px;padding:0 14px;font-family:var(--bcpay-fh);font-size:15px;font-weight:600;color:var(--bcpay-ink);position:relative;transition:color .2s}
-.bcpay-home .bcpay-nav-link::after{content:"";position:absolute;left:14px;right:14px;bottom:24px;height:2px;border-radius:2px;background:var(--bcpay-blue);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.bcpay-home .bcpay-nav-link{display:inline-flex;align-items:center;gap:5px;height:86px;padding:0 12px;white-space:nowrap;font-family:var(--bcpay-fh);font-size:15px;font-weight:600;color:var(--bcpay-ink);position:relative;transition:color .2s}
+.bcpay-home .bcpay-nav-link::after{content:"";position:absolute;left:12px;right:12px;bottom:24px;height:2px;border-radius:2px;background:var(--bcpay-blue);transform:scaleX(0);transform-origin:left;transition:transform .25s}
 .bcpay-home .bcpay-nav-link:hover,.bcpay-home .bcpay-nav-link.bcpay-is-current,.bcpay-home .bcpay-nav-item:hover>.bcpay-nav-link{color:var(--bcpay-blue)}
 .bcpay-home .bcpay-nav-link:hover::after,.bcpay-home .bcpay-nav-link.bcpay-is-current::after{transform:scaleX(1)}
 .bcpay-home .bcpay-nav-link .bcpay-ic{width:16px;height:16px;transition:transform .25s}
 .bcpay-home .bcpay-nav-item:hover>.bcpay-nav-link .bcpay-ic,.bcpay-home .bcpay-nav-item.bcpay-is-open>.bcpay-nav-link .bcpay-ic{transform:rotate(180deg)}
 .bcpay-home .bcpay-dd{position:absolute;top:100%;left:50%;width:640px;padding:18px;border-radius:0 0 var(--bcpay-r) var(--bcpay-r);background:#fff;border-top:3px solid var(--bcpay-blue);box-shadow:var(--bcpay-sh-lg);display:grid;grid-template-columns:1fr 1fr;gap:4px;opacity:0;visibility:hidden;transform:translate(-50%,12px);transition:opacity .25s,transform .25s,visibility .25s}
 .bcpay-home .bcpay-nav-item:hover>.bcpay-dd,.bcpay-home .bcpay-nav-item:focus-within>.bcpay-dd,.bcpay-home .bcpay-nav-item.bcpay-is-open>.bcpay-dd{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.bcpay-home .bcpay-dd-sm{width:250px;grid-template-columns:1fr}
 .bcpay-home .bcpay-dd-a{display:grid;grid-template-columns:42px 1fr;gap:12px;align-items:center;padding:12px;border-radius:12px;transition:background-color .2s}
 .bcpay-home .bcpay-dd-a:hover{background:var(--bcpay-blue-50)}
 .bcpay-home .bcpay-dd-ic{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:var(--bcpay-blue-100);color:var(--bcpay-royal)}
@@ -116,10 +117,11 @@ body.admin-bar .bcpay-home .bcpay-header{top:32px}
 .bcpay-home .bcpay-call{display:flex;align-items:center;gap:10px}
 .bcpay-home .bcpay-call-ic{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--bcpay-blue-50);color:var(--bcpay-blue)}
 .bcpay-home .bcpay-call-t{display:block;font-size:12px;color:var(--bcpay-muted);line-height:1.2}
-.bcpay-home .bcpay-call-n{display:block;font-family:var(--bcpay-fh);font-weight:700;font-size:15px;color:var(--bcpay-ink);line-height:1.3}
+.bcpay-home .bcpay-call-n{display:block;font-family:var(--bcpay-fh);font-weight:700;font-size:15px;color:var(--bcpay-ink);line-height:1.3;white-space:nowrap}
 .bcpay-home .bcpay-header-cta .bcpay-btn{min-height:48px;padding:0 22px;font-size:14.5px}
 .bcpay-home .bcpay-burger{display:none;place-items:center;width:46px;height:46px;margin-left:auto;border-radius:12px;background:var(--bcpay-blue-50);color:var(--bcpay-navy)}
-@media (max-width:1240px){.bcpay-home .bcpay-header-cta .bcpay-call{display:none}}
+@media (max-width:1340px){.bcpay-home .bcpay-header-cta .bcpay-call{display:none}}
+@media (max-width:1180px){.bcpay-home .bcpay-nav-link{padding:0 9px;font-size:14.5px}.bcpay-home .bcpay-nav-link::after{left:9px;right:9px}.bcpay-home .bcpay-header-in{gap:16px}}
 @media (max-width:1060px){.bcpay-home .bcpay-nav,.bcpay-home .bcpay-header-cta{display:none}.bcpay-home .bcpay-burger{display:grid}.bcpay-home .bcpay-header-in{height:74px}.bcpay-home .bcpay-logo-img{height:50px}}
 
 /* Mobile drawer */
@@ -421,7 +423,7 @@ body.admin-bar .bcpay-home .bcpay-header{top:32px}
 @media (max-width:560px){.bcpay-home .bcpay-footer-top{grid-template-columns:minmax(0,1fr);padding-top:56px}}
 
 /* Back to top */
-.bcpay-home .bcpay-totop{position:fixed;right:20px;bottom:20px;z-index:80;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--bcpay-blue);color:#fff;box-shadow:0 12px 26px -10px rgb(0 165 234 / .9);opacity:0;visibility:hidden;transform:translateY(16px);transition:opacity .3s,transform .3s,visibility .3s,background-color .2s}
+.bcpay-home .bcpay-totop{position:fixed;right:24px;bottom:104px;z-index:80;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--bcpay-blue);color:#fff;box-shadow:0 12px 26px -10px rgb(0 165 234 / .9);opacity:0;visibility:hidden;transform:translateY(16px);transition:opacity .3s,transform .3s,visibility .3s,background-color .2s}
 .bcpay-home .bcpay-totop.bcpay-show{opacity:1;visibility:visible;transform:none}
 .bcpay-home .bcpay-totop:hover{background:var(--bcpay-navy)}
 
@@ -489,12 +491,13 @@ body.admin-bar .bcpay-home .bcpay-header{top:32px}
   <symbol id="bcpay-i-xsoc" viewBox="0 0 24 24"><path d="M18.2 2.5h3.4l-7.4 8.5 8.7 11.5h-6.8l-5.3-7-6.1 7H1.3l7.9-9.1L.9 2.5h7l4.8 6.4zm-1.2 18h1.9L7 4.4H5z"/></symbol>
 </defs></svg>
 
+<!--BCPAY:HEADER-START-->
 <!-- ============ TOP BAR ============ -->
 <div class="bcpay-topbar">
   <div class="bcpay-wrap bcpay-topbar-in">
     <div class="bcpay-topbar-list">
       <a class="bcpay-topbar-item" href="tel:+442070527978"><svg class="bcpay-ic"><use href="#bcpay-i-phone"/></svg>020 7052 7978</a>
-      <a class="bcpay-topbar-item" href="mailto:info@be-connect.co.uk"><svg class="bcpay-ic"><use href="#bcpay-i-mail"/></svg>info@be-connect.co.uk</a>
+      <a class="bcpay-topbar-item" href="mailto:services@be-connect.co.uk"><svg class="bcpay-ic"><use href="#bcpay-i-mail"/></svg>services@be-connect.co.uk</a>
       <span class="bcpay-topbar-item bcpay-topbar-hide"><svg class="bcpay-ic"><use href="#bcpay-i-clock"/></svg>24/7 UK-based support</span>
     </div>
     <div class="bcpay-social">
@@ -512,14 +515,18 @@ body.admin-bar .bcpay-home .bcpay-header{top:32px}
     <a class="bcpay-logo" href="/" aria-label="Be-Connect Pay home"><img class="bcpay-logo-img" src="assets/logo-dark.png" alt="Be-Connect Pay – Together For Good" width="568" height="252"></a>
     <nav class="bcpay-nav" aria-label="Main">
       <div class="bcpay-nav-item"><a class="bcpay-nav-link bcpay-is-current" href="/" aria-current="page">Home</a></div>
-      <div class="bcpay-nav-item"><a class="bcpay-nav-link" href="/about-us/">About Us</a></div>
-      <div class="bcpay-nav-item" id="bcpay-dd-item">
-        <a class="bcpay-nav-link" href="/services/" id="bcpay-dd-toggle" aria-haspopup="true" aria-expanded="false">Services <svg class="bcpay-ic"><use href="#bcpay-i-down"/></svg></a>
+      <div class="bcpay-nav-item bcpay-has-dd">
+        <a class="bcpay-nav-link" href="/card-machines/" aria-haspopup="true" aria-expanded="false">Card Machine <svg class="bcpay-ic"><use href="#bcpay-i-down"/></svg></a>
         <div class="bcpay-dd">
-          <a class="bcpay-dd-a" href="/card-machines/"><span class="bcpay-dd-ic"><svg class="bcpay-ic"><use href="#bcpay-i-card"/></svg></span><span><span class="bcpay-dd-t">Card Machines</span><span class="bcpay-dd-d">Portable, mobile &amp; countertop</span></span></a>
-          <a class="bcpay-dd-a" href="/business-funding/"><span class="bcpay-dd-ic"><svg class="bcpay-ic"><use href="#bcpay-i-pound"/></svg></span><span><span class="bcpay-dd-t">Business Funding</span><span class="bcpay-dd-d">Flexible unsecured funding</span></span></a>
+          <a class="bcpay-dd-a" href="/portable-card-machine/"><span class="bcpay-dd-ic"><svg class="bcpay-ic"><use href="#bcpay-i-card"/></svg></span><span><span class="bcpay-dd-t">Portable Card Machine</span><span class="bcpay-dd-d">Take payments around your premises</span></span></a>
+          <a class="bcpay-dd-a" href="/mobile-card-machine/"><span class="bcpay-dd-ic"><svg class="bcpay-ic"><use href="#bcpay-i-mobile"/></svg></span><span><span class="bcpay-dd-t">Mobile Card Machine</span><span class="bcpay-dd-d">Built-in 4G SIM, works anywhere</span></span></a>
+          <a class="bcpay-dd-a" href="/countertop-card-machine/"><span class="bcpay-dd-ic"><svg class="bcpay-ic"><use href="#bcpay-i-store"/></svg></span><span><span class="bcpay-dd-t">Countertop Card Machine</span><span class="bcpay-dd-d">Perfect for serving at the till</span></span></a>
           <a class="bcpay-dd-a" href="/pos-system/"><span class="bcpay-dd-ic"><svg class="bcpay-ic"><use href="#bcpay-i-monitor"/></svg></span><span><span class="bcpay-dd-t">POS System</span><span class="bcpay-dd-d">All-in-one point of sale</span></span></a>
-          <a class="bcpay-dd-a" href="/online-payments/"><span class="bcpay-dd-ic"><svg class="bcpay-ic"><use href="#bcpay-i-globe"/></svg></span><span><span class="bcpay-dd-t">Online Payments</span><span class="bcpay-dd-d">Get paid online, anywhere</span></span></a>
+        </div>
+      </div>
+      <div class="bcpay-nav-item bcpay-has-dd">
+        <a class="bcpay-nav-link" href="/online-payments/" aria-haspopup="true" aria-expanded="false">Online Payment <svg class="bcpay-ic"><use href="#bcpay-i-down"/></svg></a>
+        <div class="bcpay-dd">
           <a class="bcpay-dd-a" href="/payment-gateway/"><span class="bcpay-dd-ic"><svg class="bcpay-ic"><use href="#bcpay-i-lock"/></svg></span><span><span class="bcpay-dd-t">Payment Gateway</span><span class="bcpay-dd-d">Secure website checkout</span></span></a>
           <a class="bcpay-dd-a" href="/pay-by-link/"><span class="bcpay-dd-ic"><svg class="bcpay-ic"><use href="#bcpay-i-link"/></svg></span><span><span class="bcpay-dd-t">Payment Link</span><span class="bcpay-dd-d">Request payment by text or email</span></span></a>
           <a class="bcpay-dd-a" href="/payment-app/"><span class="bcpay-dd-ic"><svg class="bcpay-ic"><use href="#bcpay-i-mobile"/></svg></span><span><span class="bcpay-dd-t">Payment App</span><span class="bcpay-dd-d">Take payments on your phone</span></span></a>
@@ -527,9 +534,16 @@ body.admin-bar .bcpay-home .bcpay-header{top:32px}
           <a class="bcpay-dd-a" href="/order-and-pay-at-table/"><span class="bcpay-dd-ic"><svg class="bcpay-ic"><use href="#bcpay-i-utensils"/></svg></span><span><span class="bcpay-dd-t">Order &amp; Pay at Table</span><span class="bcpay-dd-d">QR ordering for hospitality</span></span></a>
         </div>
       </div>
-      <div class="bcpay-nav-item"><a class="bcpay-nav-link" href="/industries/">Industries</a></div>
-      <div class="bcpay-nav-item"><a class="bcpay-nav-link" href="/blog/">Blog</a></div>
-      <div class="bcpay-nav-item"><a class="bcpay-nav-link" href="/contact-us/">Contact Us</a></div>
+      <div class="bcpay-nav-item"><a class="bcpay-nav-link" href="/business-funding/">Business Funding</a></div>
+      <div class="bcpay-nav-item bcpay-has-dd">
+        <a class="bcpay-nav-link" href="/about-us/" aria-haspopup="true" aria-expanded="false">About <svg class="bcpay-ic"><use href="#bcpay-i-down"/></svg></a>
+        <div class="bcpay-dd bcpay-dd-sm">
+          <a class="bcpay-dd-a" href="/about-us/"><span class="bcpay-dd-ic"><svg class="bcpay-ic"><use href="#bcpay-i-users"/></svg></span><span><span class="bcpay-dd-t">About Us</span></span></a>
+          <a class="bcpay-dd-a" href="/industries/"><span class="bcpay-dd-ic"><svg class="bcpay-ic"><use href="#bcpay-i-store"/></svg></span><span><span class="bcpay-dd-t">Industries</span></span></a>
+          <a class="bcpay-dd-a" href="/blog/"><span class="bcpay-dd-ic"><svg class="bcpay-ic"><use href="#bcpay-i-file"/></svg></span><span><span class="bcpay-dd-t">Blog</span></span></a>
+          <a class="bcpay-dd-a" href="/contact-us/"><span class="bcpay-dd-ic"><svg class="bcpay-ic"><use href="#bcpay-i-mail"/></svg></span><span><span class="bcpay-dd-t">Contact Us</span></span></a>
+        </div>
+      </div>
     </nav>
     <div class="bcpay-header-cta">
       <a class="bcpay-call" href="tel:+442070527978"><span class="bcpay-call-ic"><svg class="bcpay-ic"><use href="#bcpay-i-phone"/></svg></span><span><span class="bcpay-call-t">Call us anytime</span><span class="bcpay-call-n">020 7052 7978</span></span></a>
@@ -548,28 +562,39 @@ body.admin-bar .bcpay-home .bcpay-header{top:32px}
   </div>
   <nav class="bcpay-mnav" aria-label="Mobile">
     <a class="bcpay-mnav-a" href="/">Home</a>
-    <a class="bcpay-mnav-a" href="/about-us/">About Us</a>
-    <button class="bcpay-mnav-a" type="button" id="bcpay-msub-btn" aria-expanded="false" aria-controls="bcpay-msub">Services <svg class="bcpay-ic"><use href="#bcpay-i-down"/></svg></button>
-    <div class="bcpay-msub" id="bcpay-msub" hidden>
-      <a class="bcpay-msub-a" href="/card-machines/">Card Machines</a>
-      <a class="bcpay-msub-a" href="/business-funding/">Business Funding</a>
+    <button class="bcpay-mnav-a bcpay-msub-btn" type="button" aria-expanded="false" aria-controls="bcpay-msub-1">Card Machine <svg class="bcpay-ic"><use href="#bcpay-i-down"/></svg></button>
+    <div class="bcpay-msub" id="bcpay-msub-1" hidden>
+      <a class="bcpay-msub-a" href="/card-machines/">All Card Machines</a>
+      <a class="bcpay-msub-a" href="/portable-card-machine/">Portable Card Machine</a>
+      <a class="bcpay-msub-a" href="/mobile-card-machine/">Mobile Card Machine</a>
+      <a class="bcpay-msub-a" href="/countertop-card-machine/">Countertop Card Machine</a>
       <a class="bcpay-msub-a" href="/pos-system/">POS System</a>
-      <a class="bcpay-msub-a" href="/online-payments/">Online Payments</a>
+    </div>
+    <button class="bcpay-mnav-a bcpay-msub-btn" type="button" aria-expanded="false" aria-controls="bcpay-msub-2">Online Payment <svg class="bcpay-ic"><use href="#bcpay-i-down"/></svg></button>
+    <div class="bcpay-msub" id="bcpay-msub-2" hidden>
+      <a class="bcpay-msub-a" href="/online-payments/">All Online Payments</a>
       <a class="bcpay-msub-a" href="/payment-gateway/">Payment Gateway</a>
       <a class="bcpay-msub-a" href="/pay-by-link/">Payment Link</a>
       <a class="bcpay-msub-a" href="/payment-app/">Payment App</a>
       <a class="bcpay-msub-a" href="/phone-payment/">Phone Payment</a>
       <a class="bcpay-msub-a" href="/order-and-pay-at-table/">Order &amp; Pay at Table</a>
     </div>
-    <a class="bcpay-mnav-a" href="/industries/">Industries</a>
-    <a class="bcpay-mnav-a" href="/blog/">Blog</a>
-    <a class="bcpay-mnav-a" href="/contact-us/">Contact Us</a>
+    <a class="bcpay-mnav-a" href="/business-funding/">Business Funding</a>
+    <button class="bcpay-mnav-a bcpay-msub-btn" type="button" aria-expanded="false" aria-controls="bcpay-msub-3">About <svg class="bcpay-ic"><use href="#bcpay-i-down"/></svg></button>
+    <div class="bcpay-msub" id="bcpay-msub-3" hidden>
+      <a class="bcpay-msub-a" href="/about-us/">About Us</a>
+      <a class="bcpay-msub-a" href="/industries/">Industries</a>
+      <a class="bcpay-msub-a" href="/blog/">Blog</a>
+      <a class="bcpay-msub-a" href="/contact-us/">Contact Us</a>
+    </div>
   </nav>
   <div class="bcpay-drawer-foot">
     <a class="bcpay-btn bcpay-btn-primary" href="/contact-us/">Get a Free Quote</a>
     <a class="bcpay-btn bcpay-btn-outline" href="tel:+442070527978"><svg class="bcpay-ic"><use href="#bcpay-i-phone"/></svg>020 7052 7978</a>
+    <a class="bcpay-btn bcpay-btn-outline" href="mailto:services@be-connect.co.uk"><svg class="bcpay-ic"><use href="#bcpay-i-mail"/></svg>services@be-connect.co.uk</a>
   </div>
 </aside>
+<!--BCPAY:HEADER-END-->
 
 <main id="bcpay-top">
 
@@ -935,6 +960,7 @@ body.admin-bar .bcpay-home .bcpay-header{top:32px}
 
 </main>
 
+<!--BCPAY:FOOTER-START-->
 <!-- ============ FOOTER ============ -->
 <footer class="bcpay-footer">
   <div class="bcpay-wrap bcpay-footer-top">
@@ -983,6 +1009,7 @@ body.admin-bar .bcpay-home .bcpay-header{top:32px}
     <div class="bcpay-footer-legal"><a class="bcpay-footer-a" href="/privacy-policy/">Privacy Policy</a><a class="bcpay-footer-a" href="/terms-and-conditions/">Terms &amp; Conditions</a><a class="bcpay-footer-a" href="/cookie-policy/">Cookie Policy</a></div>
   </div>
 </footer>
+<!--BCPAY:FOOTER-END-->
 
 <a class="bcpay-totop" id="bcpay-totop" href="#bcpay-home" aria-label="Back to top"><svg class="bcpay-ic"><use href="#bcpay-i-up"/></svg></a>
 </div>
@@ -997,30 +1024,35 @@ body.admin-bar .bcpay-home .bcpay-header{top:32px}
   function $$(sel,ctx){return Array.prototype.slice.call((ctx||root).querySelectorAll(sel));}
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* Header shadow + back to top */
+  /* Header shadow + back to top (header/footer can be switched off in the plugin) */
   var header=$('header'),totop=$('totop');
-  function onScroll(){var y=window.pageYOffset||document.documentElement.scrollTop;header.classList.toggle('bcpay-is-stuck',y>60);totop.classList.toggle('bcpay-show',y>700);}
+  function onScroll(){var y=window.pageYOffset||document.documentElement.scrollTop;if(header)header.classList.toggle('bcpay-is-stuck',y>60);totop.classList.toggle('bcpay-show',y>700);}
   window.addEventListener('scroll',onScroll,{passive:true});onScroll();
   totop.addEventListener('click',function(e){e.preventDefault();window.scrollTo({top:root.getBoundingClientRect().top+window.pageYOffset,behavior:reduce?'auto':'smooth'});});
   var yr=$('year');if(yr)yr.textContent=new Date().getFullYear();
 
-  /* Services dropdown: hover on desktop, tap to open on touch screens */
-  var ddItem=$('dd-item'),ddToggle=$('dd-toggle');
-  ddToggle.addEventListener('click',function(e){
-    if(window.matchMedia('(hover: none)').matches&&!ddItem.classList.contains('bcpay-is-open')){e.preventDefault();ddItem.classList.add('bcpay-is-open');ddToggle.setAttribute('aria-expanded','true');}
+  /* Menu dropdowns: hover on desktop, tap to open on touch screens */
+  var dds=$$('.bcpay-has-dd');
+  function closeDd(except){dds.forEach(function(d){if(d!==except){d.classList.remove('bcpay-is-open');d.querySelector('.bcpay-nav-link').setAttribute('aria-expanded','false');}});}
+  dds.forEach(function(d){
+    var link=d.querySelector('.bcpay-nav-link');
+    link.addEventListener('click',function(e){
+      if(window.matchMedia('(hover: none)').matches&&!d.classList.contains('bcpay-is-open')){e.preventDefault();closeDd(d);d.classList.add('bcpay-is-open');link.setAttribute('aria-expanded','true');}
+    });
+    d.addEventListener('keydown',function(e){if(e.key==='Escape'){closeDd();link.focus();}});
   });
-  document.addEventListener('click',function(e){if(!ddItem.contains(e.target)){ddItem.classList.remove('bcpay-is-open');ddToggle.setAttribute('aria-expanded','false');}});
-  ddItem.addEventListener('keydown',function(e){if(e.key==='Escape'){ddItem.classList.remove('bcpay-is-open');ddToggle.focus();}});
+  document.addEventListener('click',function(e){if(!e.target.closest||!e.target.closest('.bcpay-has-dd'))closeDd();});
 
   /* Mobile drawer */
   var burger=$('burger'),drawer=$('drawer');
-  function setMenu(open){root.classList.toggle('bcpay-menu-open',open);drawer.setAttribute('aria-hidden',!open);burger.setAttribute('aria-expanded',open);document.documentElement.style.overflow=open?'hidden':'';if(open)$('close').focus();}
-  burger.addEventListener('click',function(){setMenu(true);});
-  $('close').addEventListener('click',function(){setMenu(false);burger.focus();});
-  $('overlay').addEventListener('click',function(){setMenu(false);});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classList.contains('bcpay-menu-open'))setMenu(false);});
-  var msBtn=$('msub-btn'),msub=$('msub');
-  msBtn.addEventListener('click',function(){var o=msub.hidden;msub.hidden=!o;msBtn.setAttribute('aria-expanded',o);});
+  if(burger&&drawer){
+    var setMenu=function(open){root.classList.toggle('bcpay-menu-open',open);drawer.setAttribute('aria-hidden',!open);burger.setAttribute('aria-expanded',open);document.documentElement.style.overflow=open?'hidden':'';if(open)$('close').focus();};
+    burger.addEventListener('click',function(){setMenu(true);});
+    $('close').addEventListener('click',function(){setMenu(false);burger.focus();});
+    $('overlay').addEventListener('click',function(){setMenu(false);});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classList.contains('bcpay-menu-open'))setMenu(false);});
+    $$('.bcpay-msub-btn').forEach(function(btn){var sub=document.getElementById(btn.getAttribute('aria-controls'));btn.addEventListener('click',function(){var o=sub.hidden;sub.hidden=!o;btn.setAttribute('aria-expanded',o);});});
+  }
 
   /* Hero slider */
   (function(){
